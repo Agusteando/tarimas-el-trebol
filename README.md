@@ -17,20 +17,28 @@ npm run build
 
 La última validación de esta iteración compiló correctamente con `npm run build`.
 
+## Iteración actual
+
+Esta versión integra el logo real del cliente, renombrado y organizado como asset de marca:
+
+- `public/images/brand/el-trebol-logo.png`
+- `public/images/brand/el-trebol-logo-original.png`
+
+También ajusta la escala del header, hero y trust bar para que la vista inicial desktop mantenga una densidad similar a la referencia: header flotante compacto, hero menos sobredimensionado y cards de confianza visibles dentro del primer bloque visual en el objetivo de 1900 × 1200 a 150%.
+
 ## Branding aplicado
 
-La iteración actual aplica la referencia desktop inicial con:
+- Header flotante con logo real y lockup legible.
+- Hero de alta densidad visual basado en la referencia.
+- Escala tipográfica contenida para evitar el problema de tamaño 3x.
+- Cards de confianza más compactas bajo el hero.
+- Paleta blanco / verde / amarillo.
+- CTAs amarillos reservados para conversión.
+- Imágenes sin texto incrustado; el texto vive en HTML/CSS.
 
-- header flotante tipo Figma,
-- hero de alta densidad visual,
-- escala tipográfica reducida para evitar el problema de tamaño excesivo,
-- cards de confianza debajo del hero,
-- paleta blanco / verde / amarillo,
-- CTAs amarillos para conversión,
-- imágenes sin texto incrustado.
+## Assets principales
 
-## Assets nuevos
-
+- `public/images/brand/el-trebol-logo.png`
 - `public/images/hero-green-background.webp`
 - `public/images/hero-yard.webp`
 - `public/references/home-desktop-figma-reference.png`

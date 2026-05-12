@@ -202,27 +202,33 @@ button:focus-visible {
 
 .brand-logo {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   color: var(--color-green-950);
 }
 
 .brand-logo__mark {
   display: grid;
-  flex: 0 0 62px;
-  width: 62px;
-  height: 62px;
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
   place-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--color-white);
 }
 
-.brand-logo svg {
-  width: 62px;
-  height: 62px;
-  fill: var(--color-green-700);
-  stroke: var(--color-green-900);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.brand-logo__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-logo__text {
+  display: block;
+  min-width: 0;
 }
 
 .brand-logo strong,
@@ -232,25 +238,25 @@ button:focus-visible {
 
 .brand-logo strong {
   font-family: var(--font-display);
-  font-size: clamp(1.48rem, 1.65vw, 1.78rem);
+  font-size: clamp(1.28rem, 1.3vw, 1.52rem);
   font-weight: 900;
   letter-spacing: -0.055em;
-  line-height: 0.96;
+  line-height: 0.98;
   text-transform: uppercase;
 }
 
 .brand-logo small {
-  margin-top: 6px;
+  margin-top: 5px;
   color: var(--color-ink);
-  font-size: 0.88rem;
+  font-size: 0.76rem;
   font-weight: 650;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
 .site-header {
   position: fixed;
   z-index: 80;
-  top: 18px;
+  top: 14px;
   right: 0;
   left: 0;
   pointer-events: none;
@@ -259,14 +265,14 @@ button:focus-visible {
 .site-header__inner {
   display: flex;
   width: min(calc(100% - 64px), 1440px);
-  min-height: 100px;
+  min-height: 84px;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(18px, 3vw, 42px);
+  gap: clamp(16px, 2.4vw, 34px);
   margin-inline: auto;
   border: 1px solid rgba(47, 125, 70, 0.48);
-  border-radius: 24px;
-  padding: 18px 24px 18px 26px;
+  border-radius: 22px;
+  padding: 10px 20px;
   pointer-events: auto;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 20px 64px rgba(16, 32, 20, 0.16);
@@ -277,7 +283,7 @@ button:focus-visible {
 .site-header__actions {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 2.4vw, 38px);
+  gap: clamp(16px, 2.1vw, 32px);
 }
 
 .site-header__nav {
@@ -316,7 +322,7 @@ button:focus-visible {
 }
 
 .site-header__phone {
-  min-height: 48px;
+  min-height: 44px;
   border: 1px solid rgba(47, 125, 70, 0.34);
   border-radius: 12px;
   padding: 0 18px;
@@ -331,9 +337,9 @@ button:focus-visible {
 }
 
 .site-header__whatsapp {
-  min-height: 52px;
+  min-height: 48px;
   border-radius: 12px;
-  padding-inline: 22px;
+  padding-inline: 20px;
   white-space: nowrap;
 }
 
@@ -357,7 +363,7 @@ button:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: clamp(730px, 84svh, 900px);
+  min-height: clamp(590px, 70svh, 710px);
   overflow: clip;
   align-items: center;
   color: var(--color-white);
@@ -402,15 +408,15 @@ button:focus-visible {
   position: relative;
   z-index: 2;
   display: grid;
-  width: min(calc(100% - 128px), 1320px);
-  grid-template-columns: minmax(0, 0.92fr) minmax(480px, 1fr);
-  gap: clamp(36px, 5vw, 76px);
+  width: min(calc(100% - 112px), 1320px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(430px, 0.98fr);
+  gap: clamp(30px, 4vw, 58px);
   align-items: center;
-  margin: clamp(122px, 12vh, 152px) auto 58px;
+  margin: clamp(96px, 10vh, 118px) auto 30px;
 }
 
 .hero__copy {
-  max-width: 620px;
+  max-width: 570px;
 }
 
 .hero__badge {
@@ -441,10 +447,10 @@ button:focus-visible {
 
 .hero h1 {
   max-width: 640px;
-  margin-top: 38px;
+  margin-top: 24px;
   color: var(--color-white);
-  font-size: clamp(3.35rem, 4.65vw, 5.15rem);
-  line-height: 1.15;
+  font-size: clamp(2.86rem, 4.08vw, 4.62rem);
+  line-height: 1.08;
   letter-spacing: -0.068em;
   text-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
@@ -455,18 +461,18 @@ button:focus-visible {
 }
 
 .hero__accent-line {
-  width: 64px;
+  width: 58px;
   height: 3px;
-  margin-top: 22px;
+  margin-top: 18px;
   border-radius: 999px;
   background: var(--color-yellow-500);
 }
 
 .hero__lead {
   max-width: 500px;
-  margin-top: 18px;
+  margin-top: 16px;
   color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(1rem, 1.08vw, 1.08rem);
+  font-size: clamp(0.95rem, 1vw, 1.04rem);
   font-weight: 500;
   line-height: 1.58;
 }
@@ -475,11 +481,11 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 34px;
+  margin-top: 26px;
 }
 
 .hero__actions .button {
-  min-height: 60px;
+  min-height: 54px;
   border-radius: 10px;
   padding-inline: 24px;
   font-size: 0.98rem;
@@ -505,9 +511,9 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
-  margin-top: 28px;
+  margin-top: 22px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 1.16rem;
+  font-size: 1.02rem;
   font-weight: 800;
 }
 
@@ -526,7 +532,7 @@ button:focus-visible {
 
 .hero__visual {
   position: relative;
-  min-height: clamp(420px, 42vw, 610px);
+  min-height: clamp(390px, 37vw, 520px);
 }
 
 .hero__visual::before,
@@ -557,7 +563,7 @@ button:focus-visible {
   inset: 0 0 44px 18px;
   overflow: hidden;
   border: 2px solid rgba(143, 208, 126, 0.7);
-  border-radius: 38px;
+  border-radius: 32px;
   background: var(--color-green-900);
   box-shadow: 0 34px 90px rgba(0, 0, 0, 0.26);
   transform: rotate(4deg);
@@ -575,13 +581,13 @@ button:focus-visible {
 .hero__proof-card {
   position: absolute;
   z-index: 3;
-  left: -78px;
-  bottom: 58px;
-  width: min(322px, 52%);
+  left: -58px;
+  bottom: 42px;
+  width: min(286px, 52%);
   overflow: hidden;
   border: 1px solid rgba(23, 69, 42, 0.14);
   border-radius: 18px;
-  padding: 24px 28px;
+  padding: 18px 22px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(18px);
@@ -589,10 +595,10 @@ button:focus-visible {
 
 .hero__proof-item {
   display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 18px;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
   align-items: center;
-  padding-block: 16px;
+  padding-block: 12px;
   color: var(--color-ink);
 }
 
@@ -602,8 +608,8 @@ button:focus-visible {
 
 .hero__proof-item > span {
   display: grid;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-900);
@@ -625,8 +631,8 @@ button:focus-visible {
 .hero__country-card {
   position: absolute;
   z-index: 3;
-  right: -18px;
-  bottom: 54px;
+  right: -10px;
+  bottom: 44px;
   display: grid;
   max-width: 270px;
   grid-template-columns: 42px 1fr;
@@ -656,7 +662,7 @@ button:focus-visible {
 .trust-bar {
   position: relative;
   z-index: 4;
-  padding: 42px max(34px, calc((100vw - 1320px) / 2));
+  padding: 28px max(34px, calc((100vw - 1320px) / 2));
   background: linear-gradient(180deg, #ffffff, #f7faf5);
   color: var(--color-ink);
 }
@@ -664,26 +670,26 @@ button:focus-visible {
 .trust-bar__grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 
 .trust-bar__item {
   display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 16px;
-  min-height: 126px;
+  grid-template-columns: 54px 1fr;
+  gap: 13px;
+  min-height: 108px;
   align-items: center;
   border: 1px solid rgba(47, 125, 70, 0.28);
   border-radius: 16px;
-  padding: 20px 18px;
+  padding: 16px 15px;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: 0 16px 42px rgba(23, 69, 42, 0.06);
 }
 
 .trust-bar__icon {
   display: grid;
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 52px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-900);
@@ -691,8 +697,8 @@ button:focus-visible {
 }
 
 .trust-bar__icon .icon-symbol {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   margin: 0;
   stroke: currentColor;
 }
@@ -701,7 +707,7 @@ button:focus-visible {
   margin: 0;
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 0.94rem;
+  font-size: 0.86rem;
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -710,7 +716,7 @@ button:focus-visible {
 .trust-bar__item p {
   margin-top: 7px;
   color: var(--color-muted);
-  font-size: 0.78rem;
+  font-size: 0.73rem;
   font-weight: 650;
   line-height: 1.45;
 }
@@ -1394,12 +1400,12 @@ button:focus-visible {
 }
 
 .site-footer .brand-logo__mark {
-  border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--color-white);
 }
 
 .site-footer .brand-logo small {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.66);
 }
 
 .site-footer__grid {
@@ -1486,7 +1492,24 @@ button:focus-visible {
   }
 
   .trust-bar__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .trust-bar__item {
+    grid-template-columns: 46px 1fr;
+    min-height: 98px;
+    padding: 14px 12px;
+  }
+
+  .trust-bar__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .trust-bar__icon .icon-symbol {
+    width: 24px;
+    height: 24px;
   }
 
   .industry-track {
@@ -1527,15 +1550,14 @@ button:focus-visible {
     padding: 10px 12px 10px 16px;
   }
 
-  .brand-logo__mark,
-  .brand-logo svg {
-    width: 46px;
-    height: 46px;
-    flex-basis: 46px;
+  .brand-logo__mark {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
   }
 
   .brand-logo strong {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .brand-logo small {
@@ -1649,7 +1671,6 @@ button:focus-visible {
     padding: 28px 14px;
   }
 
-  .trust-bar__grid,
   .about__grid,
   .solutions__grid,
   .services__grid,
@@ -1657,6 +1678,10 @@ button:focus-visible {
   .map-section__grid,
   .final-cta__card {
     grid-template-columns: 1fr;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-grid,
@@ -1695,7 +1720,7 @@ button:focus-visible {
   }
 
   .brand-logo strong {
-    font-size: 1rem;
+    font-size: 0.96rem;
   }
 
   .site-header__inner {
@@ -1769,6 +1794,10 @@ button:focus-visible {
     bottom: 0;
     left: 0;
     max-width: none;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: 1fr;
   }
 
   .trust-bar__item {
