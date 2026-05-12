@@ -1,56 +1,43 @@
-# Branding inicial — Tarimas El Trébol
+# Branding — El Trébol Tarimas y Empaques Industriales
 
-## Posicionamiento
+## Dirección visual
 
-Tarimas El Trébol debe comunicar operación industrial, confianza B2B, disponibilidad y respuesta rápida. La marca no debe sentirse como carpintería artesanal ni como recicladora informal. El sitio está orientado a compradores industriales que necesitan claridad, producto, cotización y contacto directo.
-
-Frase guía del landing:
-
-> Tarimas industriales para empresas que no pueden detener su operación.
+El sitio se trabaja como una marca industrial B2B: limpio, confiable, operativo y orientado a cotización. La intención es evitar un aspecto de carpintería informal o recicladora genérica. La experiencia debe transmitir capacidad de abastecimiento, entrega rápida y atención directa para compradores industriales.
 
 ## Paleta
 
-- Blanco `#FFFFFF`: limpieza, orden, lectura y confianza.
-- Verde oscuro `#17452A`: autoridad, estabilidad y presencia industrial.
-- Verde principal `#2F7D46`: confianza operativa, CTAs secundarios y marca.
-- Verde suave `#EAF5EC`: fondos de secciones, descanso visual y seguridad.
-- Amarillo CTA `#F4C542`: acción, cotización y puntos de decisión.
-- Amarillo suave `#FFF6D6`: etiquetas y estados positivos.
-- Madera `#B87945`: relación material con el producto, usado con moderación.
-- Tinta `#1D2A22`: texto principal, más natural que negro puro.
+- Blanco base: `#FFFFFF`
+- Fondo industrial claro: `#F7F9F5`
+- Verde suave: `#EAF5EC`
+- Verde principal: `#2F7D46`
+- Verde oscuro: `#17452A`
+- Verde profundo premium: `#0F2E1D`
+- Amarillo CTA: `#F4C542`
+- Amarillo suave: `#FFF6D6`
+- Acento madera: `#B87945`
+- Texto principal: `#1D2A22`
+- Texto secundario: `#5F6D63`
+
+Uso neuromarketing: verde para confianza y estabilidad operativa; blanco para orden y claridad; amarillo sólo para acción comercial de alta intención.
 
 ## Tipografía
 
-- Títulos: `Sora`, con fallback a sistema.
-- Texto: `Inter`, con fallback a sistema.
+- Headings: `Sora`
+- Body: `Inter`
+- Fallback: `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
 
-Sora aporta un tono técnico e industrial sin verse agresivo. Inter mantiene legibilidad sólida en mobile y desktop.
+La escala se ajustó para el viewport objetivo de escritorio `1900 × 1200` con escala visual alta, evitando titulares sobredimensionados y manteniendo densidad similar a la referencia Figma.
 
-## Reglas visuales
+## Reglas de imágenes
 
-1. El texto comercial vive en HTML/CSS, no dentro de imágenes.
-2. Las imágenes deben mostrar producto, operación, sector o contexto, sin claims ni teléfonos incrustados.
-3. El amarillo se reserva para conversión y énfasis, no como fondo dominante.
-4. El verde oscuro se usa para autoridad y contraste.
-5. El sitio debe sentirse B2B: limpio, directo, ordenado y fácil de cotizar.
+Las imágenes no deben contener texto incrustado. El copy, teléfonos, títulos, badges y CTAs se componen siempre con HTML/CSS para responsividad, SEO, accesibilidad y edición futura.
 
-## Componentes clave
+Assets de esta iteración:
 
-- CTA principal: “Cotizar por WhatsApp”.
-- CTA secundario: “Ver productos” o “Llamar ahora”.
-- WhatsApp flotante visible.
-- Teléfonos clicables.
-- Cards de productos con variantes claras.
-- Secciones largas con bloques escaneables.
-- Google Maps preparado por variables de entorno.
+- `public/images/hero-green-background.webp`: fondo gráfico oscuro del hero.
+- `public/images/hero-yard.webp`: imagen principal de tarimas y montacargas.
+- `public/references/home-desktop-figma-reference.png`: referencia visual de desktop para auditoría.
 
-## Variables de entorno
+## Estándares del proyecto
 
-```env
-VITE_PHONE_PRIMARY=7225372605
-VITE_PHONE_SECONDARY=7225472591
-VITE_WHATSAPP_NUMBER=527225372605
-VITE_EMAIL=eltrebol.tarimaindustrial@gmail.com
-VITE_MAP_LAT=
-VITE_MAP_LNG=
-```
+Componentes reutilizables, tokens globales, CSS limpio sin hacks, sin `!important`, sin overrides de emergencia, texto en HTML, imágenes responsivas y estructura preparada para iterar sin romper layout.

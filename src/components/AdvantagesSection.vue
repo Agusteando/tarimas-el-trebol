@@ -5,7 +5,7 @@ import { advantages } from '../data/advantages';
 </script>
 
 <template>
-  <section class="advantages section-pad">
+  <section id="ventajas" class="advantages section-pad">
     <div class="container">
       <SectionHeading
         eyebrow="Ventajas competitivas"

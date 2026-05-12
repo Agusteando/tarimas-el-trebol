@@ -1,47 +1,51 @@
 # Tarimas El Trébol — Landing Vue/Vite
 
-Landing page B2B para `tarimaseltrebol.mx`, construida con Vue 3, Vite y TypeScript.
+Landing page para `tarimaseltrebol.mx`, construida con Vue 3, Vite y TypeScript.
 
-## Objetivo
-
-Presentar a El Trébol / MOAN SA de CV como proveedor industrial de tarimas para empresas, con foco en cotización rápida, productos claros, servicios adicionales y contacto directo por WhatsApp/teléfono.
-
-## Stack
-
-- Vue 3
-- Vite
-- TypeScript
-- CSS modular por tokens globales
-- Assets SVG temporales sin texto incrustado
-
-## Comandos
+## Instalación
 
 ```bash
 npm install
 npm run dev
+```
+
+## Build
+
+```bash
 npm run build
-npm run preview
 ```
 
-## Configuración
+La última validación de esta iteración compiló correctamente con `npm run build`.
 
-Copia `.env.example` a `.env` y ajusta los datos reales cuando estén disponibles:
+## Branding aplicado
 
-```env
-VITE_PHONE_PRIMARY=7225372605
-VITE_PHONE_SECONDARY=7225472591
-VITE_WHATSAPP_NUMBER=527225372605
-VITE_EMAIL=eltrebol.tarimaindustrial@gmail.com
-VITE_MAP_LAT=
-VITE_MAP_LNG=
+La iteración actual aplica la referencia desktop inicial con:
+
+- header flotante tipo Figma,
+- hero de alta densidad visual,
+- escala tipográfica reducida para evitar el problema de tamaño excesivo,
+- cards de confianza debajo del hero,
+- paleta blanco / verde / amarillo,
+- CTAs amarillos para conversión,
+- imágenes sin texto incrustado.
+
+## Assets nuevos
+
+- `public/images/hero-green-background.webp`
+- `public/images/hero-yard.webp`
+- `public/references/home-desktop-figma-reference.png`
+
+## Google Maps
+
+Configura coordenadas en `.env`:
+
+```bash
+VITE_MAP_LAT=19.000000
+VITE_MAP_LNG=-99.000000
 ```
 
-Cuando agregues latitud y longitud, el componente de ubicación renderizará Google Maps automáticamente.
+El mapa queda preparado para renderizarse cuando se agreguen latitud y longitud reales.
 
-## Branding
+## Estándares activos
 
-La guía inicial está en `BRANDING.md`. El diseño usa blanco, verdes suaves, verde oscuro y amarillo como acento de conversión. Los textos se renderizan en HTML/CSS para mantener SEO, accesibilidad y responsividad.
-
-## Imágenes
-
-Los SVG actuales son placeholders limpios. Para producción, reemplaza los archivos de `public/images/` o actualiza rutas en `src/data/`.
+Componentes reutilizables, tokens globales, CSS limpio, HTML para todo el texto, diseño responsive mobile/desktop, sin `!important`, sin hacks por resolución y sin texto incrustado en imágenes.
