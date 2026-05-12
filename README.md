@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.9`.
+Versión actual: `1.2.10`.
 
-Esta iteración reconstruye `Servicios adicionales` hacia la referencia suministrada: estructura completa de hero oscuro, CTA de WhatsApp, acción por teléfono, cinco tarjetas, imagen operativa, panel de beneficios y franja inferior de contacto. También corrige el símbolo de WhatsApp para que las llamadas a la acción muestren un icono reconocible y limpio.
+Esta iteración corrige la escala desktop de `Servicios adicionales`: la composición completa de la referencia ahora se compacta correctamente en viewports de menor altura sin romper la estructura base, manteniendo el hero oscuro, CTA de WhatsApp, cinco tarjetas, imagen operativa, panel de beneficios y franja inferior de contacto visibles como un sistema.
 
 ## Estructura principal
 

@@ -823,3 +823,206 @@
     padding-inline: 22px;
   }
 }
+
+/* Desktop height calibration for shorter browser viewports. This keeps the full
+   reference composition visible without changing the mobile layout. */
+@media (min-width: 1181px) and (max-height: 920px) {
+  .additional-services {
+    min-height: auto;
+    padding-block: 28px 22px;
+  }
+
+  .additional-services .container {
+    width: min(calc(100% - 128px), var(--services-container));
+  }
+
+  .additional-services__hero {
+    max-width: 540px;
+  }
+
+  .additional-services .eyebrow {
+    font-size: 0.76rem;
+  }
+
+  .additional-services h2 {
+    max-width: 540px;
+    margin-top: 10px;
+    font-size: clamp(2.42rem, 5.35vh, 3rem);
+    line-height: 1.02;
+  }
+
+  .additional-services__hero > p:not(.eyebrow) {
+    max-width: 440px;
+    margin-top: 10px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .additional-services__actions {
+    gap: 34px;
+    margin-top: 16px;
+  }
+
+  .additional-services__primary,
+  .additional-services__secondary {
+    min-height: 46px;
+    gap: 10px;
+    font-size: 0.84rem;
+  }
+
+  .additional-services__primary {
+    min-width: 324px;
+    padding-inline: 24px;
+  }
+
+  .additional-services__secondary {
+    min-width: 166px;
+  }
+
+  .additional-services__actions .icon-symbol {
+    width: 19px;
+    height: 19px;
+  }
+
+  .additional-services__grid {
+    gap: 13px;
+    margin-top: 16px;
+  }
+
+  .additional-service-card {
+    min-height: 170px;
+    border-radius: 14px;
+    padding: 16px 18px 14px;
+  }
+
+  .additional-service-card__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .additional-service-card__icon .icon-symbol {
+    width: 28px;
+    height: 28px;
+  }
+
+  .additional-service-card h3 {
+    max-width: 160px;
+    margin-top: 10px;
+    font-size: 1.02rem;
+    line-height: 1.12;
+  }
+
+  .additional-service-card__accent {
+    width: 38px;
+    margin-top: 14px;
+  }
+
+  .additional-service-card p {
+    max-width: 166px;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    line-height: 1.27;
+  }
+
+  .additional-service-card__link {
+    right: 12px;
+    bottom: 12px;
+    width: 31px;
+    height: 31px;
+    border-radius: 6px;
+  }
+
+  .additional-service-card__link .icon-symbol {
+    width: 15px;
+    height: 15px;
+  }
+
+  .additional-services__showcase {
+    grid-template-columns: minmax(0, 1fr) 0.56fr;
+    gap: 15px;
+    margin-top: 14px;
+  }
+
+  .additional-services__photo,
+  .additional-services__proof-panel {
+    min-height: 214px;
+    border-radius: 14px;
+  }
+
+  .additional-services__photo img {
+    height: 214px;
+  }
+
+  .additional-services__proof-panel {
+    padding: 16px 24px 16px 26px;
+  }
+
+  .additional-services__proof-panel article {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 14px;
+    min-height: 60px;
+  }
+
+  .additional-services__proof-icon {
+    width: 46px;
+    height: 46px;
+    border-width: 2px;
+    box-shadow:
+      0 0 0 3px rgba(105, 166, 111, 0.22),
+      inset 0 0 0 1px rgba(15, 46, 29, 0.12);
+  }
+
+  .additional-services__proof-icon .icon-symbol {
+    width: 25px;
+    height: 25px;
+  }
+
+  .additional-services__proof-panel strong {
+    font-size: 0.9rem;
+  }
+
+  .additional-services__proof-panel small {
+    margin-top: 4px;
+    font-size: 0.73rem;
+    line-height: 1.32;
+  }
+
+  .additional-services__footer {
+    grid-template-columns: 46px minmax(320px, auto) 1px minmax(210px, 1fr) auto auto;
+    gap: 15px;
+    min-height: 58px;
+    margin-top: 14px;
+    border-radius: 11px;
+    padding: 8px 20px;
+  }
+
+  .additional-services__award {
+    width: 42px;
+    height: 42px;
+  }
+
+  .additional-services__award .icon-symbol {
+    width: 24px;
+    height: 24px;
+  }
+
+  .additional-services__footer strong {
+    font-size: 0.84rem;
+  }
+
+  .additional-services__footer p,
+  .additional-services__footer-link {
+    font-size: 0.76rem;
+  }
+
+  .additional-services__phone {
+    min-height: 40px;
+    padding-inline: 14px;
+    font-size: 0.9rem;
+  }
+
+  .additional-services__phone .icon-symbol {
+    width: 17px;
+    height: 17px;
+  }
+}

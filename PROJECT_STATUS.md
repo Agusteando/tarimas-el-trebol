@@ -2,25 +2,25 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v19 Servicios adicionales reference rebuild and WhatsApp icon correction.
+Latest implementation pass: v20 Servicios adicionales desktop scaling correction.
 
 Completed in this pass:
 
-- Rebuilt `Servicios adicionales` toward the supplied reference composition: heading block, yellow WhatsApp CTA, secondary phone scheduling action, five white service cards, operational image row, green proof panel, and bottom contact strip.
-- Added the supplied truck/forklift warehouse image as an optimized WebP asset for the services showcase.
-- Updated the WhatsApp SVG symbol to a filled, recognizable WhatsApp mark so CTA icons no longer look distorted.
-- Added reusable `phone` and `award` symbols to the central icon component.
-- Expanded services data with proof-panel rows and reference-aligned service copy.
+- Corrected the `Servicios adicionales` desktop scaling issue where the reference composition became too tall and overflowed shorter browser viewports.
+- Added a height-aware desktop calibration for the services section so the hero, CTA row, five service cards, operational image, proof panel, and bottom contact strip remain visible together on shorter desktop views.
+- Reduced only the affected desktop vertical rhythm: service card height, image/proof-panel height, margins, CTA height, footer strip, and icon sizes are now calibrated as one system instead of isolated patches.
+- Kept the v19 service reference structure intact, including the supplied truck/forklift image and the corrected WhatsApp icon.
+- Preserved mobile/tablet behavior below the desktop breakpoint.
 - Kept screenshots/reference images out of the project ZIP; only production assets used by the site are included.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
-- Section foundation: service content is now data-driven and rendered through the existing reusable icon system.
-- Nuestra misión: curved desktop image remains on the supplied warehouse photo from the previous pass.
+- Section foundation: service content remains data-driven and rendered through the existing reusable icon system.
+- Nuestra misión: curved desktop image remains on the supplied warehouse photo.
 - Nuestros productos: concrete texture remains active behind transparent tarima images, with non-wrapping WhatsApp CTAs.
-- Soluciones personalizadas: desktop reference calibration from the previous pass remains in place.
-- Servicios adicionales: now uses the full supplied reference structure rather than the earlier simple five-card row.
+- Soluciones personalizadas: desktop reference calibration remains in place.
+- Servicios adicionales: full reference structure is active and now scales correctly for shorter desktop viewports.
 - Asset cleanup: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
