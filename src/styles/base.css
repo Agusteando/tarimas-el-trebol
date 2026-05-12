@@ -115,7 +115,10 @@ button:focus-visible {
 
 .button .icon-symbol {
   flex: 0 0 auto;
+  width: 1.18em;
+  height: 1.18em;
   margin: 0;
+  --icon-sprite-scale: 1;
 }
 
 .button {

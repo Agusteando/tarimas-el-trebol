@@ -2,9 +2,14 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v29 icon normalization and location viewport calibration.
+Latest implementation pass: v30 phone-icon sizing and trébol marker refinement.
 
 Completed in this pass:
+
+- Fixed oversized raster icons inside CTA buttons by standardizing `.button .icon-symbol` dimensions and disabling sprite scaling inside buttons.
+- Corrected the phone icon sizing in `Ubicación y cobertura` and `Preguntas frecuentes` so it matches the visual weight of the WhatsApp icon.
+- Rebuilt `map-marker-trebol.png` using the extracted spritesheet clover as the center mark, with a cleaner green pin body and white seal.
+- Updated the Google Maps marker dimensions and anchor to match the regenerated marker asset.
 
 - Re-extracted and normalized all 25 icons from the transparent spritesheet using alpha-based trimming, hidden-guide-pixel cleanup, and final visible-bounds centering.
 - Replaced the previous imperfect sprite outputs with consistently centered 128×128 PNG icons under `public/images/icons/sprite/`.

@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.19`.
+Versión actual: `1.2.20`.
 
 Esta iteración reconstruye la sección de `Ubicación y cobertura` para acercarla al reference image suministrado: copy/contacto/acciones a la izquierda, mapa a la derecha, marcador de marca, tarjeta flotante de cobertura y soporte opcional para Google Maps con estilo personalizado.
 
@@ -88,3 +88,7 @@ La configuración vive en `src/data/contact.ts` y puede complementarse con varia
 ## Estándares activos
 
 Componentes reutilizables, tokens globales, CSS separado por responsabilidad, texto en HTML/CSS, diseño responsive, sin `!important`, sin hacks por resolución, sin screenshots de referencia en el repo y sin assets fuente innecesarios en producción.
+
+## Iteración v30
+
+Se ajustó el tamaño de iconos rasterizados dentro de botones para evitar que `phone` se vea sobredimensionado en Ubicación y FAQ. También se regeneró el marcador de mapa usando el trébol extraído del spritesheet como símbolo central.

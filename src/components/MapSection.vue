@@ -114,8 +114,8 @@ const initializeMap = () => {
     title: 'El Trébol — Tarimas y Empaques Industriales',
     icon: {
       url: markerIconUrl,
-      scaledSize: new window.google.maps.Size(64, 79),
-      anchor: new window.google.maps.Point(32, 79)
+      scaledSize: new window.google.maps.Size(66, 81),
+      anchor: new window.google.maps.Point(33, 81)
     }
   });
 
