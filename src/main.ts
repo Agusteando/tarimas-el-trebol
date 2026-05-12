@@ -4,5 +4,6 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/sections/mission-products.css';
 import './styles/sections/solutions-services.css';
+import './styles/sections/sectors.css';
 
 createApp(App).mount('#app');

@@ -2,26 +2,29 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v21 contact number separation and WhatsApp routing correction.
+Latest implementation pass: v22 sectores reference rebuild and 3x2 scene extraction.
 
 Completed in this pass:
 
-- Set WhatsApp to `722 547 2591` through the centralized contact config. The generated WhatsApp URL now uses `527225472591`.
-- Kept phone calls on `722 537 2605` across header, hero, products, services, final CTA, catalog page, and footer.
-- Updated the hero contact strip so the WhatsApp number links to WhatsApp instead of `tel:` and the phone number remains a `tel:` link.
-- Updated the footer contact block to label `Teléfono` and `WhatsApp` explicitly instead of treating both numbers as phone-call links.
-- Added explicit environment variables: `VITE_WHATSAPP_NUMBER`, `VITE_WHATSAPP_PHONE`, and `VITE_PHONE_CALL_NUMBER`.
-- Preserved backwards-compatible contact aliases in `src/data/contact.ts` while exposing clearer semantic fields: `phoneCallNumber` and `whatsappPhone`.
+- Extracted the six supplied sector scenes from the 3x2 source image using Python projection-based masking against the checker background.
+- Added optimized WebP sector assets under `public/images/industries/`.
+- Rebuilt `Sectores que atendemos` toward the supplied Figma reference: centered heading, 3x2 card grid, image-first cards, soft icon bubbles, and the three-column proof strip.
+- Added `IndustryCard.vue` and `IndustryProofStrip.vue` so the section stays data-driven and easier to maintain.
+- Expanded `IconSymbol.vue` with the required sector/proof icons: food, shovel, ship, users, gear, and clover.
+- Moved the sector-specific styling into `src/styles/sections/sectors.css` and removed the retired overlay-card industry CSS from `base.css`.
+- Removed unused legacy sector SVG placeholders from `public/images/`.
+- Preserved the v21 contact-number split: WhatsApp remains `722 547 2591`; phone calls remain `722 537 2605`.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
-- Contact behavior is now centralized and explicit: WhatsApp and phone-call flows are separate by default.
-- Section foundation: service content remains data-driven and rendered through the existing reusable icon system.
+- Contact behavior is centralized and explicit: WhatsApp and phone-call flows remain separate by default.
+- Section foundation: sectors now follows the same component/data/CSS separation pattern used in products, mission, solutions, and services.
 - Nuestra misión: curved desktop image remains on the supplied warehouse photo.
 - Nuestros productos: concrete texture remains active behind transparent tarima images, with non-wrapping WhatsApp CTAs.
 - Soluciones personalizadas: desktop reference calibration remains in place.
 - Servicios adicionales: full reference structure remains active and height-calibrated for shorter desktop viewports.
+- Sectores que atendemos: reference layout is implemented with extracted WebP scene assets and cleaned legacy CSS/assets.
 - Asset cleanup: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:

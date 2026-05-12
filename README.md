@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.11`.
+Versión actual: `1.2.12`.
 
-Esta iteración separa correctamente los números de contacto: WhatsApp usa `722 547 2591` (`527225472591` para `wa.me`) y las llamadas telefónicas usan `722 537 2605`. Los CTAs de WhatsApp, botones flotantes, footer, hero, header, productos, servicios y llamadas ahora consumen la configuración centralizada desde `src/data/contact.ts`.
+Esta iteración reconstruye `Sectores que atendemos` con el layout de referencia: extracción de las seis escenas desde la imagen 3x2 suministrada, cards en grid 3x2, iconos centralizados, proof strip inferior y CSS dedicado para mantener separación de responsabilidades. Se conserva la separación de contacto definida en la versión anterior: WhatsApp usa `722 547 2591` y llamadas usa `722 537 2605`.
 
 ## Estructura principal
 
@@ -32,7 +32,9 @@ Esta iteración separa correctamente los números de contacto: WhatsApp usa `722
 - `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
 - `src/components/IconSymbol.vue` centraliza todos los símbolos SVG usados por la UI.
 - `src/components/ServicesSection.vue` contiene la composición completa de servicios adicionales.
+- `src/components/IndustryCard.vue` y `src/components/IndustryProofStrip.vue` componen la sección de sectores.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
+- `src/styles/sections/sectors.css` contiene la calibración específica de sectores.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
 - `src/styles/tokens.css` contiene tokens globales.
 - `src/styles/base.css` contiene estilos base y secciones generales.
@@ -48,6 +50,7 @@ Esta iteración separa correctamente los números de contacto: WhatsApp usa `722
 - `public/images/products/concrete-floor-background.webp`
 - `public/images/sections/custom-pallet-solutions.webp`
 - `public/images/services/recoleccion-operativa.webp`
+- `public/images/industries/sector-*.webp`
 - `public/images/products/tarima-*.webp`
 
 No se almacenan screenshots de referencia dentro del proyecto.

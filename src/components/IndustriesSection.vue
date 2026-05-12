@@ -1,27 +1,26 @@
 <script setup lang="ts">
-import SectionHeading from './SectionHeading.vue';
-import { industries } from '../data/industries';
+import IndustryCard from './IndustryCard.vue';
+import IndustryProofStrip from './IndustryProofStrip.vue';
+import { industries, industryProofs } from '../data/industries';
 </script>
 
 <template>
-  <section id="sectores" class="industries section-pad">
-    <div class="container">
-      <SectionHeading
-        eyebrow="Sectores que atendemos"
-        title="Tarimas para compradores industriales y operaciones de alto volumen"
-        description="Servimos a industrias que requieren tarimas resistentes, seguras y listas para operación constante."
-        align="center"
-      />
-      <div class="industry-track" aria-label="Sectores atendidos">
-        <article v-for="industry in industries" :key="industry.id" class="industry-card" data-reveal>
-          <img :src="industry.image" :alt="industry.title" />
-          <div class="industry-card__overlay">
-            <span class="industry-card__icon" aria-hidden="true">{{ industry.icon }}</span>
-            <h3>{{ industry.title }}</h3>
-            <p>{{ industry.description }}</p>
-          </div>
-        </article>
+  <section id="sectores" class="sectors-section" aria-labelledby="sectors-title">
+    <div class="container sectors-section__container">
+      <header class="sectors-section__heading" data-reveal>
+        <p class="eyebrow">Sectores que atendemos</p>
+        <h2 id="sectors-title">Tarimas para compradores industriales y operaciones de alto movimiento</h2>
+        <p>
+          En El Trébol atendemos a empresas con necesidades de almacenamiento, transporte,
+          carga pesada y operación en múltiples industrias.
+        </p>
+      </header>
+
+      <div class="sectors-section__grid" aria-label="Sectores atendidos">
+        <IndustryCard v-for="industry in industries" :key="industry.id" :industry="industry" />
       </div>
+
+      <IndustryProofStrip :items="industryProofs" />
     </div>
   </section>
 </template>

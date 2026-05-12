@@ -73,6 +73,46 @@ defineProps<{ name: string }>();
     <g v-else-if="name === 'dots'">
       <path d="M13 24h.1M24 24h.1M35 24h.1" stroke-width="6" />
     </g>
+
+    <g v-else-if="name === 'food'">
+      <path d="M14 6v16" />
+      <path d="M8 6v8c0 4 2.7 7 6 7s6-3 6-7V6" />
+      <path d="M14 21v21" />
+      <path d="M32 6c4 4 6 9 6 15 0 5-2.4 8-6 8h-3V6h3Z" />
+      <path d="M32 29v13" />
+    </g>
+    <g v-else-if="name === 'shovel'">
+      <path d="m14 35 19-19" />
+      <path d="m29 12 7-7 7 7-7 7-7-7Z" />
+      <path d="m10 39 4-4 6 6-4 4a4.2 4.2 0 0 1-6-6Z" />
+      <path d="m22 27 5 5" />
+    </g>
+    <g v-else-if="name === 'ship'">
+      <path d="M10 26h28l-4 11H14l-4-11Z" />
+      <path d="M17 26V12h14v14" />
+      <path d="M14 18h20" />
+      <path d="M7 38c3 2 6 2 9 0s6-2 9 0 6 2 9 0 5-2 7 0" />
+      <path d="M24 7v5" />
+    </g>
+    <g v-else-if="name === 'users'">
+      <path d="M19 23a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" />
+      <path d="M7 40c1.7-8 6-12 12-12s10.3 4 12 12H7Z" />
+      <path d="M32 23a5.5 5.5 0 1 0 0-11" />
+      <path d="M31 29c4.6.6 7.8 4.4 9 11" />
+    </g>
+    <g v-else-if="name === 'gear'">
+      <path d="M24 30a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
+      <path d="M24 6v6m0 24v6M6 24h6m24 0h6" />
+      <path d="m11.3 11.3 4.2 4.2m17 17 4.2 4.2m0-25.4-4.2 4.2m-17 17-4.2 4.2" />
+      <path d="M18 8.5 16 13m16 22-2-4.5M8.5 30l4.5-2M35 16l4.5 2" />
+    </g>
+    <g v-else-if="name === 'clover'">
+      <path d="M23 22c-6-9-14-7-14-1 0 5 7 6 14 1Z" />
+      <path d="M25 22c6-9 14-7 14-1 0 5-7 6-14 1Z" />
+      <path d="M23 26c-6 9-14 7-14 1 0-5 7-6 14-1Z" />
+      <path d="M25 26c6 9 14 7 14 1 0-5-7-6-14-1Z" />
+      <path d="M24 26v16" />
+    </g>
     <g v-else-if="name === 'quote'">
       <path d="M12 8h18l7 7v25H12V8Z" />
       <path d="M29 8v8h8M18 25h12m-12 7h8" />
