@@ -17,7 +17,7 @@ export const allProducts: Product[] = [
     name: 'Tarima Barrote',
     measure: '1.00 × 1.20 m',
     image: `${imageBase}/tarima-barrote.webp`,
-    summary: 'Opción resistente para cargas pesadas, movimiento constante y uso rudo en operación industrial.',
+    summary: 'La opción más resistente para cargas pesadas y uso rudo en la industria.',
     variants: ['Nueva tratada', 'Usada sin empalme / reciclada', 'De tercera con empalme'],
     highlights: ['Alta resistencia', 'Uso rudo', 'Reutilizable'],
     quoteMessage: 'Hola, quiero cotizar tarima de barrote para mi empresa.'
@@ -27,7 +27,7 @@ export const allProducts: Product[] = [
     name: 'Tarima Tacón',
     measure: '1.00 × 1.20 m',
     image: `${imageBase}/tarima-tacon.webp`,
-    summary: 'Soporte estable para almacenamiento, embarque y transporte seguro de mercancía industrial.',
+    summary: 'Mayor estabilidad y soporte para almacenamiento y transporte seguro.',
     variants: ['Estándar de tercera con empalme', 'Estándar reciclada sin empalmes', 'Estándar nueva'],
     highlights: ['Estabilidad', 'Apilable', 'Duradera'],
     quoteMessage: 'Hola, quiero cotizar tarima de tacón para mi empresa.'
@@ -36,7 +36,7 @@ export const allProducts: Product[] = [
     id: 'tipo-chep',
     name: 'Tarima Tipo Cheep',
     image: `${imageBase}/tarima-tipo-chep.webp`,
-    summary: 'Formato práctico para almacenaje, exportación y operaciones que requieren movimiento ágil.',
+    summary: 'Ligera y práctica para exportación, almacenaje y un solo uso.',
     variants: ['Reciclada', 'Nueva'],
     highlights: ['Ligera', 'Económica', 'Exportación'],
     quoteMessage: 'Hola, quiero cotizar tarima tipo cheep para mi empresa.'

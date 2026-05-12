@@ -129,3 +129,26 @@ npm run build
 ```
 
 Status: build passes.
+
+
+## Iteration v13 notes
+
+This pass tightens the `Nuestra misión` and `Nuestros productos` reference section against the supplied desktop screenshot.
+
+Implemented:
+
+- Added `public/images/products/concrete-floor-background.webp` so the transparent pallet assets render over a concrete floor inside product image frames.
+- Stored the current section target as `public/references/mission-products-target-reference.png`.
+- Recalibrated the desktop header toward the reference: full-width top bar, compact brand lockup, plain phone treatment, and flat yellow WhatsApp CTA.
+- Reduced the mission/reference section height to the intended half-screen composition and preserved the clipped warehouse image plus dark green benefits panel.
+- Reworked product card image frames so the first three cards use the concrete background with the transparent pallet assets instead of a placeholder gradient.
+- Removed unused legacy mission-section CSS selectors from the previous layout pass.
+- Adjusted the first three homepage product descriptions to match the reference copy more closely.
+
+Validation:
+
+```bash
+npm run build
+```
+
+Status: build passes.
