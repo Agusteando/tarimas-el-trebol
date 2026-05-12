@@ -22,7 +22,7 @@ import { additionalServices, serviceProofs } from '../data/services';
             <IconSymbol name="whatsapp" />
             <span>Agendar recolección por WhatsApp</span>
           </a>
-          <a class="additional-services__secondary" :href="`tel:+52${contact.phonePrimary}`">
+          <a class="additional-services__secondary" :href="`tel:+52${contact.phoneCallNumber}`">
             <IconSymbol name="calendar" />
             <span>Agendar por teléfono</span>
           </a>
@@ -80,9 +80,9 @@ import { additionalServices, serviceProofs } from '../data/services';
           target="_blank"
           rel="noreferrer"
         >Hablemos de tu recolección</a>
-        <a class="additional-services__phone" :href="`tel:+52${contact.phonePrimary}`">
+        <a class="additional-services__phone" :href="`tel:+52${contact.phoneCallNumber}`">
           <IconSymbol name="phone" />
-          <span>{{ formatPhone(contact.phonePrimary) }}</span>
+          <span>{{ formatPhone(contact.phoneCallNumber) }}</span>
         </a>
       </div>
     </div>

@@ -32,8 +32,8 @@ const handleHomeClick = (event: MouseEvent) => {
             <IconSymbol name="whatsapp" />
             Cotizar catálogo completo
           </a>
-          <a class="button products-page__phone" :href="`tel:+52${contact.phonePrimary}`">
-            Llamar {{ formatPhone(contact.phonePrimary) }}
+          <a class="button products-page__phone" :href="`tel:+52${contact.phoneCallNumber}`">
+            Llamar {{ formatPhone(contact.phoneCallNumber) }}
           </a>
         </div>
       </div>

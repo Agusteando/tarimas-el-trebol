@@ -1,11 +1,16 @@
+const phoneCallNumber = import.meta.env.VITE_PHONE_CALL_NUMBER || import.meta.env.VITE_PHONE_PRIMARY || '7225372605';
+const whatsappPhone = import.meta.env.VITE_WHATSAPP_PHONE || import.meta.env.VITE_PHONE_SECONDARY || '7225472591';
+
 export const contact = {
   brandName: 'El Trébol',
   legalName: 'MOAN SA de CV',
   domain: 'tarimaseltrebol.mx',
-  phonePrimary: import.meta.env.VITE_PHONE_PRIMARY || '7225372605',
-  phoneSecondary: import.meta.env.VITE_PHONE_SECONDARY || '7225472591',
+  phoneCallNumber,
+  whatsappPhone,
+  phonePrimary: phoneCallNumber,
+  phoneSecondary: whatsappPhone,
   email: import.meta.env.VITE_EMAIL || 'eltrebol.tarimaindustrial@gmail.com',
-  whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || '527225372605',
+  whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || `52${whatsappPhone}`,
   defaultWhatsappMessage:
     'Hola, quiero solicitar una cotización de tarimas industriales para mi empresa.',
   mapLat: import.meta.env.VITE_MAP_LAT || '',

@@ -58,9 +58,11 @@ const heroProof = [
         <div class="hero__contact" aria-label="Datos rápidos de contacto">
           <span>WhatsApp</span>
           <i aria-hidden="true">•</i>
-          <a :href="`tel:+52${contact.phonePrimary}`">{{ formatPhone(contact.phonePrimary) }}</a>
+          <a :href="getWhatsAppLink()" target="_blank" rel="noreferrer">{{ formatPhone(contact.whatsappPhone) }}</a>
           <i aria-hidden="true">•</i>
-          <a :href="`tel:+52${contact.phoneSecondary}`">{{ formatPhone(contact.phoneSecondary) }}</a>
+          <span>Teléfono</span>
+          <i aria-hidden="true">•</i>
+          <a :href="`tel:+52${contact.phoneCallNumber}`">{{ formatPhone(contact.phoneCallNumber) }}</a>
         </div>
       </div>
 

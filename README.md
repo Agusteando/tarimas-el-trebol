@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.10`.
+Versión actual: `1.2.11`.
 
-Esta iteración corrige la escala desktop de `Servicios adicionales`: la composición completa de la referencia ahora se compacta correctamente en viewports de menor altura sin romper la estructura base, manteniendo el hero oscuro, CTA de WhatsApp, cinco tarjetas, imagen operativa, panel de beneficios y franja inferior de contacto visibles como un sistema.
+Esta iteración separa correctamente los números de contacto: WhatsApp usa `722 547 2591` (`527225472591` para `wa.me`) y las llamadas telefónicas usan `722 537 2605`. Los CTAs de WhatsApp, botones flotantes, footer, hero, header, productos, servicios y llamadas ahora consumen la configuración centralizada desde `src/data/contact.ts`.
 
 ## Estructura principal
 
@@ -73,9 +73,12 @@ El home conserva tres productos destacados y el botón `Ver todas las tarimas` n
 
 ## Google Maps
 
-Configura coordenadas en `.env`:
+Configura contacto y coordenadas en `.env`:
 
 ```bash
+VITE_WHATSAPP_NUMBER=527225472591
+VITE_WHATSAPP_PHONE=7225472591
+VITE_PHONE_CALL_NUMBER=7225372605
 VITE_MAP_LAT=19.000000
 VITE_MAP_LNG=-99.000000
 ```

@@ -16,8 +16,8 @@ import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
         <a class="button button--accent" :href="getWhatsAppLink()" target="_blank" rel="noreferrer">
           Cotizar por WhatsApp
         </a>
-        <a class="button button--ghost-dark" :href="`tel:+52${contact.phonePrimary}`">
-          Llamar {{ formatPhone(contact.phonePrimary) }}
+        <a class="button button--ghost-dark" :href="`tel:+52${contact.phoneCallNumber}`">
+          Llamar {{ formatPhone(contact.phoneCallNumber) }}
         </a>
         <a class="final-cta__email" :href="`mailto:${contact.email}`">{{ contact.email }}</a>
       </div>

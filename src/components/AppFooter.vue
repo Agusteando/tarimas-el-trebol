@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import BrandLogo from './BrandLogo.vue';
-import { contact, formatPhone } from '../data/contact';
+import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
 </script>
 
 <template>
@@ -14,8 +14,8 @@ import { contact, formatPhone } from '../data/contact';
       </div>
       <div>
         <h2>Contacto</h2>
-        <a :href="`tel:+52${contact.phonePrimary}`">{{ formatPhone(contact.phonePrimary) }}</a>
-        <a :href="`tel:+52${contact.phoneSecondary}`">{{ formatPhone(contact.phoneSecondary) }}</a>
+        <a :href="`tel:+52${contact.phoneCallNumber}`">Teléfono: {{ formatPhone(contact.phoneCallNumber) }}</a>
+        <a :href="getWhatsAppLink()" target="_blank" rel="noreferrer">WhatsApp: {{ formatPhone(contact.whatsappPhone) }}</a>
         <a :href="`mailto:${contact.email}`">{{ contact.email }}</a>
       </div>
       <div>
