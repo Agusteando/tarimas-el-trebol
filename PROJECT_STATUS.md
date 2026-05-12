@@ -2,40 +2,31 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v27 ubicación y cobertura reference rebuild.
+Latest implementation pass: v28 extracted sprite icon integration.
 
 Completed in this pass:
 
-- Rebuilt `Ubicación y cobertura` toward the supplied reference: left copy/contact/actions, right map card, custom marker, and floating coverage panel.
-- Added the production coordinates in `.env`, `.env.example`, and centralized contact config: `19.2985595,-99.6898324`.
-- Added the supplied Google Maps link to centralized contact config: `https://maps.app.goo.gl/CaAWkfqQoaVnfPph8`.
-- Added optional `VITE_GOOGLE_MAPS_API_KEY` support. When a key is present, the section initializes a styled Google Map with custom desaturated/green industrial styling and a branded marker.
-- Added a polished no-key fallback map visual so the section still matches the reference direction without requiring an API key during local review.
-- Added `src/styles/sections/location.css` and removed retired `map-section` styles from `base.css` to keep responsibilities cleaner.
-- Added missing reusable icons for `mail`, `building`, `globe`, `person`, and `people` in `IconSymbol.vue`.
-- Reordered the home flow so `Ubicación y cobertura` transitions into `Ventajas competitivas`, matching the new reference preview.
-- Preserved centralized contact behavior: WhatsApp remains `722 547 2591`; phone calls remain `722 537 2605`.
+- Extracted and tightly cropped 25 icons from the user-provided transparent spritesheet.
+- Added the extracted icon assets under `public/images/icons/sprite/` for direct reuse throughout the app.
+- Added `src/data/iconSprites.ts` as the centralized sprite-icon registry.
+- Reworked `src/components/IconSymbol.vue` so it now resolves raster sprite assets first and only falls back to SVG for missing icons.
+- Replaced the path-based implementation for the available shared icons with the extracted sprite versions across the app automatically through the centralized icon component.
+- Added alias coverage so `people` resolves to the extracted `users` sprite.
+- Preserved vector fallbacks for icons not present in the sprite sheet: `whatsapp`, `mail`, `building`, `globe`, `person`, `truck`, and `weight`.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
 - Contact behavior is centralized and explicit: WhatsApp and phone-call flows remain separate by default.
-- Location behavior is now centralized and environment-driven through `src/data/contact.ts` and `.env`.
-- Section foundation: ubicación now follows the same component/data/CSS separation pattern used in products, mission, solutions, services, sectors, delivery, FAQ, and ventajas.
-- Nuestra misión: curved desktop image remains on the supplied warehouse photo.
-- Nuestros productos: concrete texture remains active behind transparent tarima images, with non-wrapping WhatsApp CTAs.
-- Soluciones personalizadas: desktop reference calibration remains in place.
-- Servicios adicionales: full reference structure remains active and height-calibrated for shorter desktop viewports.
-- Sectores que atendemos: reference layout remains implemented with extracted WebP scene assets.
-- Entrega confiable / Proceso simple: reference layout remains implemented with the supplied truck photo and dedicated CSS.
-- Preguntas frecuentes: accordion fix and desktop sizing remain active.
-- Ventajas competitivas: desktop sizing remains tightened and now follows the location section in the home flow.
-- Asset cleanup: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
+- Section foundation: mission, products, solutions, services, sectors, delivery/process, FAQ, location, and ventajas all remain componentized with dedicated data and section CSS where needed.
+- Ubicación y cobertura remains wired to the supplied map link and coordinates via `.env`.
+- Shared icon system is now partially asset-driven instead of fully path-driven, using the supplied visual language as the primary source.
+- Asset cleanup remains intact: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
 
 1. Product spreadsheet with all final tarima types, variants, measures, and capacities.
-2. Google Maps API key if the production site should render the fully styled live Google Map instead of the built-in styled fallback.
+2. Final latitude/longitude for Google Maps if coordinates change in the future.
 3. Any real product photos from the client, if available.
 4. Final service area/city/cobertura copy.
 5. Final product detail behavior after the catalog pass: keep card anchors, add modal, or create individual product detail sections.

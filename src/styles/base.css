@@ -1050,6 +1050,12 @@ button:focus-visible {
   stroke-linejoin: round;
 }
 
+.icon-symbol--sprite {
+  fill: none;
+  stroke: none;
+  object-fit: contain;
+}
+
 .icon-bubble {
   --icon-bubble-size: 48px;
   --icon-symbol-size: 26px;
