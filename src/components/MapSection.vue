@@ -1,20 +1,28 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import IconBubble from './IconBubble.vue';
 import IconSymbol from './IconSymbol.vue';
 import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
 
 declare global {
   interface Window {
-    google?: any;
-    initElTrebolMap?: () => void;
-    gm_authFailure?: () => void;
+    L?: any;
   }
 }
 
 const mapElement = ref<HTMLElement | null>(null);
 const mapLoaded = ref(false);
 const mapLoadFailed = ref(false);
+
+const LEAFLET_SCRIPT_ID = 'el-trebol-leaflet-js';
+const LEAFLET_STYLE_ID = 'el-trebol-leaflet-css';
+const LEAFLET_SCRIPT_SRC = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+const LEAFLET_STYLE_HREF = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+const markerIconUrl = '/images/icons/map-marker-trebol.png';
+
+let mapInstance: any = null;
+let markerInstance: any = null;
+let fallbackTimer: number | undefined;
 
 const mapCoordinates = computed(() => ({
   lat: Number(contact.mapLat),
@@ -25,8 +33,6 @@ const hasMapCoordinates = computed(() =>
   Number.isFinite(mapCoordinates.value.lat) && Number.isFinite(mapCoordinates.value.lng)
 );
 
-const shouldUseGoogleMap = computed(() => Boolean(contact.googleMapsApiKey && hasMapCoordinates.value));
-
 const coverageItems = [
   {
     icon: 'users',
@@ -34,7 +40,7 @@ const coverageItems = [
     text: 'Soluciones para empresas industriales y compradores mayoristas.'
   },
   {
-    icon: 'truck',
+    icon: 'delivery-clock',
     title: 'Entregas ágiles',
     text: 'Logística eficiente desde Toluca y zona metropolitana.'
   },
@@ -52,8 +58,8 @@ const contactCards = [
     href: `tel:+52${contact.phoneCallNumber}`
   },
   {
-    icon: 'phone',
-    label: `Tel. ${formatPhone(contact.whatsappPhone)}`,
+    icon: 'whatsapp',
+    label: `WhatsApp ${formatPhone(contact.whatsappPhone)}`,
     href: getWhatsAppLink('Hola, quiero información sobre cobertura y entregas de tarimas industriales.')
   },
   {
@@ -69,124 +75,133 @@ const serviceAreaChips = [
   { icon: 'truck', label: 'Envíos a todo México' }
 ];
 
-const googleMapStyles = [
-  { elementType: 'geometry', stylers: [{ color: '#f5f5ef' }] },
-  { elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#39433d' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#fffdf7' }, { weight: 3 }] },
-  { featureType: 'administrative', elementType: 'geometry.stroke', stylers: [{ color: '#d8ded3' }] },
-  { featureType: 'landscape.man_made', elementType: 'geometry', stylers: [{ color: '#f7f7f2' }] },
-  { featureType: 'poi', stylers: [{ visibility: 'off' }] },
-  { featureType: 'poi.park', elementType: 'geometry', stylers: [{ color: '#e5f1e1' }, { visibility: 'on' }] },
-  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#d5d9d2' }] },
-  { featureType: 'road', elementType: 'geometry.stroke', stylers: [{ color: '#ffffff' }] },
-  { featureType: 'road.arterial', elementType: 'geometry', stylers: [{ color: '#cfd5d0' }] },
-  { featureType: 'road.highway', elementType: 'geometry', stylers: [{ color: '#c7cdd0' }] },
-  { featureType: 'road.highway', elementType: 'geometry.stroke', stylers: [{ color: '#f8f8f4' }] },
-  { featureType: 'road.highway', elementType: 'labels.text.fill', stylers: [{ color: '#21362c' }] },
-  { featureType: 'transit', stylers: [{ visibility: 'off' }] },
-  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#dfe9e5' }] }
-];
+const loadLeafletCss = () => {
+  if (document.getElementById(LEAFLET_STYLE_ID)) return;
 
-const markerIconUrl = '/images/icons/map-marker-trebol.png';
+  const link = document.createElement('link');
+  link.id = LEAFLET_STYLE_ID;
+  link.rel = 'stylesheet';
+  link.href = LEAFLET_STYLE_HREF;
+  link.integrity = 'sha256-p4NxAoJBhIINfQnn5Z8wVbTuR5kVQK4Ck3j2haagFlk=';
+  link.crossOrigin = '';
+  document.head.appendChild(link);
+};
 
+const loadLeafletScript = () =>
+  new Promise<void>((resolve, reject) => {
+    if (window.L) {
+      resolve();
+      return;
+    }
 
-let mapInstance: any = null;
-let markerInstance: any = null;
-let cleanupCallback = false;
-let fallbackTimer: number | undefined;
+    const existing = document.getElementById(LEAFLET_SCRIPT_ID) as HTMLScriptElement | null;
 
-const initializeMap = () => {
-  if (!mapElement.value || !window.google || !hasMapCoordinates.value) return;
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener('error', () => reject(new Error('Leaflet failed to load')), { once: true });
+      return;
+    }
 
-  const center = mapCoordinates.value;
+    const script = document.createElement('script');
+    script.id = LEAFLET_SCRIPT_ID;
+    script.src = LEAFLET_SCRIPT_SRC;
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.async = true;
+    script.defer = true;
+    script.addEventListener('load', () => resolve(), { once: true });
+    script.addEventListener('error', () => reject(new Error('Leaflet failed to load')), { once: true });
+    document.head.appendChild(script);
+  });
+
+const initializeOpenStreetMap = async () => {
+  if (!hasMapCoordinates.value || !mapElement.value) {
+    mapLoadFailed.value = true;
+    return;
+  }
 
   try {
-    mapInstance = new window.google.maps.Map(mapElement.value, {
-    center,
-    zoom: contact.mapZoom,
-    disableDefaultUI: true,
-    clickableIcons: false,
-    gestureHandling: 'cooperative',
-    styles: googleMapStyles,
-      backgroundColor: '#f7f8f2'
+    loadLeafletCss();
+    await loadLeafletScript();
+    await nextTick();
+
+    if (!window.L || !mapElement.value) {
+      mapLoadFailed.value = true;
+      return;
+    }
+
+    const L = window.L;
+    const center = [mapCoordinates.value.lat, mapCoordinates.value.lng];
+
+    mapInstance = L.map(mapElement.value, {
+      center,
+      zoom: contact.mapZoom,
+      zoomControl: false,
+      attributionControl: true,
+      scrollWheelZoom: false,
+      doubleClickZoom: true,
+      dragging: true,
+      tap: true
     });
 
-    markerInstance = new window.google.maps.Marker({
-    position: center,
-    map: mapInstance,
-    title: 'El Trébol — Tarimas y Empaques Industriales',
-    icon: {
-      url: markerIconUrl,
-      scaledSize: new window.google.maps.Size(66, 81),
-      anchor: new window.google.maps.Point(33, 81)
-      }
+    L.tileLayer(contact.openStreetMapTileUrl, {
+      attribution: contact.openStreetMapAttribution,
+      maxZoom: 19,
+      minZoom: 5,
+      className: 'location-section__leaflet-tiles'
+    }).addTo(mapInstance);
+
+    const customMarker = L.icon({
+      iconUrl: markerIconUrl,
+      iconSize: [72, 88],
+      iconAnchor: [36, 88],
+      popupAnchor: [0, -78],
+      className: 'location-section__leaflet-marker'
     });
 
-    mapLoaded.value = true;
+    markerInstance = L.marker(center, {
+      icon: customMarker,
+      title: 'El Trébol — Tarimas y Empaques Industriales'
+    }).addTo(mapInstance);
 
+    markerInstance.bindPopup('<strong>El Trébol</strong><br>Tarimas y Empaques Industriales', {
+      closeButton: false,
+      autoPan: false,
+      className: 'location-section__leaflet-popup'
+    });
+
+    mapInstance.whenReady(() => {
+      mapLoaded.value = true;
+      window.setTimeout(() => mapInstance?.invalidateSize?.(), 120);
+    });
+  } catch {
+    mapLoadFailed.value = true;
+  } finally {
     if (fallbackTimer) {
       window.clearTimeout(fallbackTimer);
       fallbackTimer = undefined;
     }
-  } catch {
-    mapLoadFailed.value = true;
   }
 };
 
-const loadGoogleMap = () => {
-  if (!shouldUseGoogleMap.value) return;
-
-  if (window.google?.maps) {
-    initializeMap();
-    return;
-  }
-
-  const existingScript = document.getElementById('el-trebol-google-maps');
-  window.initElTrebolMap = initializeMap;
-  window.gm_authFailure = () => {
-    mapLoadFailed.value = true;
-  };
-  cleanupCallback = true;
-
+onMounted(() => {
   fallbackTimer = window.setTimeout(() => {
-    if (!mapLoaded.value) {
-      mapLoadFailed.value = true;
-    }
-  }, 4500);
+    if (!mapLoaded.value) mapLoadFailed.value = true;
+  }, 6000);
 
-  if (existingScript) return;
-
-  const script = document.createElement('script');
-  script.id = 'el-trebol-google-maps';
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(contact.googleMapsApiKey)}&callback=initElTrebolMap`;
-  script.async = true;
-  script.defer = true;
-  script.onerror = () => {
-    mapLoadFailed.value = true;
-  };
-  document.head.appendChild(script);
-};
-
-onMounted(loadGoogleMap);
+  initializeOpenStreetMap();
+});
 
 onBeforeUnmount(() => {
-  markerInstance?.setMap?.(null);
-  markerInstance = null;
-  mapInstance = null;
-
   if (fallbackTimer) {
     window.clearTimeout(fallbackTimer);
     fallbackTimer = undefined;
   }
 
-  if (cleanupCallback && window.initElTrebolMap === initializeMap) {
-    delete window.initElTrebolMap;
-  }
-
-  if (cleanupCallback) {
-    delete window.gm_authFailure;
-  }
+  markerInstance?.remove?.();
+  markerInstance = null;
+  mapInstance?.remove?.();
+  mapInstance = null;
 });
 </script>
 
@@ -233,9 +248,16 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="location-section__map-card" data-reveal>
-        <div v-if="shouldUseGoogleMap && !mapLoadFailed" ref="mapElement" class="location-section__google-map" :class="{ 'location-section__google-map--loaded': mapLoaded }"></div>
+        <div
+          v-show="!mapLoadFailed"
+          ref="mapElement"
+          class="location-section__open-map"
+          :class="{ 'location-section__open-map--loaded': mapLoaded }"
+          aria-label="Mapa interactivo de ubicación de El Trébol en Toluca"
+        ></div>
+
         <a
-          v-else
+          v-if="mapLoadFailed"
           class="location-map-visual"
           :href="contact.googleMapsLink"
           target="_blank"
@@ -265,6 +287,16 @@ onBeforeUnmount(() => {
           <span class="location-map-visual__marker">
             <img src="/images/icons/map-marker-trebol.png" alt="" loading="lazy" />
           </span>
+        </a>
+
+        <a
+          class="location-section__map-link"
+          :href="contact.googleMapsLink"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <IconSymbol name="pin" />
+          <span>Abrir en Google Maps</span>
         </a>
 
         <aside class="location-section__coverage-card" aria-label="Cobertura operativa">

@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.21`.
+Versión actual: `1.2.22`.
 
 Esta iteración reconstruye la sección de `Ubicación y cobertura` para acercarla al reference image suministrado: copy/contacto/acciones a la izquierda, mapa a la derecha, marcador de marca, tarjeta flotante de cobertura y soporte opcional para Google Maps con estilo personalizado.
 
@@ -92,3 +92,17 @@ Componentes reutilizables, tokens globales, CSS separado por responsabilidad, te
 ## Iteración v30
 
 Se ajustó el tamaño de iconos rasterizados dentro de botones para evitar que `phone` se vea sobredimensionado en Ubicación y FAQ. También se regeneró el marcador de mapa usando el trébol extraído del spritesheet como símbolo central.
+
+## Mapa de ubicación
+
+`Ubicación y cobertura` usa OpenStreetMap mediante Leaflet, sin API key de Google Maps. El enlace corto de Google Maps se conserva como acción externa para abrir la ubicación en Google Maps.
+
+Variables relevantes:
+
+```bash
+VITE_MAP_LAT=19.2985595
+VITE_MAP_LNG=-99.6898324
+VITE_MAP_ZOOM=13
+VITE_GOOGLE_MAPS_LINK=https://maps.app.goo.gl/CaAWkfqQoaVnfPph8
+VITE_OPENSTREETMAP_TILE_URL=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+```

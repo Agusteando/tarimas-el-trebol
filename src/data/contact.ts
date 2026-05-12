@@ -17,7 +17,11 @@ export const contact = {
   mapLng: import.meta.env.VITE_MAP_LNG || '-99.6898324',
   mapZoom: Number(import.meta.env.VITE_MAP_ZOOM || 13),
   googleMapsLink: import.meta.env.VITE_GOOGLE_MAPS_LINK || 'https://maps.app.goo.gl/CaAWkfqQoaVnfPph8',
-  googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
+  openStreetMapTileUrl:
+    import.meta.env.VITE_OPENSTREETMAP_TILE_URL || 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  openStreetMapAttribution:
+    import.meta.env.VITE_OPENSTREETMAP_ATTRIBUTION ||
+    '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>'
 };
 
 export const formatPhone = (phone: string) =>

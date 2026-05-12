@@ -2,29 +2,31 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v31 ubicación viewport fitting and Google Maps fallback guard.
-
+Latest implementation pass: v32 OpenStreetMap/Leaflet location rebuild.
 
 Completed in this pass:
 
-- Tightened `Ubicación y cobertura` desktop height calibration for shorter browser viewports so the section fits within the initial visible page area.
-- Reduced the short-viewport vertical stack proportionally: heading scale, lead spacing, contact cards, chips, buttons, map height, coverage card, and marker size.
-- Added a Google Maps auth/load fallback guard using `gm_authFailure`, script error handling, and a load timeout so invalid or misconfigured API keys fall back to the styled local map instead of leaving the Google error modal over the section.
-- Preserved the current trébol marker asset and centralized contact behavior.
+- Removed the Google Maps JavaScript API dependency from `Ubicación y cobertura`.
+- Implemented an API-key-free OpenStreetMap map through Leaflet loaded at runtime from CDN.
+- Kept the supplied Google Maps short link as a clear `Abrir en Google Maps` action instead of using Google Maps JS.
+- Preserved the custom trébol map marker asset and wired it into the Leaflet marker.
+- Added OpenStreetMap tile configuration to centralized contact config and `.env` / `.env.example`.
+- Rebalanced the `Ubicación y cobertura` desktop grid so the section uses horizontal space more correctly and centers the composition.
+- Tightened height-aware desktop rules so the location section fits better within the first viewport on shorter desktop browser windows.
+- Kept the styled local fallback map for cases where the Leaflet CDN or OSM tiles fail to load.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
-- Contact behavior is centralized and explicit: WhatsApp and phone-call flows remain separate by default.
-- Section foundation: mission, products, solutions, services, sectors, delivery/process, FAQ, location, and ventajas all remain componentized with dedicated data and section CSS where needed.
-- Ubicación y cobertura now has the strongest viewport-fit calibration and a trebol marker that works in both real Google Maps and the no-key fallback.
-- Shared icon system is asset-driven for all icons available in the supplied spritesheet, with minimal SVG fallback only where the sheet lacks an equivalent.
+- Contact behavior remains centralized and explicit: WhatsApp is `722 547 2591`; phone calls are `722 537 2605`.
+- `Ubicación y cobertura` now uses OpenStreetMap/Leaflet and does not need a Google Maps API key.
+- The Google Maps link remains available as an outbound link for navigation.
+- Shared icon system remains sprite-driven where icons exist in the supplied icon sheet.
 - Asset cleanup remains intact: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
 
 1. Product spreadsheet with all final tarima types, variants, measures, and capacities.
-2. Final latitude/longitude for Google Maps if coordinates change in the future.
-3. Any real product photos from the client, if available.
-4. Final service area/city/cobertura copy.
-5. Final product detail behavior after the catalog pass: keep card anchors, add modal, or create individual product detail sections.
+2. Any real product photos from the client, if available.
+3. Final service area/city/cobertura copy.
+4. Final product detail behavior after the catalog pass: keep card anchors, add modal, or create individual product detail sections.
