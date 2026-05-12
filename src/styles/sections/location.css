@@ -1,5 +1,10 @@
 .location-section {
-  padding-block: 70px 58px;
+  --location-map-height: clamp(600px, calc(100svh - 230px), 715px);
+
+  min-height: calc(100svh - var(--header-height, 88px));
+  display: grid;
+  align-items: center;
+  padding-block: clamp(42px, 6svh, 70px) clamp(34px, 5svh, 58px);
   background:
     radial-gradient(circle at 8% 80%, rgba(47, 125, 70, 0.06), transparent 18%),
     linear-gradient(180deg, #ffffff 0%, #fbfcf9 100%);
@@ -164,7 +169,8 @@
 
 .location-section__map-card {
   position: relative;
-  min-height: 715px;
+  height: var(--location-map-height);
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(47, 125, 70, 0.18);
   border-radius: 20px;
@@ -356,43 +362,21 @@
 .location-map-visual__marker {
   position: absolute;
   z-index: 4;
-  top: 34%;
-  left: 49.6%;
-  display: grid;
-  width: 66px;
-  height: 86px;
-  place-items: start center;
-  padding-top: 16px;
-  color: var(--color-white);
+  top: 34.4%;
+  left: 50.2%;
+  display: block;
+  width: 74px;
+  height: 92px;
   filter: drop-shadow(0 18px 16px rgba(16, 32, 20, 0.24));
   transform: translate(-50%, -50%);
 }
 
-.location-map-visual__marker::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: 999px 999px 999px 0;
-  background: linear-gradient(180deg, #16824b, #075b30);
-  content: "";
-  transform: rotate(-45deg);
-}
-
-.location-map-visual__marker::after {
-  position: absolute;
-  bottom: -15px;
-  left: 18px;
-  width: 48px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(16, 32, 20, 0.12);
-  content: "";
-}
-
-.location-map-visual__marker .icon-symbol {
-  width: 36px;
-  height: 36px;
-  stroke-width: 2.4;
+.location-map-visual__marker img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .location-section__coverage-card {
@@ -454,7 +438,9 @@
 
 @media (min-width: 1024px) and (max-height: 920px) {
   .location-section {
-    padding-block: 48px 38px;
+    --location-map-height: clamp(548px, calc(100svh - 208px), 620px);
+
+    padding-block: 38px 32px;
   }
 
   .location-section__grid {
@@ -505,7 +491,8 @@
   }
 
   .location-section__map-card {
-    min-height: 620px;
+    height: var(--location-map-height);
+    min-height: 0;
   }
 
   .location-section__coverage-card {
@@ -527,6 +514,7 @@
   }
 
   .location-section__map-card {
+    height: auto;
     min-height: 560px;
   }
 }
@@ -554,6 +542,7 @@
   }
 
   .location-section__map-card {
+    height: auto;
     min-height: 540px;
     border-radius: 18px;
   }

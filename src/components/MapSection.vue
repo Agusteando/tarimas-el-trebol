@@ -87,14 +87,8 @@ const googleMapStyles = [
   { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#dfe9e5' }] }
 ];
 
-const markerSvg = encodeURIComponent(`
-  <svg xmlns="http://www.w3.org/2000/svg" width="80" height="96" viewBox="0 0 80 96">
-    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#082d19" flood-opacity="0.24"/></filter>
-    <path filter="url(#s)" d="M40 90S17 62.5 17 39.5C17 26.5 27.3 16 40 16s23 10.5 23 23.5C63 62.5 40 90 40 90Z" fill="#0b6939"/>
-    <circle cx="40" cy="39" r="18" fill="#fff"/>
-    <path d="M38 36c-9-12-19-7-16 2 2 7 10 5 16-2Zm4 0c9-12 19-7 16 2-2 7-10 5-16-2Zm-4 6c-9 12-19 7-16-2 2-7 10-5 16 2Zm4 0c9 12 19 7 16-2-2-7-10-5-16 2Zm-2 1v13" fill="none" stroke="#0b6939" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-`);
+const markerIconUrl = '/images/icons/map-marker-trebol.png';
+
 
 let mapInstance: any = null;
 let markerInstance: any = null;
@@ -119,9 +113,9 @@ const initializeMap = () => {
     map: mapInstance,
     title: 'El Trébol — Tarimas y Empaques Industriales',
     icon: {
-      url: `data:image/svg+xml;charset=UTF-8,${markerSvg}`,
-      scaledSize: new window.google.maps.Size(64, 77),
-      anchor: new window.google.maps.Point(32, 77)
+      url: markerIconUrl,
+      scaledSize: new window.google.maps.Size(64, 79),
+      anchor: new window.google.maps.Point(32, 79)
     }
   });
 
@@ -239,7 +233,7 @@ onBeforeUnmount(() => {
           <span class="location-map-visual__label location-map-visual__label--metepec">Metepec</span>
           <span class="location-map-visual__label location-map-visual__label--san-mateo">San Mateo<br />Atenco</span>
           <span class="location-map-visual__marker">
-            <IconSymbol name="clover" />
+            <img src="/images/icons/map-marker-trebol.png" alt="" loading="lazy" />
           </span>
         </a>
 

@@ -1054,6 +1054,9 @@ button:focus-visible {
   fill: none;
   stroke: none;
   object-fit: contain;
+  object-position: center;
+  transform: scale(var(--icon-sprite-scale, 1.35));
+  transform-origin: center;
 }
 
 .icon-bubble {

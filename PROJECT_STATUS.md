@@ -2,25 +2,25 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v28 extracted sprite icon integration.
+Latest implementation pass: v29 icon normalization and location viewport calibration.
 
 Completed in this pass:
 
-- Extracted and tightly cropped 25 icons from the user-provided transparent spritesheet.
-- Added the extracted icon assets under `public/images/icons/sprite/` for direct reuse throughout the app.
-- Added `src/data/iconSprites.ts` as the centralized sprite-icon registry.
-- Reworked `src/components/IconSymbol.vue` so it now resolves raster sprite assets first and only falls back to SVG for missing icons.
-- Replaced the path-based implementation for the available shared icons with the extracted sprite versions across the app automatically through the centralized icon component.
-- Added alias coverage so `people` resolves to the extracted `users` sprite.
-- Preserved vector fallbacks for icons not present in the sprite sheet: `whatsapp`, `mail`, `building`, `globe`, `person`, `truck`, and `weight`.
+- Re-extracted and normalized all 25 icons from the transparent spritesheet using alpha-based trimming, hidden-guide-pixel cleanup, and final visible-bounds centering.
+- Replaced the previous imperfect sprite outputs with consistently centered 128×128 PNG icons under `public/images/icons/sprite/`.
+- Tuned sprite rendering in the shared `.icon-symbol--sprite` path so icons read closer to the original SVG scale inside bubbles, chips, cards, and buttons.
+- Added a dedicated branded map marker asset at `public/images/icons/map-marker-trebol.png` with a clear trebol mark.
+- Updated `MapSection.vue` so both Google Maps and the fallback map use the branded trebol marker asset instead of a CSS-drawn marker.
+- Recalibrated `Ubicación y cobertura` with desktop `svh`-based map height and padding so the section fits better inside the first viewport while preserving the reference layout.
+- Kept the supplied map coordinates and Google Maps link in `.env` / contact config.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
 - Contact behavior is centralized and explicit: WhatsApp and phone-call flows remain separate by default.
 - Section foundation: mission, products, solutions, services, sectors, delivery/process, FAQ, location, and ventajas all remain componentized with dedicated data and section CSS where needed.
-- Ubicación y cobertura remains wired to the supplied map link and coordinates via `.env`.
-- Shared icon system is now partially asset-driven instead of fully path-driven, using the supplied visual language as the primary source.
+- Ubicación y cobertura now has the strongest viewport-fit calibration and a trebol marker that works in both real Google Maps and the no-key fallback.
+- Shared icon system is asset-driven for all icons available in the supplied spritesheet, with minimal SVG fallback only where the sheet lacks an equivalent.
 - Asset cleanup remains intact: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
