@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.7`.
+Versión actual: `1.2.8`.
 
-Esta iteración corrige el bug de `Nuestra misión` donde el grid fijo podía desbordarse hacia la izquierda en anchos intermedios. La composición ahora usa columnas fluidas dentro del contenedor, mantiene altura controlada en desktop, conserva el solape limpio entre imagen curva y panel verde, y centraliza el uso de `calc()` en contenedores para evitar reglas inválidas o frágiles.
+Esta iteración actualiza la imagen curva de `Nuestra misión` con la nueva foto suministrada y recalibra `Soluciones a la medida` para acercarse mucho más al layout de referencia en desktop: escala tipográfica, proporciones del grid, chips, CTAs, bloque de pruebas, tarjeta flotante y transición con `Servicios adicionales`.
 
 ## Estructura principal
 
@@ -29,7 +29,7 @@ Esta iteración corrige el bug de `Nuestra misión` donde el grid fijo podía de
 - `src/components/MissionMediaShape.vue` controla la curva visual de la imagen de misión.
 - `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
 - `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
-- `src/components/IconBubble.vue` centraliza burbujas de iconos para evitar ajustes por sección.
+- `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
 - `src/styles/tokens.css` contiene tokens globales.
@@ -42,6 +42,7 @@ Esta iteración corrige el bug de `Nuestra misión` donde el grid fijo podía de
 - `public/images/hero/green-industrial-pattern.webp`
 - `public/images/hero/pallets-warehouse-stack.webp`
 - `public/images/hero/wood-plank-texture.webp`
+- `public/images/mission/mission-curved-warehouse.webp`
 - `public/images/products/concrete-floor-background.webp`
 - `public/images/sections/custom-pallet-solutions.webp`
 - `public/images/products/tarima-*.webp`

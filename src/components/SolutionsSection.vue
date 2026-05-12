@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import IconBubble from './IconBubble.vue';
+import IconSymbol from './IconSymbol.vue';
 import { getWhatsAppLink } from '../data/contact';
 import { solutionChips, solutionFeatures, solutionProofs } from '../data/services';
 </script>
@@ -17,25 +18,39 @@ import { solutionChips, solutionFeatures, solutionProofs } from '../data/service
 
         <ul class="custom-solutions__chips" aria-label="Capacidades de personalización">
           <li v-for="chip in solutionChips" :key="chip.label">
-            <IconBubble :icon="chip.icon" tone="soft" size="sm" />
+            <span class="custom-solutions__chip-icon" aria-hidden="true">
+              <IconSymbol :name="chip.icon" />
+            </span>
             <span>{{ chip.label }}</span>
           </li>
         </ul>
 
         <div class="custom-solutions__actions">
-          <a class="button button--accent" :href="getWhatsAppLink('Hola, quiero solicitar una cotización para tarimas personalizadas.')" target="_blank" rel="noreferrer">
-            <IconBubble icon="whatsapp" tone="yellow" size="sm" />
+          <a
+            class="button button--accent custom-solutions__button"
+            :href="getWhatsAppLink('Hola, quiero solicitar una cotización para tarimas personalizadas.')"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconSymbol name="whatsapp" class="custom-solutions__button-icon" />
             <span>Solicitar cotización</span>
           </a>
-          <a class="button custom-solutions__advisor" :href="getWhatsAppLink('Hola, quiero hablar con un asesor sobre tarimas industriales.')" target="_blank" rel="noreferrer">
-            <IconBubble icon="person" tone="dark" size="sm" />
+          <a
+            class="button custom-solutions__button custom-solutions__advisor"
+            :href="getWhatsAppLink('Hola, quiero hablar con un asesor sobre tarimas industriales.')"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconSymbol name="person" class="custom-solutions__button-icon" />
             <span>Hablar con un asesor</span>
           </a>
         </div>
 
         <div class="custom-solutions__proof" aria-label="Beneficios de solución">
           <article v-for="proof in solutionProofs" :key="proof.title">
-            <IconBubble :icon="proof.icon" tone="soft" size="md" />
+            <span class="custom-solutions__proof-icon" aria-hidden="true">
+              <IconSymbol :name="proof.icon" />
+            </span>
             <span>
               <strong>{{ proof.title }}</strong>
               <small>{{ proof.text }}</small>
