@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.22`.
+Versión actual: `1.2.23`.
 
 Esta iteración reconstruye la sección de `Ubicación y cobertura` para acercarla al reference image suministrado: copy/contacto/acciones a la izquierda, mapa a la derecha, marcador de marca, tarjeta flotante de cobertura y soporte opcional para Google Maps con estilo personalizado.
 
@@ -106,3 +106,8 @@ VITE_MAP_ZOOM=13
 VITE_GOOGLE_MAPS_LINK=https://maps.app.goo.gl/CaAWkfqQoaVnfPph8
 VITE_OPENSTREETMAP_TILE_URL=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 ```
+
+
+## v1.2.23
+
+- Topbar WhatsApp CTA now uses `public/images/icons/brand/whatsapp-brand-dark.png` instead of an inline SVG path.
