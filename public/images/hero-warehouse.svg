@@ -1,0 +1,32 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#F4F6F3"/>
+  <rect y="520" width="1440" height="440" fill="#DDE5DD"/>
+  <path d="M0 520L220 190H1220L1440 520H0Z" fill="#D0DACD"/>
+  <path d="M220 190V520M420 190V520M620 190V520M820 190V520M1020 190V520M1220 190V520" stroke="#A9B9A7" stroke-width="6"/>
+  <path d="M0 520H1440" stroke="#879C84" stroke-width="10"/>
+  <g opacity=".25"><path d="M180 650H1240M120 760H1320M60 870H1380" stroke="#879C84" stroke-width="4"/></g>
+  <g transform="translate(760 410)">
+    <rect x="0" y="200" width="130" height="150" rx="8" fill="#202820"/>
+    <rect x="25" y="80" width="65" height="145" rx="10" fill="#2F7D46"/>
+    <rect x="50" y="40" width="95" height="25" rx="12" fill="#F4C542"/>
+    <rect x="126" y="-20" width="24" height="340" fill="#202820"/>
+    <rect x="150" y="-20" width="170" height="16" fill="#202820"/>
+    <circle cx="35" cy="356" r="38" fill="#111711"/><circle cx="35" cy="356" r="17" fill="#849081"/>
+    <circle cx="118" cy="356" r="38" fill="#111711"/><circle cx="118" cy="356" r="17" fill="#849081"/>
+  </g>
+  <g transform="translate(170 525)">
+    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
+    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
+    <g opacity=".45" stroke="#F5D5AE" stroke-width="3"><path d="M20 18H345M20 88H345M20 158H345"/></g>
+  </g>
+  <g transform="translate(1030 455) scale(.82)">
+    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
+    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
+  </g>
+  <g transform="translate(1020 650) scale(.72)">
+    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
+    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
+  </g>
+  <rect width="1440" height="960" fill="url(#fade)"/>
+  <defs><linearGradient id="fade" x1="0" y1="0" x2="1028" y2="754" gradientUnits="userSpaceOnUse"><stop stop-color="#102014" stop-opacity=".76"/><stop offset=".52" stop-color="#102014" stop-opacity=".2"/><stop offset="1" stop-color="#102014" stop-opacity=".05"/></linearGradient></defs>
+</svg>

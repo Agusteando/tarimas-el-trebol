@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El Trébol">
+  <rect width="64" height="64" rx="16" fill="#EAF5EC"/>
+  <path d="M19 28c-5 0-9-4-9-9s4-9 9-9 9 4 9 9c0 2-.7 3.8-1.8 5.2L32 30l5.8-5.8A8.96 8.96 0 0 1 36 19c0-5 4-9 9-9s9 4 9 9-4 9-9 9c-2 0-3.8-.7-5.2-1.8L34 32l5.8 5.8A8.96 8.96 0 0 1 45 36c5 0 9 4 9 9s-4 9-9 9-9-4-9-9c0-2 .7-3.8 1.8-5.2L32 34l-5.8 5.8A8.96 8.96 0 0 1 28 45c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c2 0 3.8.7 5.2 1.8L30 32l-5.8-5.8A8.96 8.96 0 0 1 19 28Z" fill="#2F7D46"/>
+  <path d="M34 35c2 7 6 12 13 16" stroke="#17452A" stroke-width="4" stroke-linecap="round"/>
+</svg>
