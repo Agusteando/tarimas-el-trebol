@@ -364,12 +364,12 @@ button:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: clamp(650px, 73svh, 780px);
+  min-height: clamp(664px, 73svh, 790px);
   overflow: clip;
   align-items: center;
   color: var(--color-white);
   background: var(--color-green-950);
-  padding: clamp(116px, 10svh, 132px) 0 16px;
+  padding: clamp(118px, 10svh, 136px) 0 16px;
 }
 
 .hero::before {
@@ -411,14 +411,14 @@ button:focus-visible {
   z-index: 2;
   display: grid;
   width: min(calc(100% - 88px), 1360px);
-  grid-template-columns: minmax(520px, 0.96fr) minmax(520px, 1fr);
-  gap: clamp(32px, 4.4vw, 72px);
+  grid-template-columns: minmax(560px, 0.96fr) minmax(520px, 1fr);
+  gap: clamp(34px, 4vw, 66px);
   align-items: center;
   margin: 0 auto;
 }
 
 .hero__copy {
-  max-width: 650px;
+  max-width: 690px;
 }
 
 .hero__line {
@@ -465,8 +465,8 @@ button:focus-visible {
   max-width: none;
   margin-top: clamp(34px, 4.2svh, 48px);
   color: var(--color-white);
-  font-size: clamp(3.05rem, 4.42vw, 4.72rem);
-  font-weight: 720;
+  font-size: clamp(3.12rem, 4.34vw, 4.56rem);
+  font-weight: 740;
   line-height: 1.11;
   letter-spacing: -0.038em;
   word-spacing: 0;
@@ -564,16 +564,37 @@ button:focus-visible {
 }
 
 .hero__visual::after {
-  right: -42px;
+  right: -26px;
+  bottom: 26px;
+  width: 78px;
+  height: 108px;
+  border: 0;
+  border-radius: 0;
+  opacity: 0.82;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.82) 1px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+
+.hero__wood-panel {
+  position: absolute;
+  z-index: 0;
+  right: -50px;
   bottom: 52px;
-  width: 92px;
-  height: 250px;
-  border-color: rgba(184, 121, 69, 0.65);
-  background: linear-gradient(180deg, rgba(184, 121, 69, 0.82), rgba(132, 75, 38, 0.7));
+  width: clamp(78px, 7.2vw, 112px);
+  height: clamp(260px, 23vw, 354px);
+  overflow: hidden;
+  border: 1px solid rgba(184, 121, 69, 0.62);
+  border-radius: 30px;
+  background:
+    linear-gradient(90deg, rgba(184, 121, 69, 0.22), rgba(184, 121, 69, 0.06)),
+    url('/images/hero/wood-plank-texture.webp') center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(255, 229, 137, 0.14), 0 28px 72px rgba(16, 32, 20, 0.18);
+  transform: rotate(3deg);
 }
 
 .hero__image-shell {
   position: absolute;
+  z-index: 1;
   inset: 0 10px 42px 18px;
   overflow: hidden;
   border: 2px solid rgba(143, 208, 126, 0.7);
@@ -857,7 +878,7 @@ button:focus-visible {
 
 .about__copy {
   display: grid;
-  max-width: 610px;
+  max-width: 640px;
   justify-items: start;
 }
 
@@ -1905,12 +1926,12 @@ button:focus-visible {
 
   .hero__container {
     width: min(calc(100% - 56px), 1276px);
-    grid-template-columns: minmax(455px, 0.98fr) minmax(450px, 1fr);
-    gap: clamp(28px, 3.35vw, 48px);
+    grid-template-columns: minmax(520px, 0.95fr) minmax(460px, 1fr);
+    gap: clamp(26px, 3.1vw, 46px);
   }
 
   .hero__copy {
-    max-width: 610px;
+    max-width: 640px;
   }
 
   .hero__badge {
@@ -1927,8 +1948,8 @@ button:focus-visible {
   .hero h1 {
     max-width: none;
     margin-top: 40px;
-    font-size: clamp(2.68rem, 4.08vw, 3.72rem);
-    line-height: 1.11;
+    font-size: clamp(2.82rem, 4.02vw, 3.74rem);
+    line-height: 1.1;
     letter-spacing: -0.036em;
     word-spacing: 0;
   }
@@ -1981,11 +2002,18 @@ button:focus-visible {
   }
 
   .hero__visual::after {
-    right: -36px;
-    bottom: 50px;
-    width: 78px;
-    height: 226px;
-    border-radius: 30px;
+    right: -18px;
+    bottom: 24px;
+    width: 66px;
+    height: 92px;
+  }
+
+  .hero__wood-panel {
+    right: -38px;
+    bottom: 48px;
+    width: 82px;
+    height: 230px;
+    border-radius: 28px;
   }
 
   .hero__image-shell {
@@ -2180,7 +2208,7 @@ button:focus-visible {
   }
 
   .hero__lead {
-    max-width: 610px;
+    max-width: 640px;
   }
 
   .hero__actions,
@@ -2199,6 +2227,14 @@ button:focus-visible {
 
   .hero__image-shell {
     inset: 0 0 70px 0;
+  }
+
+  .hero__wood-panel {
+    right: -10px;
+    bottom: 88px;
+    width: 72px;
+    height: 220px;
+    opacity: 0.78;
   }
 
   .hero__proof-card {

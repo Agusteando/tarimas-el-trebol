@@ -65,6 +65,7 @@ const heroProof = [
       </div>
 
       <div class="hero__visual" aria-label="Vista de tarimas industriales apiladas en bodega">
+        <div class="hero__wood-panel" aria-hidden="true"></div>
         <div class="hero__image-shell">
           <img src="/images/hero/pallets-warehouse-stack.webp" alt="Tarimas industriales apiladas dentro de bodega industrial" />
         </div>

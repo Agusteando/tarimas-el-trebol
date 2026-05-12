@@ -75,3 +75,17 @@ npm run build
 ```
 
 Status: build passes.
+
+## Iteration v10 notes
+
+This pass identifies `public/references/hero-main-target-reference.png` as the target reference for the first main desktop section. The hero now uses the supplied wood plank texture behind the realistic pallet image to reproduce the layered right-side treatment from the reference without embedding marketing text in imagery.
+
+Updated hero assets:
+
+- `public/images/hero/green-industrial-pattern.webp`
+- `public/images/hero/pallets-warehouse-stack.webp`
+- `public/images/hero/wood-plank-texture.webp`
+- `public/images/hero/wood-plank-texture-source.png`
+- `public/references/hero-main-target-reference.png`
+
+Implementation standard remains: reusable Vue components, global design tokens, clean CSS, organized assets, responsive desktop/mobile behavior, no `!important`, no page-wide scale hacks, and all headings, CTAs, badges, phones, and labels rendered in HTML/CSS.

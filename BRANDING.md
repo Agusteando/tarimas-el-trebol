@@ -74,3 +74,9 @@ Assets nuevos:
 - `public/images/products/tarima-cheep.webp`
 - `public/images/products/tarima-reciclada.webp`
 - `public/references/products-section-reference.png`
+
+## v10 hero reference lock
+
+The first main section target reference is stored as `public/references/hero-main-target-reference.png`. The wood texture layer is stored as `public/images/hero/wood-plank-texture.webp` and is used as a CSS background on the hero decorative panel so the visual effect remains responsive and separate from content.
+
+Hero text, CTA labels, phone numbers, proof cards, and badges must stay in HTML/CSS. The hero imagery should remain purely visual: green industrial pattern, pallet warehouse photo, and wood texture accent.
