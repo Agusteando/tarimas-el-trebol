@@ -6,7 +6,7 @@ import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
   <section id="cotizar" class="final-cta section-pad">
     <div class="container final-cta__card" data-reveal>
       <div>
-        <p class="eyebrow">¿Listo para cotizar?</p>
+        <p class="eyebrow eyebrow--light">¿Listo para cotizar?</p>
         <h2>Cotiza tarimas industriales para tu empresa</h2>
         <p>
           Recibe atención personalizada y precios de acuerdo con tus necesidades, volumen y tipo de tarima.

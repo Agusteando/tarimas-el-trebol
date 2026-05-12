@@ -1,32 +1,38 @@
-<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1440" height="960" fill="#F4F6F3"/>
-  <rect y="520" width="1440" height="440" fill="#DDE5DD"/>
-  <path d="M0 520L220 190H1220L1440 520H0Z" fill="#D0DACD"/>
-  <path d="M220 190V520M420 190V520M620 190V520M820 190V520M1020 190V520M1220 190V520" stroke="#A9B9A7" stroke-width="6"/>
-  <path d="M0 520H1440" stroke="#879C84" stroke-width="10"/>
-  <g opacity=".25"><path d="M180 650H1240M120 760H1320M60 870H1380" stroke="#879C84" stroke-width="4"/></g>
-  <g transform="translate(760 410)">
-    <rect x="0" y="200" width="130" height="150" rx="8" fill="#202820"/>
-    <rect x="25" y="80" width="65" height="145" rx="10" fill="#2F7D46"/>
-    <rect x="50" y="40" width="95" height="25" rx="12" fill="#F4C542"/>
-    <rect x="126" y="-20" width="24" height="340" fill="#202820"/>
-    <rect x="150" y="-20" width="170" height="16" fill="#202820"/>
-    <circle cx="35" cy="356" r="38" fill="#111711"/><circle cx="35" cy="356" r="17" fill="#849081"/>
-    <circle cx="118" cy="356" r="38" fill="#111711"/><circle cx="118" cy="356" r="17" fill="#849081"/>
+<svg width="1600" height="1060" viewBox="0 0 1600 1060" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1060" fill="#EEF4EC"/>
+  <rect y="604" width="1600" height="456" fill="#D8E2D6"/>
+  <path d="M0 604L250 170H1360L1600 604H0Z" fill="#CDD9C9"/>
+  <path d="M250 170V604M470 170V604M690 170V604M910 170V604M1130 170V604M1360 170V604" stroke="#9FB29A" stroke-width="8" opacity=".75"/>
+  <path d="M0 604H1600" stroke="#7F957A" stroke-width="12" opacity=".7"/>
+  <g opacity=".28" stroke="#80967B" stroke-width="4"><path d="M140 736H1480M88 860H1540M30 985H1580"/></g>
+  <g transform="translate(128 520)">
+    <g fill="#B87945"><rect width="390" height="36" rx="4"/><rect y="76" width="390" height="36" rx="4"/><rect y="152" width="390" height="36" rx="4"/></g>
+    <g fill="#8E5C30"><rect x="38" y="32" width="54" height="126"/><rect x="168" y="32" width="54" height="126"/><rect x="298" y="32" width="54" height="126"/></g>
+    <g opacity=".42" stroke="#F5D5AE" stroke-width="3"><path d="M22 18H368M22 94H368M22 170H368"/></g>
   </g>
-  <g transform="translate(170 525)">
-    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
-    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
-    <g opacity=".45" stroke="#F5D5AE" stroke-width="3"><path d="M20 18H345M20 88H345M20 158H345"/></g>
+  <g transform="translate(700 448)">
+    <rect x="0" y="230" width="150" height="165" rx="10" fill="#202820"/>
+    <rect x="30" y="92" width="74" height="160" rx="12" fill="#2F7D46"/>
+    <rect x="56" y="52" width="105" height="28" rx="14" fill="#F4C542"/>
+    <rect x="140" y="-20" width="26" height="374" fill="#202820"/>
+    <rect x="166" y="-20" width="218" height="17" fill="#202820"/>
+    <circle cx="44" cy="402" r="42" fill="#111711"/><circle cx="44" cy="402" r="18" fill="#849081"/>
+    <circle cx="136" cy="402" r="42" fill="#111711"/><circle cx="136" cy="402" r="18" fill="#849081"/>
   </g>
-  <g transform="translate(1030 455) scale(.82)">
-    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
-    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
+  <g transform="translate(1080 474) scale(.84)">
+    <g fill="#B87945"><rect width="390" height="36" rx="4"/><rect y="76" width="390" height="36" rx="4"/><rect y="152" width="390" height="36" rx="4"/></g>
+    <g fill="#8E5C30"><rect x="38" y="32" width="54" height="126"/><rect x="168" y="32" width="54" height="126"/><rect x="298" y="32" width="54" height="126"/></g>
   </g>
-  <g transform="translate(1020 650) scale(.72)">
-    <g fill="#B87945"><rect x="0" y="0" width="360" height="34" rx="3"/><rect x="0" y="70" width="360" height="34" rx="3"/><rect x="0" y="140" width="360" height="34" rx="3"/></g>
-    <g fill="#8E5C30"><rect x="35" y="30" width="50" height="115"/><rect x="155" y="30" width="50" height="115"/><rect x="275" y="30" width="50" height="115"/></g>
+  <g transform="translate(1070 680) scale(.7)">
+    <g fill="#B87945"><rect width="390" height="36" rx="4"/><rect y="76" width="390" height="36" rx="4"/><rect y="152" width="390" height="36" rx="4"/></g>
+    <g fill="#8E5C30"><rect x="38" y="32" width="54" height="126"/><rect x="168" y="32" width="54" height="126"/><rect x="298" y="32" width="54" height="126"/></g>
   </g>
-  <rect width="1440" height="960" fill="url(#fade)"/>
-  <defs><linearGradient id="fade" x1="0" y1="0" x2="1028" y2="754" gradientUnits="userSpaceOnUse"><stop stop-color="#102014" stop-opacity=".76"/><stop offset=".52" stop-color="#102014" stop-opacity=".2"/><stop offset="1" stop-color="#102014" stop-opacity=".05"/></linearGradient></defs>
+  <rect width="1600" height="1060" fill="url(#fade)"/>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1200" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102014" stop-opacity=".86"/>
+      <stop offset=".46" stop-color="#102014" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#102014" stop-opacity=".06"/>
+    </linearGradient>
+  </defs>
 </svg>

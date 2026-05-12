@@ -25,7 +25,7 @@ const steps = [
 <template>
   <section class="quote-process section-pad">
     <div class="container quote-process__grid">
-      <div>
+      <div class="quote-process__content">
         <SectionHeading
           eyebrow="Proceso de cotización"
           title="Cotiza sin fricción y con datos útiles desde el primer contacto"
@@ -35,15 +35,17 @@ const steps = [
           Enviar mensaje por WhatsApp
         </a>
       </div>
-      <ol class="step-list">
-        <li v-for="(step, index) in steps" :key="step.title" data-reveal>
-          <span>{{ String(index + 1).padStart(2, '0') }}</span>
-          <div>
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
-          </div>
-        </li>
-      </ol>
+      <div class="quote-process__panel" data-reveal>
+        <ol class="step-list">
+          <li v-for="(step, index) in steps" :key="step.title">
+            <span>{{ String(index + 1).padStart(2, '0') }}</span>
+            <div>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 </template>

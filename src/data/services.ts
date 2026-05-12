@@ -32,5 +32,5 @@ export const solutionPoints = [
   'Diferentes capacidades',
   'Materiales duraderos',
   'Opciones recicladas',
-  'Soluciones para tu operación industrial'
+  'Soluciones para operación industrial'
 ];

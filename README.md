@@ -1,8 +1,18 @@
-# Tarimas El Trébol - Landing Page
+# Tarimas El Trébol — Landing Vue/Vite
 
-Proyecto Vue 3 + Vite para `tarimaseltrebol.mx`.
+Landing page B2B para `tarimaseltrebol.mx`, construida con Vue 3, Vite y TypeScript.
 
-La landing está preparada para compradores B2B de tarimas industriales. Todo el texto principal está renderizado con HTML/CSS, no incrustado dentro de imágenes, para conservar legibilidad, SEO y comportamiento responsive en mobile y desktop.
+## Objetivo
+
+Presentar a El Trébol / MOAN SA de CV como proveedor industrial de tarimas para empresas, con foco en cotización rápida, productos claros, servicios adicionales y contacto directo por WhatsApp/teléfono.
+
+## Stack
+
+- Vue 3
+- Vite
+- TypeScript
+- CSS modular por tokens globales
+- Assets SVG temporales sin texto incrustado
 
 ## Comandos
 
@@ -15,39 +25,23 @@ npm run preview
 
 ## Configuración
 
-Copia `.env.example` a `.env` y ajusta los valores:
+Copia `.env.example` a `.env` y ajusta los datos reales cuando estén disponibles:
 
-```bash
-cp .env.example .env
+```env
+VITE_PHONE_PRIMARY=7225372605
+VITE_PHONE_SECONDARY=7225472591
+VITE_WHATSAPP_NUMBER=527225372605
+VITE_EMAIL=eltrebol.tarimaindustrial@gmail.com
+VITE_MAP_LAT=
+VITE_MAP_LNG=
 ```
 
-Para Google Maps, cuando tengas la ubicación exacta, llena:
+Cuando agregues latitud y longitud, el componente de ubicación renderizará Google Maps automáticamente.
 
-```bash
-VITE_MAP_LAT=19.000000
-VITE_MAP_LNG=-99.000000
-```
+## Branding
 
-El componente del mapa usa un iframe de Google Maps con coordenadas. No requiere API key para este render básico.
-
-## Estructura
-
-```text
-src/
-  components/         Secciones del landing y componentes reutilizables
-  composables/        Utilidades de interacción
-  data/               Contenido editable del sitio
-  styles/             Tokens y CSS base
-public/images/        Visuales temporales sin texto incrustado
-```
+La guía inicial está en `BRANDING.md`. El diseño usa blanco, verdes suaves, verde oscuro y amarillo como acento de conversión. Los textos se renderizan en HTML/CSS para mantener SEO, accesibilidad y responsividad.
 
 ## Imágenes
 
-Las imágenes incluidas son placeholders SVG sin texto incrustado. El copy, CTAs, títulos y etiquetas se sobreponen desde Vue/HTML para que la página sea responsive y fácil de mantener. Cuando se aprueben imágenes finales, se pueden reemplazar los archivos en `public/images/` manteniendo los mismos nombres o actualizando las rutas en `src/data/`.
-
-## Contacto usado
-
-- Teléfono: 722 537 2605
-- Teléfono secundario: 722 547 2591
-- Email: eltrebol.tarimaindustrial@gmail.com
-- Dominio: tarimaseltrebol.mx
+Los SVG actuales son placeholders limpios. Para producción, reemplaza los archivos de `public/images/` o actualiza rutas en `src/data/`.

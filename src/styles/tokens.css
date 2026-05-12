@@ -1,26 +1,39 @@
 :root {
+  color-scheme: light;
+
   --color-white: #ffffff;
+  --color-green-950: #102014;
   --color-green-900: #17452a;
+  --color-green-800: #235f37;
   --color-green-700: #2f7d46;
+  --color-green-500: #69a66f;
   --color-green-200: #d7eadb;
   --color-green-100: #eaf5ec;
+  --color-green-50: #f6fbf5;
   --color-yellow-500: #f4c542;
+  --color-yellow-300: #ffe589;
   --color-yellow-100: #fff6d6;
   --color-wood: #b87945;
   --color-ink: #1d2a22;
   --color-muted: #5f6d63;
+  --color-soft: #f8faf6;
   --color-industrial: #f4f6f3;
-  --color-line: rgba(29, 42, 34, 0.14);
+  --color-line: rgba(29, 42, 34, 0.13);
+  --color-line-strong: rgba(29, 42, 34, 0.22);
 
+  --font-display: "Sora", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --container: 1180px;
-  --header-height: 82px;
+  --header-height: 84px;
+  --section-y: clamp(78px, 10vw, 144px);
   --radius-xs: 10px;
   --radius-sm: 16px;
   --radius-md: 24px;
   --radius-lg: 36px;
+  --radius-xl: 48px;
   --shadow-soft: 0 18px 60px rgba(23, 69, 42, 0.12);
-  --shadow-card: 0 14px 40px rgba(29, 42, 34, 0.1);
+  --shadow-card: 0 18px 54px rgba(29, 42, 34, 0.1);
+  --shadow-lift: 0 26px 90px rgba(16, 32, 20, 0.18);
   --transition: 180ms ease;
 }

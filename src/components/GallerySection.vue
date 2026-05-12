@@ -27,8 +27,11 @@ const galleryItems = [
   <section class="gallery section-pad">
     <div class="container">
       <div class="gallery__header" data-reveal>
-        <p class="eyebrow">Galería operativa</p>
-        <h2>Visuales pensados para reemplazarse por fotografía real cuando esté disponible</h2>
+        <div>
+          <p class="eyebrow">Galería operativa</p>
+          <h2>Producto, logística y servicio en una experiencia visual limpia</h2>
+        </div>
+        <p>Las imágenes acompañan la navegación sin cargar texto dentro del archivo visual.</p>
       </div>
       <div class="gallery-grid">
         <article v-for="item in galleryItems" :key="item.title" class="gallery-card" data-reveal>

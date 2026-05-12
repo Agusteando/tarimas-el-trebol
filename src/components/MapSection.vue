@@ -14,12 +14,22 @@ const mapUrl = computed(() =>
 <template>
   <section id="ubicacion" class="map-section section-pad">
     <div class="container map-section__grid">
-      <div>
+      <div class="map-section__content">
         <SectionHeading
           eyebrow="Ubicación y cobertura"
           title="Atención para empresas industriales, constructoras, transportistas y compradores B2B"
-          description="La ubicación exacta se integrará cuando estén disponibles las coordenadas. El componente ya está preparado para renderizar Google Maps con latitud y longitud."
+          description="El componente está preparado para renderizar Google Maps con latitud y longitud cuando estén disponibles."
         />
+        <div class="map-section__details" data-reveal>
+          <div>
+            <strong>Cobertura comercial</strong>
+            <span>Empresas industriales, constructoras, transportistas y operaciones de carga.</span>
+          </div>
+          <div>
+            <strong>Mapa listo para producción</strong>
+            <span>Agrega VITE_MAP_LAT y VITE_MAP_LNG en el archivo .env.</span>
+          </div>
+        </div>
         <a class="button" :href="getWhatsAppLink('Hola, quiero solicitar ubicación y cobertura de entrega para tarimas industriales.')" target="_blank" rel="noreferrer">
           Solicitar ubicación o ruta
         </a>
@@ -36,7 +46,7 @@ const mapUrl = computed(() =>
         <div v-else class="map-placeholder">
           <span aria-hidden="true">⌖</span>
           <h3>Google Maps listo para coordenadas</h3>
-          <p>Agrega VITE_MAP_LAT y VITE_MAP_LNG en el archivo .env.</p>
+          <p>Cuando tengas latitud y longitud, se renderiza el mapa sin tocar el layout.</p>
         </div>
       </div>
     </div>

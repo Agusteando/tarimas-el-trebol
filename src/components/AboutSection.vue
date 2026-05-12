@@ -12,6 +12,20 @@ import { getWhatsAppLink } from '../data/contact';
           title="Proveedor industrial de tarimas para empresas de alto movimiento"
           description="Somos una empresa líder en la venta de tarimas industriales de todas las medidas, fundada en 2018. Nos especializamos en soluciones eficientes y de alta calidad para empresas de diversos sectores."
         />
+        <div class="about__kpis" data-reveal>
+          <div>
+            <strong>2018</strong>
+            <span>Empresa fundada</span>
+          </div>
+          <div>
+            <strong>B2B</strong>
+            <span>Compras industriales</span>
+          </div>
+          <div>
+            <strong>Medidas</strong>
+            <span>Soluciones a necesidad</span>
+          </div>
+        </div>
         <div class="mission-card" data-reveal>
           <span class="mission-card__label">Nuestra misión</span>
           <p>

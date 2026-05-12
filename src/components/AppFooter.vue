@@ -9,7 +9,7 @@ import { contact, formatPhone } from '../data/contact';
       <div>
         <BrandLogo />
         <p>
-          {{ contact.legalName }}. Venta de tarimas industriales nuevas, recicladas y personalizadas.
+          {{ contact.legalName }}. Venta de tarimas industriales nuevas, recicladas y personalizadas para compradores B2B.
         </p>
       </div>
       <div>

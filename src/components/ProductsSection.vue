@@ -20,7 +20,10 @@ import { getWhatsAppLink } from '../data/contact';
             <img :src="product.image" :alt="product.name" />
           </div>
           <div class="product-card__body">
-            <p v-if="product.measure" class="product-card__measure">{{ product.measure }}</p>
+            <div class="product-card__topline">
+              <p v-if="product.measure" class="product-card__measure">{{ product.measure }}</p>
+              <p class="product-card__tag">Cotización personalizada</p>
+            </div>
             <h3>{{ product.name }}</h3>
             <p>{{ product.summary }}</p>
             <ul>

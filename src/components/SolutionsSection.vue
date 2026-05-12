@@ -9,8 +9,8 @@ import { solutionPoints } from '../data/services';
       <div data-reveal>
         <SectionHeading
           eyebrow="Soluciones personalizadas"
-          title="Suministro de tarimas para necesidades específicas de carga, manejo y almacenamiento"
-          description="Adaptamos el suministro a volumen, medida, capacidad, tipo de uso y ritmo operativo de cada empresa."
+          title="Suministro de tarimas para carga, manejo, almacenamiento y transporte"
+          description="Adaptamos el suministro a volumen, medida, capacidad, condición y ritmo operativo de cada empresa."
         />
         <div class="solution-points">
           <span v-for="point in solutionPoints" :key="point">{{ point }}</span>

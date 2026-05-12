@@ -10,6 +10,7 @@ import { advantages } from '../data/advantages';
       <SectionHeading
         eyebrow="Ventajas competitivas"
         title="Una operación enfocada en calidad, velocidad y atención B2B"
+        description="El diseño comercial se centra en las razones que un comprador industrial necesita validar antes de cotizar."
         align="center"
       />
       <div class="advantage-grid">

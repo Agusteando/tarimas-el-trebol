@@ -2,13 +2,13 @@ export const advantages = [
   {
     title: 'Atención personalizada',
     description:
-      'Nuestro equipo entiende las necesidades específicas de cada cliente y propone la opción adecuada para su operación.',
+      'Entendemos la medida, volumen, condición y uso que necesita cada cliente antes de proponer una opción.',
     icon: 'person'
   },
   {
     title: 'Tiempos de entrega',
     description:
-      'Trabajamos para ofrecer entregas rápidas y eficientes, reduciendo interrupciones en la cadena de suministro.',
+      'Operación enfocada en respuesta rápida para reducir interrupciones en la cadena de suministro.',
     icon: 'truck'
   },
   {
