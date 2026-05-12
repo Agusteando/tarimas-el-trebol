@@ -13,8 +13,11 @@ export const contact = {
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || `52${whatsappPhone}`,
   defaultWhatsappMessage:
     'Hola, quiero solicitar una cotización de tarimas industriales para mi empresa.',
-  mapLat: import.meta.env.VITE_MAP_LAT || '',
-  mapLng: import.meta.env.VITE_MAP_LNG || ''
+  mapLat: import.meta.env.VITE_MAP_LAT || '19.2985595',
+  mapLng: import.meta.env.VITE_MAP_LNG || '-99.6898324',
+  mapZoom: Number(import.meta.env.VITE_MAP_ZOOM || 13),
+  googleMapsLink: import.meta.env.VITE_GOOGLE_MAPS_LINK || 'https://maps.app.goo.gl/CaAWkfqQoaVnfPph8',
+  googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
 };
 
 export const formatPhone = (phone: string) =>

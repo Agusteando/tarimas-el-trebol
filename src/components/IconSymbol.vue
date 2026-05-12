@@ -151,6 +151,32 @@ defineProps<{ name: string }>();
       <path d="M8 24h30" />
       <path d="m28 14 10 10-10 10" />
     </g>
+    <g v-else-if="name === 'mail'">
+      <path d="M8 13h32v24H8V13Z" />
+      <path d="m8 15 16 13 16-13" />
+    </g>
+    <g v-else-if="name === 'building'">
+      <path d="M10 40h28V12H10v28Z" />
+      <path d="M17 40V29h14v11" />
+      <path d="M16 18h4m-4 6h4m8-6h4m-4 6h4" />
+      <path d="M7 40h34" />
+    </g>
+    <g v-else-if="name === 'globe'">
+      <path d="M24 42a18 18 0 1 0 0-36 18 18 0 0 0 0 36Z" />
+      <path d="M6 24h36" />
+      <path d="M24 6c5 5 7.5 11 7.5 18S29 37 24 42c-5-5-7.5-11-7.5-18S19 11 24 6Z" />
+      <path d="M10 15h28M10 33h28" />
+    </g>
+    <g v-else-if="name === 'person'">
+      <path d="M24 24a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+      <path d="M10 42c2-9.5 7-14 14-14s12 4.5 14 14H10Z" />
+    </g>
+    <g v-else-if="name === 'people'">
+      <path d="M18 23a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z" />
+      <path d="M6 39c1.6-7.3 5.6-11 12-11 4 0 7.1 1.5 9.2 4.4" />
+      <path d="M32 25a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+      <path d="M25 40c1.5-6.6 5.1-10 10.8-10 4.8 0 8 3.3 9.2 10H25Z" />
+    </g>
     <g v-else>
       <path d="M24 23a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
       <path d="M9 42c2-10 8-15 15-15s13 5 15 15H9Z" />

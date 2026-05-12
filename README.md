@@ -19,25 +19,45 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.16`.
+Versión actual: `1.2.17`.
 
-Esta iteración corrige el comportamiento del acordeón de `Preguntas frecuentes` y recalibra el tamaño desktop de `Preguntas frecuentes` y `Ventajas competitivas` para que la composición principal sea visible dentro del primer viewport en escritorio con menor desbordamiento vertical.
+Esta iteración reconstruye la sección de `Ubicación y cobertura` para acercarla al reference image suministrado: copy/contacto/acciones a la izquierda, mapa a la derecha, marcador de marca, tarjeta flotante de cobertura y soporte opcional para Google Maps con estilo personalizado.
 
 ## Estructura principal
 
 - `src/components/` contiene los componentes Vue reutilizables.
+- `src/components/MapSection.vue` controla la sección de ubicación y cobertura.
 - `src/components/FaqSection.vue` controla la sección de preguntas frecuentes.
 - `src/components/MissionMediaShape.vue` controla la curva visual de la imagen de misión.
 - `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
 - `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
 - `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto, misión, delivery y FAQ.
+- `src/styles/sections/location.css` contiene la calibración específica de ubicación y cobertura.
 - `src/styles/sections/faq.css` contiene la calibración específica de preguntas frecuentes.
 - `src/styles/sections/advantages.css` contiene la calibración específica de ventajas competitivas.
 - `src/styles/sections/delivery-process.css` contiene la calibración específica de entrega y proceso.
 - `src/styles/sections/sectors.css` contiene la calibración específica de sectores.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones y servicios.
 - `src/styles/sections/mission-products.css` contiene la calibración específica de misión, productos y catálogo.
+
+## Configuración `.env`
+
+El ZIP incluye `.env` y `.env.example` con las coordenadas reales suministradas:
+
+```bash
+VITE_WHATSAPP_NUMBER=527225472591
+VITE_WHATSAPP_PHONE=7225472591
+VITE_PHONE_CALL_NUMBER=7225372605
+VITE_EMAIL=eltrebol.tarimaindustrial@gmail.com
+VITE_MAP_LAT=19.2985595
+VITE_MAP_LNG=-99.6898324
+VITE_GOOGLE_MAPS_LINK=https://maps.app.goo.gl/CaAWkfqQoaVnfPph8
+VITE_GOOGLE_MAPS_API_KEY=
+VITE_MAP_ZOOM=13
+```
+
+Si `VITE_GOOGLE_MAPS_API_KEY` está vacío, la sección usa un fallback visual estilizado. Si se agrega un API key válido, se inicializa Google Maps con estilos personalizados, UI limpia y marcador de marca.
 
 ## Assets activos principales
 
@@ -59,6 +79,9 @@ No se almacenan screenshots de referencia dentro del proyecto.
 
 - WhatsApp: `722 547 2591`
 - Llamadas: `722 537 2605`
+- Email: `eltrebol.tarimaindustrial@gmail.com`
+- Ubicación: `19.2985595,-99.6898324`
+- Maps: `https://maps.app.goo.gl/CaAWkfqQoaVnfPph8`
 
 La configuración vive en `src/data/contact.ts` y puede complementarse con variables `.env`.
 

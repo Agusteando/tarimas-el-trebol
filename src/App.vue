@@ -39,10 +39,10 @@ useReveal();
       <SolutionsSection />
       <ServicesSection />
       <IndustriesSection />
+      <MapSection />
       <AdvantagesSection />
       <QuoteProcess />
       <FaqSection />
-      <MapSection />
       <FinalCTA />
     </template>
   </main>
