@@ -63,3 +63,15 @@ El mapa queda preparado para renderizarse cuando se agreguen latitud y longitud 
 ## Estándares activos
 
 Componentes reutilizables, tokens globales, CSS limpio, HTML para todo el texto, diseño responsive mobile/desktop, sin `!important`, sin hacks por resolución y sin texto incrustado en imágenes.
+
+## v9 update
+
+This update focuses on the mission and products section. It uses the provided product image sheet, crops product assets into organized files, adds a reusable `ProductCard.vue`, and aligns the layout closer to the supplied Figma/reference screenshot.
+
+Validation:
+
+```bash
+npm run build
+```
+
+Status: build passes.

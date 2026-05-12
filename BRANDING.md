@@ -52,3 +52,25 @@ Componentes reutilizables, tokens globales, CSS limpio, responsive mobile/deskto
 - `public/images/hero/pallets-warehouse-stack.webp`
 
 La imagen de fondo aporta el patrón verde industrial; la imagen de tarimas se usa dentro del card rotado del hero y como visual temporal aprobado para secciones corporativas. Ninguna contiene texto de marketing.
+
+## Iteración v9 — misión y productos
+
+La sección de misión y la sección de productos se ajustaron contra la referencia visual compartida. El objetivo de esta pasada fue mantener densidad de contenido, proporciones y estilo de tarjetas sin depender de texto incrustado en imágenes.
+
+Estándares conservados:
+
+- Componentes reutilizables para producto y secciones.
+- Tokens globales para color, tipografía, spacing, radios y sombras.
+- Texto, CTAs, badges e información de producto en HTML/CSS.
+- Imágenes tratadas como assets visuales, sin claims incrustados.
+- CSS con selectores intencionales y modificadores de sección.
+- Sin `!important`, sin escalado global de página y sin hacks por resolución.
+
+Assets nuevos:
+
+- `public/images/products/pallet-types-source.png`
+- `public/images/products/tarima-barrote.webp`
+- `public/images/products/tarima-tacon.webp`
+- `public/images/products/tarima-cheep.webp`
+- `public/images/products/tarima-reciclada.webp`
+- `public/references/products-section-reference.png`
