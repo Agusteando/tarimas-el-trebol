@@ -266,15 +266,15 @@ button:focus-visible {
 
 .site-header__inner {
   display: flex;
-  width: min(calc(100% - 78px), 1438px);
-  min-height: 76px;
+  width: min(calc(100% - 68px), 1380px);
+  min-height: 78px;
   align-items: center;
   justify-content: space-between;
   gap: clamp(16px, 2.4vw, 34px);
   margin-inline: auto;
   border: 1px solid rgba(47, 125, 70, 0.48);
   border-radius: 22px;
-  padding: 8px 20px;
+  padding: 8px 22px;
   pointer-events: auto;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 20px 64px rgba(16, 32, 20, 0.16);
@@ -364,12 +364,12 @@ button:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: clamp(610px, 74svh, 780px);
+  min-height: clamp(650px, 73svh, 780px);
   overflow: clip;
   align-items: center;
   color: var(--color-white);
   background: var(--color-green-950);
-  padding: clamp(104px, 9svh, 124px) 0 16px;
+  padding: clamp(116px, 10svh, 132px) 0 16px;
 }
 
 .hero::before {
@@ -410,8 +410,8 @@ button:focus-visible {
   position: relative;
   z-index: 2;
   display: grid;
-  width: min(calc(100% - 116px), 1464px);
-  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1fr);
+  width: min(calc(100% - 88px), 1360px);
+  grid-template-columns: minmax(520px, 0.96fr) minmax(520px, 1fr);
   gap: clamp(32px, 4.4vw, 72px);
   align-items: center;
   margin: 0 auto;
@@ -420,6 +420,20 @@ button:focus-visible {
 .hero__copy {
   max-width: 650px;
 }
+
+.hero__line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero__line--white {
+  color: var(--color-white);
+}
+
+.hero__line--green {
+  color: #9ad889;
+}
+
 
 .hero__badge {
   display: inline-flex;
@@ -448,21 +462,17 @@ button:focus-visible {
 }
 
 .hero h1 {
-  max-width: 650px;
-  margin-top: clamp(30px, 3.8svh, 42px);
+  max-width: none;
+  margin-top: clamp(34px, 4.2svh, 48px);
   color: var(--color-white);
-  font-size: clamp(3rem, 4.18vw, 4.72rem);
-  font-weight: 750;
-  line-height: 1.08;
-  letter-spacing: -0.034em;
-  word-spacing: 0.02em;
+  font-size: clamp(3.05rem, 4.42vw, 4.72rem);
+  font-weight: 720;
+  line-height: 1.11;
+  letter-spacing: -0.038em;
+  word-spacing: 0;
   text-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
-.hero h1 span {
-  display: block;
-  color: #9ad889;
-}
 
 .hero__accent-line {
   width: 56px;
@@ -473,7 +483,7 @@ button:focus-visible {
 }
 
 .hero__lead {
-  max-width: 575px;
+  max-width: 590px;
   margin-top: 15px;
   color: rgba(255, 255, 255, 0.86);
   font-size: clamp(0.92rem, 0.98vw, 1.02rem);
@@ -1842,8 +1852,8 @@ button:focus-visible {
 
   .site-header__inner {
     width: min(calc(100% - 48px), 1320px);
-    min-height: 68px;
-    padding: 7px 16px;
+    min-height: 70px;
+    padding: 7px 17px;
   }
 
   .brand-logo__mark {
@@ -1888,19 +1898,19 @@ button:focus-visible {
   }
 
   .hero {
-    min-height: clamp(548px, 71svh, 660px);
-    padding-top: 88px;
+    min-height: clamp(612px, 73svh, 720px);
+    padding-top: 102px;
     padding-bottom: 14px;
   }
 
   .hero__container {
-    width: min(calc(100% - 72px), 1200px);
-    grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.98fr);
-    gap: clamp(24px, 3.1vw, 42px);
+    width: min(calc(100% - 56px), 1276px);
+    grid-template-columns: minmax(455px, 0.98fr) minmax(450px, 1fr);
+    gap: clamp(28px, 3.35vw, 48px);
   }
 
   .hero__copy {
-    max-width: 560px;
+    max-width: 610px;
   }
 
   .hero__badge {
@@ -1915,12 +1925,12 @@ button:focus-visible {
   }
 
   .hero h1 {
-    max-width: 535px;
-    margin-top: 32px;
-    font-size: clamp(2.48rem, 3.72vw, 3.46rem);
-    line-height: 1.08;
-    letter-spacing: -0.028em;
-    word-spacing: 0.02em;
+    max-width: none;
+    margin-top: 40px;
+    font-size: clamp(2.68rem, 4.08vw, 3.72rem);
+    line-height: 1.11;
+    letter-spacing: -0.036em;
+    word-spacing: 0;
   }
 
   .hero__accent-line {
@@ -1930,7 +1940,7 @@ button:focus-visible {
   }
 
   .hero__lead {
-    max-width: 500px;
+    max-width: 520px;
     margin-top: 14px;
     font-size: 0.9rem;
     line-height: 1.48;
@@ -1962,7 +1972,7 @@ button:focus-visible {
   }
 
   .hero__visual {
-    min-height: clamp(324px, 31.5vw, 418px);
+    min-height: clamp(330px, 32vw, 430px);
   }
 
   .hero__visual::before {
@@ -1984,9 +1994,9 @@ button:focus-visible {
   }
 
   .hero__proof-card {
-    left: -42px;
+    left: -46px;
     bottom: 34px;
-    width: min(252px, 51%);
+    width: min(270px, 53%);
     padding: 13px 16px;
   }
 
@@ -2163,6 +2173,10 @@ button:focus-visible {
   .hero h1 {
     margin-top: 32px;
     font-size: clamp(2.65rem, 10vw, 4.9rem);
+  }
+
+  .hero__line {
+    white-space: normal;
   }
 
   .hero__lead {

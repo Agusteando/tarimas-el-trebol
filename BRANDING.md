@@ -37,9 +37,9 @@ Los textos comerciales, teléfonos, labels, badges y CTAs deben renderizarse con
 
 ## Escala de la vista inicial
 
-El header, hero y trust bar están calibrados contra la referencia desktop enviada y usan las imágenes reales de hero aprobadas para fondo y visual principal. Esta iteración agrega más aire entre el badge de Atención B2B y el H1 sin escalar la página completa, y extiende la misma dirección visual al bloque de Quiénes somos y Nuestra misión.
+El header, hero y trust bar están calibrados contra la referencia desktop enviada y usan las imágenes reales de hero aprobadas para fondo y visual principal. Esta iteración bloquea las líneas del H1 para preservar la composición de la referencia, da más ancho útil al copy, suaviza el peso tipográfico y mantiene la densidad del primer viewport sin escalar la página completa.
 
-La escala se controla desde CSS responsive con un breakpoint específico para desktop denso; no se usa `zoom`, `transform: scale()` sobre la página ni texto incrustado en imágenes.
+La escala se controla desde CSS responsive con líneas de título explícitas, columnas mínimas y un breakpoint específico para desktop denso; no se usa `zoom`, `transform: scale()` sobre la página ni texto incrustado en imágenes.
 
 ## Estándares activos
 
