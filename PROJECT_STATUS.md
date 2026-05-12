@@ -2,26 +2,24 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v13 mission/products reference tightening and concrete product background.
+Latest implementation pass: v14 product crop correction and image centering.
 
 Completed in this pass:
 
-- Added `public/images/products/concrete-floor-background.webp` for the product image frames so the transparent tarima assets sit on a concrete industrial floor treatment.
-- Added `public/references/mission-products-target-reference.png` from the supplied target screenshot for this section pass.
-- Recalibrated the desktop header to the target screenshot: full-width white bar, compact logo lockup, plain phone action, and flat yellow WhatsApp CTA.
-- Tuned `Nuestra misión` to the intended half-screen reference composition with the left copy block, clipped warehouse image, and dark green angled benefits panel.
-- Tuned `Nuestros productos` card sizing, image-frame height, card spacing, CTA styling, and footer CTA spacing toward the supplied reference.
-- Updated the first three featured product summaries to match the reference wording more closely.
-- Kept the full `/productos` catalog page connected from `Ver todas las tarimas`.
-- Removed unused legacy mission-section CSS selectors from the old non-reference markup path.
+- Re-cropped the 12 supplied pallet products from the transparent 4 × 3 product sheet using alpha-based connected-component detection rather than fixed grid slicing.
+- Exported clean transparent WebP files for every product under `public/images/products/`.
+- Removed visible adjacent-product bleed by masking each output image to only the detected tarima component and its shadow.
+- Centered each product crop with consistent transparent padding around the detected object.
+- Updated product image rendering to use `object-fit: contain`, preventing cards from clipping the transparent product images over the concrete-floor background.
+- Preserved the `/productos` catalog route and the homepage `Ver todas las tarimas` flow.
 - Rebuilt production output successfully with `npm run build`.
 
 Plan status updates:
 
-- Nuestra misión: desktop reference composition is now tightened for the supplied screenshot. Mobile still needs a final device pass after all desktop section locks.
-- Nuestros productos: homepage cards now use the concrete product background and transparent tarima assets. The full catalog route remains active with all 12 tarima types.
-- Product navigation: `Ver todas las tarimas` continues to lead to `/productos`, and product-level `Ver detalles` links target the selected catalog card.
-- Product assets: transparent WebP tarima assets remain under `public/images/products/`, with the concrete background stored alongside them.
+- Product assets: transparent tarima images are now cleanly cropped and centered. The previous issue where slices showed parts of the next product has been addressed at the asset-generation level.
+- Nuestros productos: homepage product cards continue to use the concrete floor background behind the transparent tarima assets.
+- Product catalog: the full `/productos` page remains active with all 12 tarima types.
+- Nuestra misión: the reference-composition work from v13 remains intact and was not reworked in this pass.
 
 Pending user input remains:
 

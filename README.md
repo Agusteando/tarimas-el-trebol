@@ -152,3 +152,23 @@ npm run build
 ```
 
 Status: build passes.
+
+## Iteration v14 notes
+
+This pass rebuilds the product image crops from the supplied transparent 4 × 3 pallet sheet using alpha/component detection instead of fixed grid slices.
+
+Implemented:
+
+- Re-cropped all 12 product WebP assets from the transparent source image using connected-component alpha detection.
+- Removed adjacent-product bleed from every asset by masking each crop to its own detected transparent component before export.
+- Centered each tarima crop with consistent internal padding so the cards render cleanly over the concrete floor background.
+- Changed product-card images from `cover` to `contain` so transparent assets are not clipped inside their image frames.
+- Added `product-crops-preview-v14.png` as a local diagnostic output during the pass, not as a runtime dependency.
+
+Validation:
+
+```bash
+npm run build
+```
+
+Status: build passes.
