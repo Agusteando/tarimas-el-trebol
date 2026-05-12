@@ -8,6 +8,7 @@ declare global {
   interface Window {
     google?: any;
     initElTrebolMap?: () => void;
+    gm_authFailure?: () => void;
   }
 }
 
@@ -93,22 +94,25 @@ const markerIconUrl = '/images/icons/map-marker-trebol.png';
 let mapInstance: any = null;
 let markerInstance: any = null;
 let cleanupCallback = false;
+let fallbackTimer: number | undefined;
 
 const initializeMap = () => {
   if (!mapElement.value || !window.google || !hasMapCoordinates.value) return;
 
   const center = mapCoordinates.value;
-  mapInstance = new window.google.maps.Map(mapElement.value, {
+
+  try {
+    mapInstance = new window.google.maps.Map(mapElement.value, {
     center,
     zoom: contact.mapZoom,
     disableDefaultUI: true,
     clickableIcons: false,
     gestureHandling: 'cooperative',
     styles: googleMapStyles,
-    backgroundColor: '#f7f8f2'
-  });
+      backgroundColor: '#f7f8f2'
+    });
 
-  markerInstance = new window.google.maps.Marker({
+    markerInstance = new window.google.maps.Marker({
     position: center,
     map: mapInstance,
     title: 'El Trébol — Tarimas y Empaques Industriales',
@@ -116,10 +120,18 @@ const initializeMap = () => {
       url: markerIconUrl,
       scaledSize: new window.google.maps.Size(66, 81),
       anchor: new window.google.maps.Point(33, 81)
-    }
-  });
+      }
+    });
 
-  mapLoaded.value = true;
+    mapLoaded.value = true;
+
+    if (fallbackTimer) {
+      window.clearTimeout(fallbackTimer);
+      fallbackTimer = undefined;
+    }
+  } catch {
+    mapLoadFailed.value = true;
+  }
 };
 
 const loadGoogleMap = () => {
@@ -132,7 +144,16 @@ const loadGoogleMap = () => {
 
   const existingScript = document.getElementById('el-trebol-google-maps');
   window.initElTrebolMap = initializeMap;
+  window.gm_authFailure = () => {
+    mapLoadFailed.value = true;
+  };
   cleanupCallback = true;
+
+  fallbackTimer = window.setTimeout(() => {
+    if (!mapLoaded.value) {
+      mapLoadFailed.value = true;
+    }
+  }, 4500);
 
   if (existingScript) return;
 
@@ -154,8 +175,17 @@ onBeforeUnmount(() => {
   markerInstance = null;
   mapInstance = null;
 
+  if (fallbackTimer) {
+    window.clearTimeout(fallbackTimer);
+    fallbackTimer = undefined;
+  }
+
   if (cleanupCallback && window.initElTrebolMap === initializeMap) {
     delete window.initElTrebolMap;
+  }
+
+  if (cleanupCallback) {
+    delete window.gm_authFailure;
   }
 });
 </script>

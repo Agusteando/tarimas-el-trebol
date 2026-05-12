@@ -2,22 +2,15 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v30 phone-icon sizing and trébol marker refinement.
+Latest implementation pass: v31 ubicación viewport fitting and Google Maps fallback guard.
+
 
 Completed in this pass:
 
-- Fixed oversized raster icons inside CTA buttons by standardizing `.button .icon-symbol` dimensions and disabling sprite scaling inside buttons.
-- Corrected the phone icon sizing in `Ubicación y cobertura` and `Preguntas frecuentes` so it matches the visual weight of the WhatsApp icon.
-- Rebuilt `map-marker-trebol.png` using the extracted spritesheet clover as the center mark, with a cleaner green pin body and white seal.
-- Updated the Google Maps marker dimensions and anchor to match the regenerated marker asset.
-
-- Re-extracted and normalized all 25 icons from the transparent spritesheet using alpha-based trimming, hidden-guide-pixel cleanup, and final visible-bounds centering.
-- Replaced the previous imperfect sprite outputs with consistently centered 128×128 PNG icons under `public/images/icons/sprite/`.
-- Tuned sprite rendering in the shared `.icon-symbol--sprite` path so icons read closer to the original SVG scale inside bubbles, chips, cards, and buttons.
-- Added a dedicated branded map marker asset at `public/images/icons/map-marker-trebol.png` with a clear trebol mark.
-- Updated `MapSection.vue` so both Google Maps and the fallback map use the branded trebol marker asset instead of a CSS-drawn marker.
-- Recalibrated `Ubicación y cobertura` with desktop `svh`-based map height and padding so the section fits better inside the first viewport while preserving the reference layout.
-- Kept the supplied map coordinates and Google Maps link in `.env` / contact config.
+- Tightened `Ubicación y cobertura` desktop height calibration for shorter browser viewports so the section fits within the initial visible page area.
+- Reduced the short-viewport vertical stack proportionally: heading scale, lead spacing, contact cards, chips, buttons, map height, coverage card, and marker size.
+- Added a Google Maps auth/load fallback guard using `gm_authFailure`, script error handling, and a load timeout so invalid or misconfigured API keys fall back to the styled local map instead of leaving the Google error modal over the section.
+- Preserved the current trébol marker asset and centralized contact behavior.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:

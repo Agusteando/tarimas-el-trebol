@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.20`.
+Versión actual: `1.2.21`.
 
 Esta iteración reconstruye la sección de `Ubicación y cobertura` para acercarla al reference image suministrado: copy/contacto/acciones a la izquierda, mapa a la derecha, marcador de marca, tarjeta flotante de cobertura y soporte opcional para Google Maps con estilo personalizado.
 
