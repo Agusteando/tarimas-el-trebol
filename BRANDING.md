@@ -37,7 +37,7 @@ Los textos comerciales, teléfonos, labels, badges y CTAs deben renderizarse con
 
 ## Escala de la vista inicial
 
-El header, hero y trust bar están calibrados contra la referencia desktop enviada y ahora usan las imágenes reales de hero aprobadas para fondo y visual principal. La composición debe permitir que el usuario vea la propuesta principal, los CTAs, el visual de tarimas y las cards de confianza sin que el hero se sienta sobredimensionado.
+El header, hero y trust bar están calibrados contra la referencia desktop enviada y usan las imágenes reales de hero aprobadas para fondo y visual principal. Esta iteración agrega más aire entre el badge de Atención B2B y el H1 sin escalar la página completa, y extiende la misma dirección visual al bloque de Quiénes somos y Nuestra misión.
 
 La escala se controla desde CSS responsive con un breakpoint específico para desktop denso; no se usa `zoom`, `transform: scale()` sobre la página ni texto incrustado en imágenes.
 
@@ -51,4 +51,4 @@ Componentes reutilizables, tokens globales, CSS limpio, responsive mobile/deskto
 - `public/images/hero/green-industrial-pattern.webp`
 - `public/images/hero/pallets-warehouse-stack.webp`
 
-La imagen de fondo aporta el patrón verde industrial; la imagen de tarimas se usa dentro del card rotado del hero. Ninguna contiene texto de marketing.
+La imagen de fondo aporta el patrón verde industrial; la imagen de tarimas se usa dentro del card rotado del hero y como visual temporal aprobado para secciones corporativas. Ninguna contiene texto de marketing.

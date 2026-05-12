@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Iteración actual
 
-Esta versión incorpora las dos imágenes nuevas entregadas para el hero, suaviza la tipografía del layout y mantiene la recalibración de escala contra la referencia desktop. El ajuste no es sólo visual: también revisa densidad, espaciado, iconos, tarjetas superpuestas, header, CTAs y trust bar para que la primera vista se acerque más al target.
+Esta versión suma una pasada de respiración visual en el hero sin romper escala ni proporciones, y avanza el siguiente bloque del landing: trust bar, quiénes somos y misión. El ajuste cubre densidad, espaciado, iconos, tarjetas superpuestas, header, CTAs, trust bar y transición hacia contenido informativo B2B.
 
 Assets de marca activos:
 
@@ -35,6 +35,8 @@ Se agregó una calibración responsive para desktop denso, especialmente útil e
 - Tipografía más cercana a la referencia, usando Manrope para headings con peso visual menos agresivo que Sora.
 - Iconos, tarjetas superpuestas y CTAs recalibrados.
 - Cards de confianza más compactas bajo el hero.
+- Sección Quiénes somos rediseñada con visual real, tarjeta flotante e información escaneable.
+- Nueva sección de misión con fondo verde suave, card visual y puntos de valor.
 - Paleta blanco / verde / amarillo.
 - CTAs amarillos reservados para conversión.
 - Imágenes sin texto incrustado; el texto vive en HTML/CSS.

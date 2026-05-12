@@ -1,45 +1,73 @@
 <script setup lang="ts">
-import SectionHeading from './SectionHeading.vue';
+import IconSymbol from './IconSymbol.vue';
 import { getWhatsAppLink } from '../data/contact';
+
+const aboutHighlights = [
+  {
+    icon: 'person',
+    title: 'Atención personalizada',
+    text: 'Asesoría experta en cada proyecto.'
+  },
+  {
+    icon: 'shield',
+    title: 'Compromiso total',
+    text: 'Calidad, cumplimiento y servicio.'
+  }
+];
 </script>
 
 <template>
-  <section class="about section-pad">
+  <section class="about" aria-labelledby="about-title">
     <div class="container about__grid">
-      <div class="about__copy">
-        <SectionHeading
-          eyebrow="Quiénes somos"
-          title="Proveedor industrial de tarimas para empresas de alto movimiento"
-          description="Somos una empresa líder en la venta de tarimas industriales de todas las medidas, fundada en 2018. Nos especializamos en soluciones eficientes y de alta calidad para empresas de diversos sectores."
-        />
-        <div class="about__kpis" data-reveal>
-          <div>
-            <strong>2018</strong>
-            <span>Empresa fundada</span>
-          </div>
-          <div>
-            <strong>B2B</strong>
-            <span>Compras industriales</span>
-          </div>
-          <div>
-            <strong>Medidas</strong>
-            <span>Soluciones a necesidad</span>
-          </div>
+      <figure class="about__media" data-reveal>
+        <div class="about__image-card">
+          <img src="/images/hero/pallets-warehouse-stack.webp" alt="Tarimas industriales apiladas en bodega" />
         </div>
-        <div class="mission-card" data-reveal>
-          <span class="mission-card__label">Nuestra misión</span>
+
+        <figcaption class="about__float-card">
+          <span class="about__float-icon" aria-hidden="true">
+            <IconSymbol name="shield" />
+          </span>
+          <strong>Especialistas en tarimas industriales a la medida</strong>
+          <p>Soluciones confiables para empresas que no pueden detener su operación.</p>
+        </figcaption>
+      </figure>
+
+      <div class="about__copy" data-reveal>
+        <p class="eyebrow eyebrow--clover">Quiénes somos</p>
+        <h2 id="about-title">Soluciones de tarimas industriales para empresas</h2>
+
+        <div class="about__body">
           <p>
-            Ser el mejor aliado estratégico para las empresas, proporcionando soluciones de
-            tarimas industriales que faciliten y optimicen sus operaciones.
+            En El Trébol somos especialistas en la fabricación y suministro de tarimas
+            industriales de todas las medidas. Atendemos a empresas de los sectores logístico,
+            alimenticio, metalúrgico, automotriz, farmacéutico y más, con soluciones diseñadas
+            para optimizar sus procesos y proteger su carga.
+          </p>
+          <p>
+            Combinamos materiales de alta calidad, procesos rigurosos y un equipo experimentado
+            para ofrecer tarimas resistentes, funcionales y listas para soportar las exigencias
+            de la industria actual.
           </p>
         </div>
-        <a class="button" :href="getWhatsAppLink('Hola, quiero información sobre tarimas industriales para mi empresa.')" target="_blank" rel="noreferrer">
-          Hablar con un asesor
+
+        <div class="about__features" aria-label="Diferenciadores de atención">
+          <article v-for="item in aboutHighlights" :key="item.title" class="about__feature">
+            <span aria-hidden="true">
+              <IconSymbol :name="item.icon" />
+            </span>
+            <div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.text }}</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="button about__cta" :href="getWhatsAppLink('Hola, quiero información sobre tarimas industriales para mi empresa.')" target="_blank" rel="noreferrer">
+          Solicitar asesoría
+          <span aria-hidden="true">→</span>
         </a>
       </div>
-      <figure class="about__figure" data-reveal>
-        <img src="/images/about-stacks.svg" alt="Tarimas industriales apiladas en almacén" />
-      </figure>
     </div>
   </section>
 </template>

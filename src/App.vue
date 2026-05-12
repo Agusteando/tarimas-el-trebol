@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
 import TrustBar from './components/TrustBar.vue';
 import AboutSection from './components/AboutSection.vue';
+import MissionSection from './components/MissionSection.vue';
 import ProductsSection from './components/ProductsSection.vue';
 import SolutionsSection from './components/SolutionsSection.vue';
 import ServicesSection from './components/ServicesSection.vue';
@@ -25,6 +26,7 @@ useReveal();
     <HeroSection />
     <TrustBar />
     <AboutSection />
+    <MissionSection />
     <ProductsSection />
     <SolutionsSection />
     <ServicesSection />
