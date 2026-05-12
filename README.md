@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.12`.
+Versión actual: `1.2.13`.
 
-Esta iteración reconstruye `Sectores que atendemos` con el layout de referencia: extracción de las seis escenas desde la imagen 3x2 suministrada, cards en grid 3x2, iconos centralizados, proof strip inferior y CSS dedicado para mantener separación de responsabilidades. Se conserva la separación de contacto definida en la versión anterior: WhatsApp usa `722 547 2591` y llamadas usa `722 537 2605`.
+Esta iteración reconstruye `Entrega confiable` y `Proceso simple` con el layout de referencia: imagen de camión suministrada, composición derecha edge-to-edge, beneficios de entrega, proceso en cuatro pasos y banner final de cotización por WhatsApp. Se conserva la separación de contacto: WhatsApp usa `722 547 2591` y llamadas usa `722 537 2605`.
 
 ## Estructura principal
 
@@ -33,9 +33,11 @@ Esta iteración reconstruye `Sectores que atendemos` con el layout de referencia
 - `src/components/IconSymbol.vue` centraliza todos los símbolos SVG usados por la UI.
 - `src/components/ServicesSection.vue` contiene la composición completa de servicios adicionales.
 - `src/components/IndustryCard.vue` y `src/components/IndustryProofStrip.vue` componen la sección de sectores.
+- `src/components/QuoteProcess.vue` contiene la composición de entrega confiable y proceso simple.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
 - `src/styles/sections/sectors.css` contiene la calibración específica de sectores.
-- `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
+- `src/styles/sections/delivery-process.css` contiene la calibración específica de entrega confiable y proceso simple.
+- `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto, misión y entrega.
 - `src/styles/tokens.css` contiene tokens globales.
 - `src/styles/base.css` contiene estilos base y secciones generales.
 - `src/styles/sections/mission-products.css` contiene la calibración específica de misión, productos y catálogo.
@@ -51,6 +53,7 @@ Esta iteración reconstruye `Sectores que atendemos` con el layout de referencia
 - `public/images/sections/custom-pallet-solutions.webp`
 - `public/images/services/recoleccion-operativa.webp`
 - `public/images/industries/sector-*.webp`
+- `public/images/delivery/delivery-truck-pallets.webp`
 - `public/images/products/tarima-*.webp`
 
 No se almacenan screenshots de referencia dentro del proyecto.

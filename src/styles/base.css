@@ -1007,7 +1007,6 @@ button:focus-visible {
   background: linear-gradient(135deg, var(--color-green-950), var(--color-green-900));
 }
 
-.quote-process__grid,
 .map-section__grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -1015,8 +1014,7 @@ button:focus-visible {
   align-items: center;
 }
 
-.map-section__content,
-.quote-process__content {
+.map-section__content {
   display: grid;
   justify-items: start;
   gap: 28px;
@@ -1134,62 +1132,6 @@ button:focus-visible {
 
 .advantage-card p {
   color: rgba(255, 255, 255, 0.76);
-}
-
-.quote-process {
-  background: var(--color-white);
-}
-
-.quote-process__content .button {
-  margin-top: 2px;
-}
-
-.quote-process__panel {
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-xl);
-  padding: clamp(22px, 4vw, 34px);
-  background: var(--color-soft);
-  box-shadow: var(--shadow-card);
-}
-
-.step-list {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-  counter-reset: process;
-  list-style: none;
-}
-
-.step-list li {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 18px;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  background: var(--color-white);
-}
-
-.step-list span {
-  display: grid;
-  width: 48px;
-  height: 48px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--color-green-950);
-  background: var(--color-yellow-500);
-  font-size: 1rem;
-  font-weight: 950;
-}
-
-.step-list h3 {
-  margin-bottom: 8px;
-  font-size: 1.32rem;
-}
-
-.step-list p {
-  color: var(--color-muted);
 }
 
 .gallery {
@@ -1732,7 +1674,6 @@ button:focus-visible {
   }
 
   .about__grid,
-  .quote-process__grid,
   .map-section__grid,
   .final-cta__card {
     grid-template-columns: 1fr;
@@ -1759,10 +1700,6 @@ button:focus-visible {
 
   .gallery__header p:not(.eyebrow) {
     margin-top: 16px;
-  }
-
-  .step-list li {
-    grid-template-columns: 1fr;
   }
 
   .floating-whatsapp {
@@ -1909,11 +1846,6 @@ button:focus-visible {
   }
 
   .advantage-card,
-  .quote-process__panel,
-  .step-list li {
-    padding: 22px;
-  }
-
   .about__kpis {
     grid-template-columns: 1fr;
   }
