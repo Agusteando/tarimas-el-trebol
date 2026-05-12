@@ -25,7 +25,6 @@ const toggleItem = (index: number) => {
             :key="item.question"
             class="faq-item"
             :class="{ 'faq-item--open': openIndex === index }"
-            data-reveal
           >
             <button
               type="button"

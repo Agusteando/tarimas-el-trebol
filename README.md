@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.15`.
+Versión actual: `1.2.16`.
 
-Esta iteración reconstruye la sección de `Ventajas competitivas` para acercarla al reference image suministrado: encabezado alineado a la izquierda, cinco beneficios en columnas con separadores verticales y una franja CTA inferior con bloque de relación a largo plazo y acciones de WhatsApp / llamada.
+Esta iteración corrige el comportamiento del acordeón de `Preguntas frecuentes` y recalibra el tamaño desktop de `Preguntas frecuentes` y `Ventajas competitivas` para que la composición principal sea visible dentro del primer viewport en escritorio con menor desbordamiento vertical.
 
 ## Estructura principal
 

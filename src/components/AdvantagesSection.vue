@@ -23,7 +23,6 @@ import { advantages } from '../data/advantages';
           :key="advantage.title"
           class="advantages-section__item"
           :class="{ 'advantages-section__item--last': index === advantages.length - 1 }"
-          data-reveal
         >
           <IconBubble :icon="advantage.icon" tone="soft" size="xl" />
           <h3>{{ advantage.title }}</h3>
