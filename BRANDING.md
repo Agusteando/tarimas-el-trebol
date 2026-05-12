@@ -37,7 +37,9 @@ Los textos comerciales, teléfonos, labels, badges y CTAs deben renderizarse con
 
 ## Escala de la vista inicial
 
-El header, hero y trust bar están ajustados para una densidad similar a la referencia desktop. La composición debe permitir que el usuario vea la propuesta principal, los CTAs, el visual de tarimas y las primeras cards de confianza sin que el hero se sienta sobredimensionado.
+El header, hero y trust bar están calibrados contra la referencia desktop enviada. La composición debe permitir que el usuario vea la propuesta principal, los CTAs, el visual de tarimas y las cards de confianza sin que el hero se sienta sobredimensionado.
+
+La escala se controla desde CSS responsive con un breakpoint específico para desktop denso; no se usa `zoom`, `transform: scale()` sobre la página ni texto incrustado en imágenes.
 
 ## Estándares activos
 

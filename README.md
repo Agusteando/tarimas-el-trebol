@@ -19,18 +19,21 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Iteración actual
 
-Esta versión integra el logo real del cliente, renombrado y organizado como asset de marca:
+Esta versión recalibra la vista inicial contra la referencia desktop enviada. El ajuste principal no es sólo tipográfico: también corrige escala general, espaciado, iconos, tarjetas superpuestas, header, CTAs y trust bar para que la primera vista tenga la misma densidad visual esperada.
+
+Assets de marca activos:
 
 - `public/images/brand/el-trebol-logo.png`
 - `public/images/brand/el-trebol-logo-original.png`
 
-También ajusta la escala del header, hero y trust bar para que la vista inicial desktop mantenga una densidad similar a la referencia: header flotante compacto, hero menos sobredimensionado y cards de confianza visibles dentro del primer bloque visual en el objetivo de 1900 × 1200 a 150%.
+Se agregó una calibración responsive para desktop denso, especialmente útil en el objetivo de 1900 × 1200 a 150%, sin romper el comportamiento móvil.
 
 ## Branding aplicado
 
-- Header flotante con logo real y lockup legible.
+- Header flotante más compacto con logo real y lockup legible.
 - Hero de alta densidad visual basado en la referencia.
-- Escala tipográfica contenida para evitar el problema de tamaño 3x.
+- Escala tipográfica contenida y saltos de línea controlados para evitar texto sobredimensionado.
+- Iconos, tarjetas superpuestas y CTAs recalibrados.
 - Cards de confianza más compactas bajo el hero.
 - Paleta blanco / verde / amarillo.
 - CTAs amarillos reservados para conversión.

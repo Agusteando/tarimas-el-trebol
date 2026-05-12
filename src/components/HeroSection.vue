@@ -25,8 +25,9 @@ const heroProof = [
         </p>
 
         <h1 id="hero-title">
-          Tarimas industriales para empresas que
-          <span>no pueden detener su operación</span>
+          Tarimas industriales<br />
+          para empresas que<br />
+          <span>no pueden detener<br />su operación</span>
         </h1>
 
         <div class="hero__accent-line" aria-hidden="true"></div>
