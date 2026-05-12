@@ -9,8 +9,8 @@ defineProps<{ name: string }>();
       <path d="m18 24 4 4 8-9" />
     </g>
     <g v-else-if="name === 'truck'">
-      <path d="M6 14h24v17H6V14Zm24 6h7l5 6v5H30V20Z" />
-      <path d="M14 36a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm22 0a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+      <path d="M6 15h23v16H6V15Zm23 5h8l5 6v5H29V20Z" />
+      <path d="M14 37a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm22 0a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" />
     </g>
     <g v-else-if="name === 'leaf'">
       <path d="M39 8C22 9 10 20 10 35c13 2 27-7 29-27Z" />
@@ -23,6 +23,47 @@ defineProps<{ name: string }>();
     <g v-else-if="name === 'measure'">
       <path d="M13 10 38 35l-5 5L8 15l5-5Z" />
       <path d="m16 18 3-3m3 9 3-3m3 9 3-3" />
+    </g>
+    <g v-else-if="name === 'weight'">
+      <path d="M17 17h14l4 23H13l4-23Z" />
+      <path d="M19 17a5 5 0 0 1 10 0" />
+      <path d="M24 25v7m-4-3.5h8" />
+    </g>
+    <g v-else-if="name === 'factory'">
+      <path d="M8 40V22l9 5v-5l9 5v-9h14v22H8Z" />
+      <path d="M14 34h5m5 0h5m5 0h3M31 18v-7h6v7" />
+    </g>
+    <g v-else-if="name === 'recycle'">
+      <path d="m18 11 4-5 4 5" />
+      <path d="M22 6v9a8 8 0 0 0-7.2 4.6" />
+      <path d="m36 25 3 5-6 1" />
+      <path d="M39 30l-8 4.8a8 8 0 0 1-8.2-.2" />
+      <path d="m12 30-6-1 3-5" />
+      <path d="M6 29l7.8 5a8 8 0 0 0 7.8.3" />
+    </g>
+    <g v-else-if="name === 'delivery-clock'">
+      <path d="M7 14h21v17H7V14Zm21 6h8l5 6v5H28V20Z" />
+      <path d="M15 37a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+      <path d="M35 39a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+      <path d="M35 27v5l4 2" />
+    </g>
+    <g v-else-if="name === 'pallet'">
+      <path d="M8 17h32M10 14h28v7H10v-7Z" />
+      <path d="M12 21v10m8-10v10m8-10v10m8-10v10" />
+      <path d="M8 31h32v5H8v-5Z" />
+    </g>
+    <g v-else-if="name === 'metal'">
+      <path d="M10 35 30 11l8 7-20 24-8-7Z" />
+      <path d="m23 20 8 7M15 30l8 7" />
+      <path d="M31 11h8v8" />
+    </g>
+    <g v-else-if="name === 'box'">
+      <path d="m24 6 16 9v18l-16 9-16-9V15l16-9Z" />
+      <path d="M8 15l16 9 16-9M24 24v18" />
+      <path d="m16 10 16 9" />
+    </g>
+    <g v-else-if="name === 'dots'">
+      <path d="M13 24h.1M24 24h.1M35 24h.1" stroke-width="6" />
     </g>
     <g v-else-if="name === 'quote'">
       <path d="M12 8h18l7 7v25H12V8Z" />

@@ -3,5 +3,6 @@ import App from './App.vue';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/sections/mission-products.css';
+import './styles/sections/solutions-services.css';
 
 createApp(App).mount('#app');

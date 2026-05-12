@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.5`.
+Versión actual: `1.2.6`.
 
-Esta iteración ajusta la sección de `Nuestra misión` y `Nuestros productos` contra la referencia desktop provista. El bloque de misión ahora usa una altura controlada, una figura SVG recortada con borde orgánico para la imagen central, un panel de beneficios independiente y burbujas de iconos centradas. La sección de productos usa la textura de concreto optimizada detrás de las tarimas transparentes y mantiene el CTA `Cotizar por WhatsApp` en una sola línea.
+Esta iteración estandariza bases visuales para los siguientes bloques: `Quiénes somos` usa la textura de madera real como acento, `Nuestra misión` corrige el encuentro entre la imagen curva y el panel verde, y `Soluciones personalizadas` / `Servicios adicionales` se rehacen contra la nueva referencia Figma con imagen real optimizada, tarjetas, chips e iconografía centrada.
 
 ## Estructura principal
 
@@ -29,6 +29,8 @@ Esta iteración ajusta la sección de `Nuestra misión` y `Nuestros productos` c
 - `src/components/MissionMediaShape.vue` controla la curva visual de la imagen de misión.
 - `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
 - `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
+- `src/components/IconBubble.vue` centraliza burbujas de iconos para evitar ajustes por sección.
+- `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
 - `src/styles/tokens.css` contiene tokens globales.
 - `src/styles/base.css` contiene estilos base y secciones generales.
@@ -41,6 +43,7 @@ Esta iteración ajusta la sección de `Nuestra misión` y `Nuestros productos` c
 - `public/images/hero/pallets-warehouse-stack.webp`
 - `public/images/hero/wood-plank-texture.webp`
 - `public/images/products/concrete-floor-background.webp`
+- `public/images/sections/custom-pallet-solutions.webp`
 - `public/images/products/tarima-*.webp`
 
 No se almacenan screenshots de referencia dentro del proyecto.

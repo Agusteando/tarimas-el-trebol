@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconSymbol from './IconSymbol.vue';
+import IconBubble from './IconBubble.vue';
 import type { MissionBenefit } from '../data/mission';
 
 defineProps<{
@@ -10,9 +10,7 @@ defineProps<{
 <template>
   <aside class="mission-benefit-panel" aria-label="Ventajas de servicio" data-reveal>
     <article v-for="item in items" :key="item.title" class="mission-benefit-panel__item">
-      <span class="mission-benefit-panel__icon" aria-hidden="true">
-        <IconSymbol :name="item.icon" />
-      </span>
+      <IconBubble class="mission-benefit-panel__icon" :icon="item.icon" tone="inverted" size="lg" />
       <span class="mission-benefit-panel__copy">
         <strong>{{ item.title }}</strong>
         <small>{{ item.text }}</small>

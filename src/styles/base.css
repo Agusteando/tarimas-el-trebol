@@ -802,8 +802,9 @@ button:focus-visible {
   border: 1px solid rgba(184, 121, 69, 0.68);
   border-radius: 28px;
   background:
-    linear-gradient(90deg, rgba(184, 121, 69, 0.88), rgba(184, 121, 69, 0.62)),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.1), transparent);
+    linear-gradient(90deg, rgba(184, 121, 69, 0.32), rgba(184, 121, 69, 0.06)),
+    url('/images/hero/wood-plank-texture.webp') center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(255, 229, 137, 0.12), 0 24px 62px rgba(16, 32, 20, 0.12);
   content: "";
   transform: rotate(-4deg);
 }
@@ -1006,8 +1007,6 @@ button:focus-visible {
   background: linear-gradient(135deg, var(--color-green-950), var(--color-green-900));
 }
 
-.solutions__grid,
-.services__grid,
 .quote-process__grid,
 .map-section__grid {
   display: grid;
@@ -1023,117 +1022,6 @@ button:focus-visible {
   gap: 28px;
 }
 
-.solutions__visual,
-.services__media {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(47, 125, 70, 0.12);
-  border-radius: var(--radius-xl);
-  background: var(--color-green-100);
-  box-shadow: var(--shadow-soft);
-}
-
-.solutions__visual::after,
-.services__media::after {
-  position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: calc(var(--radius-xl) - 12px);
-  pointer-events: none;
-  content: "";
-}
-
-.solutions__visual img,
-.services__media img {
-  width: 100%;
-}
-
-
-
-.solutions {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--color-green-100), var(--color-yellow-100));
-}
-
-.solutions::before {
-  position: absolute;
-  inset: 0;
-  opacity: 0.38;
-  background-image: radial-gradient(circle at 20% 10%, rgba(47, 125, 70, 0.24), transparent 26%), radial-gradient(circle at 80% 40%, rgba(244, 197, 66, 0.32), transparent 22%);
-  content: "";
-}
-
-.solutions .container {
-  position: relative;
-}
-
-.solution-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.solution-points span {
-  border: 1px solid rgba(47, 125, 70, 0.18);
-  border-radius: 999px;
-  padding: 12px 16px;
-  color: var(--color-green-950);
-  background: rgba(255, 255, 255, 0.72);
-  font-weight: 900;
-  box-shadow: 0 10px 24px rgba(23, 69, 42, 0.08);
-}
-
-.services {
-  background: var(--color-white);
-}
-
-.service-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 32px 0;
-}
-
-.service-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-md);
-  padding: 18px;
-  background: var(--color-soft);
-  transition: transform var(--transition), border-color var(--transition), background var(--transition);
-}
-
-.service-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(47, 125, 70, 0.26);
-  background: var(--color-white);
-}
-
-.service-item > span {
-  display: grid;
-  flex: 0 0 44px;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--color-green-950);
-  background: var(--color-yellow-500);
-  font-weight: 950;
-}
-
-.service-item h3 {
-  margin-bottom: 6px;
-  font-size: 1.18rem;
-}
-
-.service-item p {
-  color: var(--color-muted);
-  font-size: 0.95rem;
-}
 
 .industries {
   overflow: clip;
@@ -1243,6 +1131,61 @@ button:focus-visible {
   stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.icon-bubble {
+  --icon-bubble-size: 48px;
+  --icon-symbol-size: 26px;
+
+  display: inline-grid;
+  flex: 0 0 var(--icon-bubble-size);
+  width: var(--icon-bubble-size);
+  height: var(--icon-bubble-size);
+  place-items: center;
+  border-radius: 999px;
+  color: var(--color-green-900);
+  line-height: 0;
+}
+
+.icon-bubble--sm {
+  --icon-bubble-size: 28px;
+  --icon-symbol-size: 18px;
+}
+
+.icon-bubble--md {
+  --icon-bubble-size: 46px;
+  --icon-symbol-size: 25px;
+}
+
+.icon-bubble--lg {
+  --icon-bubble-size: 58px;
+  --icon-symbol-size: 31px;
+}
+
+.icon-bubble--soft {
+  background: var(--color-green-100);
+}
+
+.icon-bubble--dark {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-green-800), var(--color-green-950));
+}
+
+.icon-bubble--inverted {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.icon-bubble--yellow {
+  color: var(--color-green-950);
+  background: transparent;
+}
+
+.icon-bubble .icon-symbol {
+  width: var(--icon-symbol-size);
+  height: var(--icon-symbol-size);
+  margin: 0;
+  stroke: currentColor;
 }
 
 .advantage-card .icon-symbol {
@@ -1867,8 +1810,6 @@ button:focus-visible {
   }
 
   .about__grid,
-  .solutions__grid,
-  .services__grid,
   .quote-process__grid,
   .map-section__grid,
   .final-cta__card {
@@ -1882,8 +1823,7 @@ button:focus-visible {
   .product-grid,
   .advantage-grid,
   .gallery-grid,
-  .site-footer__grid,
-  .service-list {
+  .site-footer__grid {
     grid-template-columns: 1fr;
   }
 

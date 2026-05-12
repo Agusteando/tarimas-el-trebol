@@ -4,33 +4,91 @@ export type Service = {
   icon: string;
 };
 
+export type SolutionChip = {
+  label: string;
+  icon: string;
+};
+
+export type SolutionProof = {
+  title: string;
+  text: string;
+  icon: string;
+};
+
+export type SolutionFeature = {
+  title: string;
+  text: string;
+  icon: string;
+};
+
 export const additionalServices: Service[] = [
   {
     title: 'Recolección de tarima',
-    description: 'Retiro de tarima usada para liberar espacio operativo.',
-    icon: '↻'
+    description: 'Retiro y manejo responsable de tarima usada.',
+    icon: 'pallet'
   },
   {
     title: 'Playo',
-    description: 'Recolección de materiales plásticos industriales aprovechables.',
-    icon: '◌'
+    description: 'Recolección de playo y materiales plásticos.',
+    icon: 'truck'
   },
   {
     title: 'Metal',
-    description: 'Gestión de chatarra metálica industrial de forma ordenada.',
-    icon: '▦'
+    description: 'Reciclaje de metales y perfiles.',
+    icon: 'metal'
   },
   {
     title: 'Cartón',
-    description: 'Retiro de cartón y empaques industriales acumulados.',
-    icon: '□'
+    description: 'Manejo y reciclaje de cartón.',
+    icon: 'box'
+  },
+  {
+    title: 'Otros materiales',
+    description: 'Soluciones para otros materiales industriales.',
+    icon: 'dots'
   }
 ];
 
-export const solutionPoints = [
-  'Diferentes medidas',
-  'Diferentes capacidades',
-  'Materiales duraderos',
-  'Opciones recicladas',
-  'Soluciones para operación industrial'
+export const solutionChips: SolutionChip[] = [
+  { label: 'Diferentes medidas', icon: 'measure' },
+  { label: 'Diferentes capacidades', icon: 'weight' },
+  { label: 'Materiales duraderos', icon: 'shield' },
+  { label: 'Opciones recicladas', icon: 'recycle' },
+  { label: 'Operación industrial', icon: 'factory' }
+];
+
+export const solutionProofs: SolutionProof[] = [
+  {
+    title: 'Alta resistencia',
+    text: 'Materiales seleccionados para máxima durabilidad.',
+    icon: 'shield'
+  },
+  {
+    title: 'Sostenible',
+    text: 'Opciones recicladas que cuidan el planeta.',
+    icon: 'leaf'
+  },
+  {
+    title: 'Entregas confiables',
+    text: 'Cumplimos tiempos y volúmenes requeridos.',
+    icon: 'delivery-clock'
+  }
+];
+
+export const solutionFeatures: SolutionFeature[] = [
+  {
+    title: 'Medidas a la medida',
+    text: 'Adaptamos dimensiones y capacidades según tu operación.',
+    icon: 'measure'
+  },
+  {
+    title: 'Alta durabilidad industrial',
+    text: 'Materiales y ensambles diseñados para uso intensivo y repetitivo.',
+    icon: 'shield'
+  },
+  {
+    title: 'Manejo y almacenamiento óptimo',
+    text: 'Diseñadas para mejorar la eficiencia en carga, descarga y almacenamiento.',
+    icon: 'box'
+  }
 ];
