@@ -1,4 +1,4 @@
-# Tarimas El Trébol — Landing Vue/Vite
+# Tarimas El Trébol — Vue/Vite Landing
 
 Landing page para `tarimaseltrebol.mx`, construida con Vue 3, Vite y TypeScript.
 
@@ -17,37 +17,52 @@ npm run build
 
 La última validación de esta iteración compiló correctamente con `npm run build`.
 
-## Iteración actual
+## Estado actual
 
-Esta versión recalibra el hero contra la referencia desktop para preservar la composición visual en tamaños cercanos al objetivo, especialmente el bloque de H1. El ajuste fija las líneas del título con spans semánticos, aumenta el ancho útil del copy, suaviza el peso tipográfico y mantiene la proporción del visual, proof card, header, CTAs y trust bar sin usar zoom ni transformaciones de escala sobre la página.
+Versión actual: `1.2.5`.
 
-Assets de marca activos:
+Esta iteración ajusta la sección de `Nuestra misión` y `Nuestros productos` contra la referencia desktop provista. El bloque de misión ahora usa una altura controlada, una figura SVG recortada con borde orgánico para la imagen central, un panel de beneficios independiente y burbujas de iconos centradas. La sección de productos usa la textura de concreto optimizada detrás de las tarimas transparentes y mantiene el CTA `Cotizar por WhatsApp` en una sola línea.
 
-- `public/images/brand/el-trebol-logo.png`
-- `public/images/brand/el-trebol-logo-original.png`
+## Estructura principal
 
-Se agregó una calibración responsive para desktop denso, especialmente útil en el objetivo de 1900 × 1200 a 150%, sin romper el comportamiento móvil.
+- `src/components/` contiene los componentes Vue reutilizables.
+- `src/components/MissionMediaShape.vue` controla la curva visual de la imagen de misión.
+- `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
+- `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
+- `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
+- `src/styles/tokens.css` contiene tokens globales.
+- `src/styles/base.css` contiene estilos base y secciones generales.
+- `src/styles/sections/mission-products.css` contiene la calibración específica de misión, productos y catálogo.
 
-## Branding aplicado
-
-- Header flotante más compacto con logo real y lockup legible.
-- Hero de alta densidad visual basado en la referencia.
-- Tipografía más cercana a la referencia, usando Manrope para headings con peso visual menos agresivo que Sora.
-- Iconos, tarjetas superpuestas y CTAs recalibrados.
-- Cards de confianza calibradas bajo el hero para conservar densidad y ritmo visual.
-- Sección Quiénes somos rediseñada con visual real, tarjeta flotante e información escaneable.
-- Nueva sección de misión con fondo verde suave, card visual y puntos de valor.
-- Paleta blanco / verde / amarillo.
-- CTAs amarillos reservados para conversión.
-- Imágenes sin texto incrustado; el texto vive en HTML/CSS.
-
-## Assets principales
+## Assets activos principales
 
 - `public/images/brand/el-trebol-logo.png`
 - `public/images/hero/green-industrial-pattern.webp`
 - `public/images/hero/pallets-warehouse-stack.webp`
-- `public/references/home-desktop-figma-reference.png`
-- `public/references/target-reference-density.png`
+- `public/images/hero/wood-plank-texture.webp`
+- `public/images/products/concrete-floor-background.webp`
+- `public/images/products/tarima-*.webp`
+
+No se almacenan screenshots de referencia dentro del proyecto.
+
+## Productos
+
+La página `/productos` muestra el catálogo completo con 12 tipos de tarima:
+
+- Barrote
+- Tacón
+- Tipo Cheep
+- Reciclada
+- Nueva Estándar
+- Personalizada
+- Reforzada para Carga Pesada
+- Doble Vista
+- Exportación
+- Ligera Económica
+- Industrial Cerrada
+- Perimetral
+
+El home conserva tres productos destacados y el botón `Ver todas las tarimas` navega al catálogo completo.
 
 ## Google Maps
 
@@ -62,113 +77,4 @@ El mapa queda preparado para renderizarse cuando se agreguen latitud y longitud 
 
 ## Estándares activos
 
-Componentes reutilizables, tokens globales, CSS limpio, HTML para todo el texto, diseño responsive mobile/desktop, sin `!important`, sin hacks por resolución y sin texto incrustado en imágenes.
-
-## v9 update
-
-This update focuses on the mission and products section. It uses the provided product image sheet, crops product assets into organized files, adds a reusable `ProductCard.vue`, and aligns the layout closer to the supplied Figma/reference screenshot.
-
-Validation:
-
-```bash
-npm run build
-```
-
-Status: build passes.
-
-## Iteration v10 notes
-
-This pass identifies `public/references/hero-main-target-reference.png` as the target reference for the first main desktop section. The hero now uses the supplied wood plank texture behind the realistic pallet image to reproduce the layered right-side treatment from the reference without embedding marketing text in imagery.
-
-Updated hero assets:
-
-- `public/images/hero/green-industrial-pattern.webp`
-- `public/images/hero/pallets-warehouse-stack.webp`
-- `public/images/hero/wood-plank-texture.webp`
-- `public/images/hero/wood-plank-texture-source.png`
-- `public/references/hero-main-target-reference.png`
-
-Implementation standard remains: reusable Vue components, global design tokens, clean CSS, organized assets, responsive desktop/mobile behavior, no `!important`, no page-wide scale hacks, and all headings, CTAs, badges, phones, and labels rendered in HTML/CSS.
-## Iteration v11 notes
-
-This pass centers the SVG icons inside their visual containers in `Nuestra misión` and `Nuestros productos`. The shared `IconSymbol` base style is now neutral, so container spacing no longer comes from a global icon margin. The mission benefit bubbles and product CTA/footer icons now control their own sizing and alignment directly.
-
-Product-section cleanup in this pass:
-
-- Added explicit `whatsapp` and `arrow` symbols to `IconSymbol.vue` so product CTAs render the intended icons instead of falling back to the person glyph.
-- Removed obsolete product-card subselectors from the old card structure to avoid stale CSS affecting the current showcase card markup.
-- Preserved the roadmap direction for mission/products reference matching while keeping all labels, CTAs, product names, and badges as HTML/CSS.
-
-Validation:
-
-```bash
-npm run build
-```
-
-Status: build passes.
-
-
-## Iteration v12 notes
-
-This pass replaces the product imagery with the supplied 4 × 3 transparent pallet sheet and expands the product system into a full catalog route.
-
-Implemented:
-
-- Replaced the visible product-card images with new sliced WebP assets from the supplied product sheet.
-- Added 12 product records: Barrote, Tacón, Tipo Cheep, Reciclada, Nueva Estándar, Personalizada, Reforzada para Carga Pesada, Doble Vista, Exportación, Ligera Económica, Industrial Cerrada, and Perimetral.
-- Created `/productos` as the full products page reached from the `Ver todas las tarimas` CTA.
-- Kept the homepage product section focused on the first three featured products.
-- Updated product detail links so they route to the full catalog and scroll to the selected tarima.
-- Added a small internal route layer and Vercel rewrite support for the catalog page without adding router dependencies.
-- Updated reveal behavior so newly mounted route content is observed correctly.
-
-Validation:
-
-```bash
-npm run build
-```
-
-Status: build passes.
-
-
-## Iteration v13 notes
-
-This pass tightens the `Nuestra misión` and `Nuestros productos` reference section against the supplied desktop screenshot.
-
-Implemented:
-
-- Added `public/images/products/concrete-floor-background.webp` so the transparent pallet assets render over a concrete floor inside product image frames.
-- Stored the current section target as `public/references/mission-products-target-reference.png`.
-- Recalibrated the desktop header toward the reference: full-width top bar, compact brand lockup, plain phone treatment, and flat yellow WhatsApp CTA.
-- Reduced the mission/reference section height to the intended half-screen composition and preserved the clipped warehouse image plus dark green benefits panel.
-- Reworked product card image frames so the first three cards use the concrete background with the transparent pallet assets instead of a placeholder gradient.
-- Removed unused legacy mission-section CSS selectors from the previous layout pass.
-- Adjusted the first three homepage product descriptions to match the reference copy more closely.
-
-Validation:
-
-```bash
-npm run build
-```
-
-Status: build passes.
-
-## Iteration v14 notes
-
-This pass rebuilds the product image crops from the supplied transparent 4 × 3 pallet sheet using alpha/component detection instead of fixed grid slices.
-
-Implemented:
-
-- Re-cropped all 12 product WebP assets from the transparent source image using connected-component alpha detection.
-- Removed adjacent-product bleed from every asset by masking each crop to its own detected transparent component before export.
-- Centered each tarima crop with consistent internal padding so the cards render cleanly over the concrete floor background.
-- Changed product-card images from `cover` to `contain` so transparent assets are not clipped inside their image frames.
-- Added `product-crops-preview-v14.png` as a local diagnostic output during the pass, not as a runtime dependency.
-
-Validation:
-
-```bash
-npm run build
-```
-
-Status: build passes.
+Componentes reutilizables, tokens globales, CSS separado por responsabilidad, texto en HTML/CSS, diseño responsive, sin `!important`, sin hacks por resolución, sin screenshots de referencia en el repo y sin assets fuente innecesarios en producción.

@@ -1,23 +1,7 @@
 <script setup lang="ts">
-import IconSymbol from './IconSymbol.vue';
-
-const missionItems = [
-  {
-    icon: 'shield',
-    title: 'Calidad garantizada',
-    text: 'Procesos estandarizados y materiales seleccionados para máxima resistencia.'
-  },
-  {
-    icon: 'leaf',
-    title: 'Compromiso sostenible',
-    text: 'Reutilizamos y reciclamos para reducir el impacto ambiental.'
-  },
-  {
-    icon: 'people',
-    title: 'Atención personalizada',
-    text: 'Asesoría cercana y soluciones a la medida de cada operación.'
-  }
-];
+import MissionBenefitList from './MissionBenefitList.vue';
+import MissionMediaShape from './MissionMediaShape.vue';
+import { missionBenefits } from '../data/mission';
 </script>
 
 <template>
@@ -34,18 +18,10 @@ const missionItems = [
       </div>
 
       <div class="mission-section__reference-media" data-reveal>
-        <img src="/images/hero/pallets-warehouse-stack.webp" alt="Tarimas industriales almacenadas en bodega" loading="lazy" />
+        <MissionMediaShape src="/images/hero/pallets-warehouse-stack.webp" alt="Tarimas industriales almacenadas en bodega" />
       </div>
 
-      <aside class="mission-section__reference-panel" aria-label="Ventajas de servicio" data-reveal>
-        <article v-for="item in missionItems" :key="item.title" class="mission-section__reference-item">
-          <span class="mission-section__reference-icon"><IconSymbol :name="item.icon" /></span>
-          <span>
-            <strong>{{ item.title }}</strong>
-            <small>{{ item.text }}</small>
-          </span>
-        </article>
-      </aside>
+      <MissionBenefitList :items="missionBenefits" />
     </div>
   </section>
 </template>

@@ -1,82 +1,46 @@
-# Branding — El Trébol Tarimas y Empaques Industriales
+# Branding — Tarimas El Trébol
 
-## Dirección
+## Positioning
 
-Industrial limpio, B2B, operativo y confiable. La página debe comunicar capacidad de abastecimiento, rapidez, calidad y cotización directa para compradores industriales.
+Tarimas industriales para empresas que no pueden detener su operación.
 
-## Logo
+The site should feel industrial, reliable, organized, B2B, responsive, and operationally focused. It should avoid looking like an informal wood shop, a generic recycling page, or a stock-template site.
 
-La iteración actual usa el logo real entregado por el cliente. Los archivos fueron renombrados para mantener el proyecto limpio:
+## Typography
 
-- `public/images/brand/el-trebol-logo.png`
-- `public/images/brand/el-trebol-logo-original.png`
-
-En el header se usa como marca visual real dentro de un lockup HTML para mantener legibilidad a escala desktop y mobile. En footer conserva fondo blanco en el área del logo para respetar el arte original.
-
-## Colores
-
-- Blanco base: `#FFFFFF`
-- Verde oscuro / autoridad: `#102014`, `#17452A`
-- Verde principal: `#2F7D46`
-- Verde suave: `#EAF5EC`
-- Amarillo CTA: `#F4C542`
-- Amarillo suave: `#FFF6D6`
-- Madera/acento: `#B87945`
-- Texto principal: `#1D2A22`
-- Texto secundario: `#5F6D63`
-
-## Tipografía
-
-- Headings: `Manrope`
-- Body: `Inter`
+- Display: Manrope
+- Body: Inter
 - Fallback: system UI stack
 
-## Reglas visuales
+Headings should feel strong without becoming too heavy. Body copy should stay compact and readable for industrial buyers.
 
-Los textos comerciales, teléfonos, labels, badges y CTAs deben renderizarse con HTML/CSS. Las imágenes no deben tener texto incrustado para conservar accesibilidad, SEO, edición limpia y comportamiento responsive.
+## Color system
 
-## Escala de la vista inicial
+- White: `#FFFFFF`
+- Industrial off-white: `#F7F9F5`
+- Soft green: `#EAF5EC`
+- Main green: `#2F7D46`
+- Dark green: `#17452A`
+- Deep forest: `#0F2E1D`
+- CTA yellow: `#F4C542`
+- Soft yellow: `#FFF6D6`
+- Wood accent: `#B87945`
+- Text: `#1D2A22`
+- Muted text: `#5F6F63`
 
-El header, hero y trust bar están calibrados contra la referencia desktop enviada y usan las imágenes reales de hero aprobadas para fondo y visual principal. Esta iteración bloquea las líneas del H1 para preservar la composición de la referencia, da más ancho útil al copy, suaviza el peso tipográfico y mantiene la densidad del primer viewport sin escalar la página completa.
+Yellow is reserved for conversion and small attention markers.
 
-La escala se controla desde CSS responsive con líneas de título explícitas, columnas mínimas y un breakpoint específico para desktop denso; no se usa `zoom`, `transform: scale()` sobre la página ni texto incrustado en imágenes.
+## Active visual assets
 
-## Estándares activos
-
-Componentes reutilizables, tokens globales, CSS limpio, responsive mobile/desktop, assets ordenados, sin `!important`, sin CSS muerto, sin hacks por resolución y sin texto incrustado en imágenes.
-
-
-## Assets de hero activos
-
+- `public/images/brand/el-trebol-logo.png`
 - `public/images/hero/green-industrial-pattern.webp`
 - `public/images/hero/pallets-warehouse-stack.webp`
+- `public/images/hero/wood-plank-texture.webp`
+- `public/images/products/concrete-floor-background.webp`
+- `public/images/products/tarima-*.webp`
 
-La imagen de fondo aporta el patrón verde industrial; la imagen de tarimas se usa dentro del card rotado del hero y como visual temporal aprobado para secciones corporativas. Ninguna contiene texto de marketing.
+Reference screenshots are not stored in the repo.
 
-## Iteración v9 — misión y productos
+## Implementation standard
 
-La sección de misión y la sección de productos se ajustaron contra la referencia visual compartida. El objetivo de esta pasada fue mantener densidad de contenido, proporciones y estilo de tarjetas sin depender de texto incrustado en imágenes.
-
-Estándares conservados:
-
-- Componentes reutilizables para producto y secciones.
-- Tokens globales para color, tipografía, spacing, radios y sombras.
-- Texto, CTAs, badges e información de producto en HTML/CSS.
-- Imágenes tratadas como assets visuales, sin claims incrustados.
-- CSS con selectores intencionales y modificadores de sección.
-- Sin `!important`, sin escalado global de página y sin hacks por resolución.
-
-Assets nuevos:
-
-- `public/images/products/pallet-types-source.png`
-- `public/images/products/tarima-barrote.webp`
-- `public/images/products/tarima-tacon.webp`
-- `public/images/products/tarima-cheep.webp`
-- `public/images/products/tarima-reciclada.webp`
-- `public/references/products-section-reference.png`
-
-## v10 hero reference lock
-
-The first main section target reference is stored as `public/references/hero-main-target-reference.png`. The wood texture layer is stored as `public/images/hero/wood-plank-texture.webp` and is used as a CSS background on the hero decorative panel so the visual effect remains responsive and separate from content.
-
-Hero text, CTA labels, phone numbers, proof cards, and badges must stay in HTML/CSS. The hero imagery should remain purely visual: green industrial pattern, pallet warehouse photo, and wood texture accent.
+Text stays in HTML/CSS. Images are used for visual material only. Components should stay focused, styles should be separated by responsibility, and the build should avoid unused source assets, screenshots, override hacks, and `!important`.

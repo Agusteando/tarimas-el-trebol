@@ -3,7 +3,7 @@ defineProps<{ name: string }>();
 </script>
 
 <template>
-  <svg class="icon-symbol" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <svg class="icon-symbol" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
     <g v-if="name === 'shield'">
       <path d="M24 5l15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z" />
       <path d="m18 24 4 4 8-9" />

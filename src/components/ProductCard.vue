@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import IconSymbol from './IconSymbol.vue';
+import ProductImageFrame from './ProductImageFrame.vue';
 import type { Product } from '../data/products';
 import { getWhatsAppLink } from '../data/contact';
 import { navigateToHref } from '../composables/useAppRoute';
@@ -20,9 +21,7 @@ const handleDetailsClick = (event: MouseEvent) => {
 
 <template>
   <article :id="product.id" class="product-card" data-reveal>
-    <div class="product-card__image-frame">
-      <img class="product-card__image" :src="product.image" :alt="product.name" loading="lazy" />
-    </div>
+    <ProductImageFrame :src="product.image" :alt="product.name" />
 
     <div class="product-card__content">
       <div class="product-card__main">
