@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import AppHeader from './components/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
 import TrustBar from './components/TrustBar.vue';
@@ -15,7 +16,12 @@ import MapSection from './components/MapSection.vue';
 import FinalCTA from './components/FinalCTA.vue';
 import AppFooter from './components/AppFooter.vue';
 import FloatingWhatsApp from './components/FloatingWhatsApp.vue';
+import ProductsPage from './pages/ProductsPage.vue';
 import { useReveal } from './composables/useReveal';
+import { useAppRoute } from './composables/useAppRoute';
+
+const { currentPath } = useAppRoute();
+const isProductsPage = computed(() => currentPath.value === '/productos');
 
 useReveal();
 </script>
@@ -23,19 +29,22 @@ useReveal();
 <template>
   <AppHeader />
   <main>
-    <HeroSection />
-    <TrustBar />
-    <AboutSection />
-    <MissionSection />
-    <ProductsSection />
-    <SolutionsSection />
-    <ServicesSection />
-    <IndustriesSection />
-    <AdvantagesSection />
-    <QuoteProcess />
-    <GallerySection />
-    <MapSection />
-    <FinalCTA />
+    <ProductsPage v-if="isProductsPage" />
+    <template v-else>
+      <HeroSection />
+      <TrustBar />
+      <AboutSection />
+      <MissionSection />
+      <ProductsSection />
+      <SolutionsSection />
+      <ServicesSection />
+      <IndustriesSection />
+      <AdvantagesSection />
+      <QuoteProcess />
+      <GallerySection />
+      <MapSection />
+      <FinalCTA />
+    </template>
   </main>
   <AppFooter />
   <FloatingWhatsApp />

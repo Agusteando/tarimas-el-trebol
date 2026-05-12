@@ -107,3 +107,25 @@ npm run build
 
 Status: build passes.
 
+
+## Iteration v12 notes
+
+This pass replaces the product imagery with the supplied 4 × 3 transparent pallet sheet and expands the product system into a full catalog route.
+
+Implemented:
+
+- Replaced the visible product-card images with new sliced WebP assets from the supplied product sheet.
+- Added 12 product records: Barrote, Tacón, Tipo Cheep, Reciclada, Nueva Estándar, Personalizada, Reforzada para Carga Pesada, Doble Vista, Exportación, Ligera Económica, Industrial Cerrada, and Perimetral.
+- Created `/productos` as the full products page reached from the `Ver todas las tarimas` CTA.
+- Kept the homepage product section focused on the first three featured products.
+- Updated product detail links so they route to the full catalog and scroll to the selected tarima.
+- Added a small internal route layer and Vercel rewrite support for the catalog page without adding router dependencies.
+- Updated reveal behavior so newly mounted route content is observed correctly.
+
+Validation:
+
+```bash
+npm run build
+```
+
+Status: build passes.

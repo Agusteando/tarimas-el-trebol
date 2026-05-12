@@ -1,15 +1,25 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import IconSymbol from './IconSymbol.vue';
 import type { Product } from '../data/products';
 import { getWhatsAppLink } from '../data/contact';
+import { navigateToHref } from '../composables/useAppRoute';
 
-defineProps<{
+const props = defineProps<{
   product: Product;
+  detailsHref?: string;
 }>();
+
+const detailHref = computed(() => props.detailsHref ?? `/productos#${props.product.id}`);
+
+const handleDetailsClick = (event: MouseEvent) => {
+  event.preventDefault();
+  navigateToHref(detailHref.value);
+};
 </script>
 
 <template>
-  <article class="product-card" data-reveal>
+  <article :id="product.id" class="product-card" data-reveal>
     <div class="product-card__image-frame">
       <img class="product-card__image" :src="product.image" :alt="product.name" loading="lazy" />
     </div>
@@ -31,7 +41,7 @@ defineProps<{
         <IconSymbol name="whatsapp" />
         <span>Cotizar por WhatsApp</span>
       </a>
-      <a class="button product-card__details" :href="`#${product.id}`" aria-label="Ver detalles de producto">
+      <a class="button product-card__details" :href="detailHref" aria-label="Ver detalles de producto" @click="handleDetailsClick">
         Ver detalles
       </a>
     </div>

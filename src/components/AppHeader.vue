@@ -2,19 +2,26 @@
 import { ref } from 'vue';
 import BrandLogo from './BrandLogo.vue';
 import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
+import { navigateToHref } from '../composables/useAppRoute';
 
 const isOpen = ref(false);
 
 const navItems = [
-  { href: '#productos', label: 'Productos', hasDropdown: true },
-  { href: '#servicios', label: 'Servicios', hasDropdown: true },
-  { href: '#sectores', label: 'Sectores', hasDropdown: true },
-  { href: '#ventajas', label: 'Ventajas' },
-  { href: '#ubicacion', label: 'Ubicación' }
+  { href: '/#productos', label: 'Productos', hasDropdown: true },
+  { href: '/#servicios', label: 'Servicios', hasDropdown: true },
+  { href: '/#sectores', label: 'Sectores', hasDropdown: true },
+  { href: '/#ventajas', label: 'Ventajas' },
+  { href: '/#ubicacion', label: 'Ubicación' }
 ];
 
 const closeMenu = () => {
   isOpen.value = false;
+};
+
+const handleNavClick = (event: MouseEvent, href: string) => {
+  event.preventDefault();
+  closeMenu();
+  navigateToHref(href);
 };
 </script>
 
@@ -42,7 +49,7 @@ const closeMenu = () => {
           :key="item.href"
           :href="item.href"
           :class="{ 'has-chevron': item.hasDropdown }"
-          @click="closeMenu"
+          @click="handleNavClick($event, item.href)"
         >
           {{ item.label }}
         </a>

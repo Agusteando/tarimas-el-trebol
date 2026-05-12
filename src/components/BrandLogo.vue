@@ -1,5 +1,14 @@
+<script setup lang="ts">
+import { navigateToHref } from '../composables/useAppRoute';
+
+const handleClick = (event: MouseEvent) => {
+  event.preventDefault();
+  navigateToHref('/#inicio');
+};
+</script>
+
 <template>
-  <a class="brand-logo" href="#inicio" aria-label="Ir al inicio de El Trébol Tarimas y Empaques Industriales">
+  <a class="brand-logo" href="/#inicio" aria-label="Ir al inicio de El Trébol Tarimas y Empaques Industriales" @click="handleClick">
     <span class="brand-logo__mark" aria-hidden="true">
       <img
         class="brand-logo__image"

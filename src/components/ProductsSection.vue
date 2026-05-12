@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import ProductCard from './ProductCard.vue';
 import IconSymbol from './IconSymbol.vue';
-import { products } from '../data/products';
+import { featuredProducts } from '../data/products';
+import { navigateToHref } from '../composables/useAppRoute';
 </script>
 
 <template>
@@ -13,11 +14,11 @@ import { products } from '../data/products';
       </div>
 
       <div class="product-grid product-grid--showcase">
-        <ProductCard v-for="product in products" :key="product.id" :product="product" />
+        <ProductCard v-for="product in featuredProducts" :key="product.id" :product="product" />
       </div>
 
       <div class="products__footer" data-reveal>
-        <a class="button products__all-button" href="#soluciones">
+        <a class="button products__all-button" href="/productos" @click.prevent="navigateToHref('/productos')">
           <span>Ver todas las tarimas</span>
           <IconSymbol name="arrow" />
         </a>
