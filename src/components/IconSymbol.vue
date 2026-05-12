@@ -126,6 +126,10 @@ defineProps<{ name: string }>();
       <path d="M29 8v8h8M18 25h12m-12 7h8" />
       <path d="m32 32 3 3 6-8" />
     </g>
+    <g v-else-if="name === 'chat'">
+      <path d="M10 12h28a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H21l-8 6v-6h-3a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z" />
+      <path d="M16 21h16M16 28h10" />
+    </g>
     <g v-else-if="name === 'whatsapp'">
       <path
         fill="currentColor"

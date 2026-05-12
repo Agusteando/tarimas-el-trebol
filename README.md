@@ -19,27 +19,23 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.13`.
+Versión actual: `1.2.14`.
 
-Esta iteración reconstruye `Entrega confiable` y `Proceso simple` con el layout de referencia: imagen de camión suministrada, composición derecha edge-to-edge, beneficios de entrega, proceso en cuatro pasos y banner final de cotización por WhatsApp. Se conserva la separación de contacto: WhatsApp usa `722 547 2591` y llamadas usa `722 537 2605`.
+Esta iteración reemplaza la antigua galería placeholder con una sección de `Preguntas frecuentes` mucho más cercana al reference image suministrado: copy y acordeón a la izquierda, fotografía operativa a la derecha y franja CTA inferior con acciones de WhatsApp y llamada.
 
 ## Estructura principal
 
 - `src/components/` contiene los componentes Vue reutilizables.
+- `src/components/FaqSection.vue` controla la sección de preguntas frecuentes.
 - `src/components/MissionMediaShape.vue` controla la curva visual de la imagen de misión.
 - `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
 - `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
 - `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
-- `src/components/IconSymbol.vue` centraliza todos los símbolos SVG usados por la UI.
-- `src/components/ServicesSection.vue` contiene la composición completa de servicios adicionales.
-- `src/components/IndustryCard.vue` y `src/components/IndustryProofStrip.vue` componen la sección de sectores.
-- `src/components/QuoteProcess.vue` contiene la composición de entrega confiable y proceso simple.
-- `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
+- `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto, misión, delivery y FAQ.
+- `src/styles/sections/faq.css` contiene la calibración específica de preguntas frecuentes.
+- `src/styles/sections/delivery-process.css` contiene la calibración específica de entrega y proceso.
 - `src/styles/sections/sectors.css` contiene la calibración específica de sectores.
-- `src/styles/sections/delivery-process.css` contiene la calibración específica de entrega confiable y proceso simple.
-- `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto, misión y entrega.
-- `src/styles/tokens.css` contiene tokens globales.
-- `src/styles/base.css` contiene estilos base y secciones generales.
+- `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones y servicios.
 - `src/styles/sections/mission-products.css` contiene la calibración específica de misión, productos y catálogo.
 
 ## Assets activos principales
@@ -51,45 +47,19 @@ Esta iteración reconstruye `Entrega confiable` y `Proceso simple` con el layout
 - `public/images/mission/mission-curved-warehouse.webp`
 - `public/images/products/concrete-floor-background.webp`
 - `public/images/sections/custom-pallet-solutions.webp`
-- `public/images/services/recoleccion-operativa.webp`
-- `public/images/industries/sector-*.webp`
+- `public/images/industries/*.webp`
 - `public/images/delivery/delivery-truck-pallets.webp`
+- `public/images/faq/faq-warehouse-forklift.webp`
 - `public/images/products/tarima-*.webp`
 
 No se almacenan screenshots de referencia dentro del proyecto.
 
-## Productos
+## Contacto centralizado
 
-La página `/productos` muestra el catálogo completo con 12 tipos de tarima:
+- WhatsApp: `722 547 2591`
+- Llamadas: `722 537 2605`
 
-- Barrote
-- Tacón
-- Tipo Cheep
-- Reciclada
-- Nueva Estándar
-- Personalizada
-- Reforzada para Carga Pesada
-- Doble Vista
-- Exportación
-- Ligera Económica
-- Industrial Cerrada
-- Perimetral
-
-El home conserva tres productos destacados y el botón `Ver todas las tarimas` navega al catálogo completo.
-
-## Google Maps
-
-Configura contacto y coordenadas en `.env`:
-
-```bash
-VITE_WHATSAPP_NUMBER=527225472591
-VITE_WHATSAPP_PHONE=7225472591
-VITE_PHONE_CALL_NUMBER=7225372605
-VITE_MAP_LAT=19.000000
-VITE_MAP_LNG=-99.000000
-```
-
-El mapa queda preparado para renderizarse cuando se agreguen latitud y longitud reales.
+La configuración vive en `src/data/contact.ts` y puede complementarse con variables `.env`.
 
 ## Estándares activos
 

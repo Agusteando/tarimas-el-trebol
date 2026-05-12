@@ -1,8 +1,0 @@
-<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="960" height="720" rx="44" fill="#EEF4EC"/>
-  <rect y="480" width="960" height="240" fill="#DDE7DB"/>
-  <path d="M130 480V170H830V480" stroke="#B7C8B3" stroke-width="14"/>
-  <g transform="translate(95 370)"><rect width="220" height="36" rx="5" fill="#C98549"/><rect y="72" width="220" height="36" rx="5" fill="#C98549"/><rect x="22" y="32" width="42" height="55" fill="#A96534"/><rect x="92" y="32" width="42" height="55" fill="#A96534"/><rect x="162" y="32" width="42" height="55" fill="#A96534"/></g>
-  <g transform="translate(370 300) scale(1.35)"><rect width="220" height="36" rx="5" fill="#C98549"/><rect y="72" width="220" height="36" rx="5" fill="#C98549"/><rect x="22" y="32" width="42" height="55" fill="#A96534"/><rect x="92" y="32" width="42" height="55" fill="#A96534"/><rect x="162" y="32" width="42" height="55" fill="#A96534"/></g>
-  <g transform="translate(690 385) scale(.9)"><rect width="220" height="36" rx="5" fill="#C98549"/><rect y="72" width="220" height="36" rx="5" fill="#C98549"/><rect x="22" y="32" width="42" height="55" fill="#A96534"/><rect x="92" y="32" width="42" height="55" fill="#A96534"/><rect x="162" y="32" width="42" height="55" fill="#A96534"/></g>
-</svg>

@@ -11,7 +11,7 @@ import ServicesSection from './components/ServicesSection.vue';
 import IndustriesSection from './components/IndustriesSection.vue';
 import AdvantagesSection from './components/AdvantagesSection.vue';
 import QuoteProcess from './components/QuoteProcess.vue';
-import GallerySection from './components/GallerySection.vue';
+import FaqSection from './components/FaqSection.vue';
 import MapSection from './components/MapSection.vue';
 import FinalCTA from './components/FinalCTA.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -41,7 +41,7 @@ useReveal();
       <IndustriesSection />
       <AdvantagesSection />
       <QuoteProcess />
-      <GallerySection />
+      <FaqSection />
       <MapSection />
       <FinalCTA />
     </template>

@@ -8,3 +8,4 @@ import './styles/sections/sectors.css';
 import './styles/sections/delivery-process.css';
 
 createApp(App).mount('#app');
+import './styles/sections/faq.css';
