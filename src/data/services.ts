@@ -4,6 +4,12 @@ export type Service = {
   icon: string;
 };
 
+export type ServiceProof = {
+  title: string;
+  text: string;
+  icon: string;
+};
+
 export type SolutionChip = {
   label: string;
   icon: string;
@@ -24,28 +30,46 @@ export type SolutionFeature = {
 export const additionalServices: Service[] = [
   {
     title: 'Recolección de tarima',
-    description: 'Retiro y manejo responsable de tarima usada.',
+    description: 'Retiramos tarimas usadas para extender su vida útil en nuevos ciclos.',
     icon: 'pallet'
   },
   {
     title: 'Playo',
-    description: 'Recolección de playo y materiales plásticos.',
+    description: 'Recolección de playo y embalaje de madera para su reutilización.',
     icon: 'truck'
   },
   {
     title: 'Metal',
-    description: 'Reciclaje de metales y perfiles.',
+    description: 'Reciclaje de metales y perfiles con manejo responsable.',
     icon: 'metal'
   },
   {
     title: 'Cartón',
-    description: 'Manejo y reciclaje de cartón.',
+    description: 'Manejo y reciclaje de cartón industrial y comercial.',
     icon: 'box'
   },
   {
-    title: 'Otros materiales',
-    description: 'Soluciones para otros materiales industriales.',
+    title: 'Otros materiales industriales',
+    description: 'Soluciones para otros materiales reciclables según tus necesidades.',
     icon: 'dots'
+  }
+];
+
+export const serviceProofs: ServiceProof[] = [
+  {
+    title: 'Limpieza operativa',
+    text: 'Liberamos espacio en tu planta o almacén para que tu operación fluya mejor.',
+    icon: 'leaf'
+  },
+  {
+    title: 'Recolección programada',
+    text: 'Nos adaptamos a tus horarios y volúmenes para una logística eficiente.',
+    icon: 'calendar'
+  },
+  {
+    title: 'Manejo responsable',
+    text: 'Aseguramos el destino adecuado de cada material con procesos sostenibles.',
+    icon: 'shield'
   }
 ];
 

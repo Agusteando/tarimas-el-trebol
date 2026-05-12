@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.8`.
+Versión actual: `1.2.9`.
 
-Esta iteración actualiza la imagen curva de `Nuestra misión` con la nueva foto suministrada y recalibra `Soluciones a la medida` para acercarse mucho más al layout de referencia en desktop: escala tipográfica, proporciones del grid, chips, CTAs, bloque de pruebas, tarjeta flotante y transición con `Servicios adicionales`.
+Esta iteración reconstruye `Servicios adicionales` hacia la referencia suministrada: estructura completa de hero oscuro, CTA de WhatsApp, acción por teléfono, cinco tarjetas, imagen operativa, panel de beneficios y franja inferior de contacto. También corrige el símbolo de WhatsApp para que las llamadas a la acción muestren un icono reconocible y limpio.
 
 ## Estructura principal
 
@@ -30,6 +30,8 @@ Esta iteración actualiza la imagen curva de `Nuestra misión` con la nueva foto
 - `src/components/MissionBenefitList.vue` controla el panel de beneficios de misión.
 - `src/components/ProductImageFrame.vue` compone cada imagen de producto con el fondo de concreto.
 - `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
+- `src/components/IconSymbol.vue` centraliza todos los símbolos SVG usados por la UI.
+- `src/components/ServicesSection.vue` contiene la composición completa de servicios adicionales.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones personalizadas y servicios adicionales.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto y misión.
 - `src/styles/tokens.css` contiene tokens globales.
@@ -45,6 +47,7 @@ Esta iteración actualiza la imagen curva de `Nuestra misión` con la nueva foto
 - `public/images/mission/mission-curved-warehouse.webp`
 - `public/images/products/concrete-floor-background.webp`
 - `public/images/sections/custom-pallet-solutions.webp`
+- `public/images/services/recoleccion-operativa.webp`
 - `public/images/products/tarima-*.webp`
 
 No se almacenan screenshots de referencia dentro del proyecto.

@@ -2,24 +2,25 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v18 mission media refresh and desktop reference calibration for Soluciones a la Medida and Servicios adicionales.
+Latest implementation pass: v19 Servicios adicionales reference rebuild and WhatsApp icon correction.
 
 Completed in this pass:
 
-- Updated the curved `Nuestra misión` image to the newly supplied warehouse photograph and kept the shaped composition intact.
-- Recalibrated `Soluciones a la medida` to better match the supplied desktop reference with controlled section sizing, fixed desktop media height, tighter chip/button/proof spacing, and cleaner icon alignment.
-- Simplified the solutions CTA buttons to use direct icons instead of nested bubble workarounds, improving alignment and making the section closer to the reference.
-- Retuned the floating white feature card and the transition into `Servicios adicionales` so the full desktop composition stays visually consistent.
-- Preserved responsive behavior below the desktop breakpoint and rebuilt successfully with `npm run build`.
+- Rebuilt `Servicios adicionales` toward the supplied reference composition: heading block, yellow WhatsApp CTA, secondary phone scheduling action, five white service cards, operational image row, green proof panel, and bottom contact strip.
+- Added the supplied truck/forklift warehouse image as an optimized WebP asset for the services showcase.
+- Updated the WhatsApp SVG symbol to a filled, recognizable WhatsApp mark so CTA icons no longer look distorted.
+- Added reusable `phone` and `award` symbols to the central icon component.
+- Expanded services data with proof-panel rows and reference-aligned service copy.
+- Kept screenshots/reference images out of the project ZIP; only production assets used by the site are included.
+- Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
-- Section foundation: dedicated section CSS remains in place, with desktop sizing now more explicitly standardized for the solutions/services block.
-- Quiénes somos: wood texture treatment remains active.
-- Nuestra misión: curved desktop image now uses the newly supplied warehouse photo while keeping the seam-covered curve and aligned benefit panel.
+- Section foundation: service content is now data-driven and rendered through the existing reusable icon system.
+- Nuestra misión: curved desktop image remains on the supplied warehouse photo from the previous pass.
 - Nuestros productos: concrete texture remains active behind transparent tarima images, with non-wrapping WhatsApp CTAs.
-- Soluciones personalizadas: desktop reference calibration has been tightened for heading scale, chip rhythm, CTA sizing, proof alignment, media sizing, and feature-card overlap.
-- Servicios adicionales: dark-green reference section remains active and tuned to the solutions block above it.
+- Soluciones personalizadas: desktop reference calibration from the previous pass remains in place.
+- Servicios adicionales: now uses the full supplied reference structure rather than the earlier simple five-card row.
 - Asset cleanup: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
