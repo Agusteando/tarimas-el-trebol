@@ -57,7 +57,7 @@ h2,
 h3 {
   font-family: var(--font-display);
   line-height: 1.02;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
 }
 
 p {
@@ -86,7 +86,7 @@ button:focus-visible {
 .eyebrow {
   color: var(--color-green-700);
   font-size: 0.76rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -117,7 +117,7 @@ button:focus-visible {
   color: var(--color-white);
   background: linear-gradient(135deg, var(--color-green-700), var(--color-green-800));
   font-size: 0.94rem;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1;
   box-shadow: 0 14px 30px rgba(47, 125, 70, 0.2);
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
@@ -178,7 +178,7 @@ button:focus-visible {
 }
 
 .section-heading h2 {
-  margin-top: 14px;
+  margin-top: 15px;
   font-size: clamp(2rem, 4vw, 3.7rem);
 }
 
@@ -205,15 +205,15 @@ button:focus-visible {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
   color: var(--color-green-950);
 }
 
 .brand-logo__mark {
   display: grid;
-  flex: 0 0 50px;
-  width: 50px;
-  height: 50px;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
   place-items: center;
   overflow: hidden;
   border-radius: 14px;
@@ -239,9 +239,9 @@ button:focus-visible {
 
 .brand-logo strong {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 1.14vw, 1.38rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.15rem, 1.04vw, 1.32rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
   line-height: 0.98;
   text-transform: uppercase;
 }
@@ -249,7 +249,7 @@ button:focus-visible {
 .brand-logo small {
   margin-top: 4px;
   color: var(--color-ink);
-  font-size: clamp(0.7rem, 0.72vw, 0.82rem);
+  font-size: clamp(0.68rem, 0.68vw, 0.78rem);
   font-weight: 650;
   line-height: 1.08;
 }
@@ -257,7 +257,7 @@ button:focus-visible {
 .site-header {
   position: fixed;
   z-index: 80;
-  top: 14px;
+  top: 15px;
   right: 0;
   left: 0;
   pointer-events: none;
@@ -265,15 +265,15 @@ button:focus-visible {
 
 .site-header__inner {
   display: flex;
-  width: min(calc(100% - 64px), 1440px);
-  min-height: 74px;
+  width: min(calc(100% - 78px), 1438px);
+  min-height: 76px;
   align-items: center;
   justify-content: space-between;
   gap: clamp(16px, 2.4vw, 34px);
   margin-inline: auto;
   border: 1px solid rgba(47, 125, 70, 0.48);
   border-radius: 22px;
-  padding: 8px 18px;
+  padding: 8px 20px;
   pointer-events: auto;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 20px 64px rgba(16, 32, 20, 0.16);
@@ -297,8 +297,8 @@ button:focus-visible {
   align-items: center;
   gap: 8px;
   color: #101812;
-  font-size: clamp(0.8rem, 0.86vw, 0.92rem);
-  font-weight: 850;
+  font-size: clamp(0.78rem, 0.82vw, 0.9rem);
+  font-weight: 800;
   line-height: 1;
   white-space: nowrap;
   transition: color var(--transition), background var(--transition), border-color var(--transition), transform var(--transition);
@@ -320,12 +320,13 @@ button:focus-visible {
 }
 
 .site-header__phone {
-  min-height: 42px;
+  min-height: 40px;
   border: 1px solid rgba(47, 125, 70, 0.34);
   border-radius: 12px;
-  padding: 0 16px;
+  padding: 0 15px;
   color: var(--color-ink);
   background: rgba(255, 255, 255, 0.7);
+  min-width: 156px;
 }
 
 .site-header__phone svg {
@@ -335,10 +336,10 @@ button:focus-visible {
 }
 
 .site-header__whatsapp {
-  min-height: 46px;
+  min-height: 44px;
   border-radius: 12px;
-  padding-inline: 20px;
-  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
+  padding-inline: 19px;
+  font-size: clamp(0.8rem, 0.84vw, 0.9rem);
   white-space: nowrap;
 }
 
@@ -362,12 +363,12 @@ button:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: clamp(650px, 82svh, 840px);
+  min-height: clamp(610px, 74svh, 780px);
   overflow: clip;
   align-items: center;
   color: var(--color-white);
   background: var(--color-green-950);
-  padding: clamp(106px, 10svh, 132px) 0 24px;
+  padding: clamp(104px, 9svh, 124px) 0 16px;
 }
 
 .hero::before {
@@ -408,20 +409,20 @@ button:focus-visible {
   position: relative;
   z-index: 2;
   display: grid;
-  width: min(calc(100% - 104px), 1464px);
-  grid-template-columns: minmax(0, 0.94fr) minmax(430px, 1fr);
-  gap: clamp(32px, 4.2vw, 68px);
+  width: min(calc(100% - 116px), 1464px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1fr);
+  gap: clamp(32px, 4.4vw, 72px);
   align-items: center;
   margin: 0 auto;
 }
 
 .hero__copy {
-  max-width: 640px;
+  max-width: 650px;
 }
 
 .hero__badge {
   display: inline-flex;
-  min-height: 40px;
+  min-height: 38px;
   align-items: center;
   gap: 10px;
   border: 1px solid rgba(143, 208, 126, 0.7);
@@ -429,8 +430,8 @@ button:focus-visible {
   padding: 0 20px;
   color: rgba(255, 255, 255, 0.9);
   background: rgba(16, 32, 20, 0.32);
-  font-size: 0.93rem;
-  font-weight: 800;
+  font-size: 0.88rem;
+  font-weight: 750;
   box-shadow: inset 0 -8px 18px rgba(143, 208, 126, 0.08);
   backdrop-filter: blur(10px);
 }
@@ -447,11 +448,12 @@ button:focus-visible {
 
 .hero h1 {
   max-width: 650px;
-  margin-top: clamp(24px, 3svh, 34px);
+  margin-top: clamp(22px, 2.7svh, 30px);
   color: var(--color-white);
-  font-size: clamp(3.35rem, 4.5vw, 5.12rem);
-  line-height: 1.06;
-  letter-spacing: -0.045em;
+  font-size: clamp(3rem, 4.18vw, 4.72rem);
+  line-height: 1.08;
+  letter-spacing: -0.034em;
+  word-spacing: 0.02em;
   text-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
@@ -461,42 +463,42 @@ button:focus-visible {
 }
 
 .hero__accent-line {
-  width: 58px;
+  width: 56px;
   height: 3px;
-  margin-top: 18px;
+  margin-top: 16px;
   border-radius: 999px;
   background: var(--color-yellow-500);
 }
 
 .hero__lead {
   max-width: 575px;
-  margin-top: 16px;
+  margin-top: 15px;
   color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(0.94rem, 1.04vw, 1.08rem);
+  font-size: clamp(0.92rem, 0.98vw, 1.02rem);
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  margin-top: clamp(24px, 3svh, 36px);
+  gap: 16px;
+  margin-top: clamp(22px, 2.7svh, 32px);
 }
 
 .hero__actions .button {
-  min-height: 56px;
-  border-radius: 11px;
-  padding-inline: 25px;
-  font-size: clamp(0.92rem, 1.04vw, 1rem);
+  min-height: 52px;
+  border-radius: 10px;
+  padding-inline: 23px;
+  font-size: clamp(0.9rem, 0.96vw, 0.98rem);
 }
 
 .hero__actions .button--accent {
-  min-width: 276px;
+  min-width: 258px;
 }
 
 .hero__actions .button--ghost {
-  min-width: 210px;
+  min-width: 196px;
   border-color: rgba(255, 255, 255, 0.54);
   background: rgba(255, 255, 255, 0.035);
 }
@@ -511,10 +513,10 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
-  margin-top: clamp(18px, 2.4svh, 28px);
+  margin-top: clamp(16px, 2.1svh, 24px);
   color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(0.94rem, 1.06vw, 1.08rem);
-  font-weight: 800;
+  font-size: clamp(0.9rem, 0.98vw, 1.02rem);
+  font-weight: 750;
 }
 
 .hero__contact a {
@@ -532,7 +534,7 @@ button:focus-visible {
 
 .hero__visual {
   position: relative;
-  min-height: clamp(390px, 35vw, 540px);
+  min-height: clamp(360px, 32.4vw, 510px);
 }
 
 .hero__visual::before,
@@ -545,25 +547,25 @@ button:focus-visible {
 }
 
 .hero__visual::before {
-  inset: 44px -20px 40px 46px;
+  inset: 38px -20px 36px 42px;
   transform: rotate(3deg);
 }
 
 .hero__visual::after {
-  right: -44px;
-  bottom: 56px;
-  width: 96px;
-  height: 270px;
+  right: -42px;
+  bottom: 52px;
+  width: 92px;
+  height: 250px;
   border-color: rgba(184, 121, 69, 0.65);
   background: linear-gradient(180deg, rgba(184, 121, 69, 0.82), rgba(132, 75, 38, 0.7));
 }
 
 .hero__image-shell {
   position: absolute;
-  inset: 2px 8px 46px 18px;
+  inset: 0 10px 42px 18px;
   overflow: hidden;
   border: 2px solid rgba(143, 208, 126, 0.7);
-  border-radius: 32px;
+  border-radius: 31px;
   background: var(--color-green-900);
   box-shadow: 0 34px 90px rgba(0, 0, 0, 0.26);
   transform: rotate(4deg);
@@ -574,20 +576,20 @@ button:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(-4deg) scale(1.1);
+  transform: rotate(-4deg) scale(1.07);
   transform-origin: 50% 50%;
 }
 
 .hero__proof-card {
   position: absolute;
   z-index: 3;
-  left: -54px;
-  bottom: 42px;
-  width: min(318px, 52%);
+  left: -48px;
+  bottom: 38px;
+  width: min(300px, 51%);
   overflow: hidden;
   border: 1px solid rgba(23, 69, 42, 0.14);
-  border-radius: 18px;
-  padding: 18px 22px;
+  border-radius: 17px;
+  padding: 16px 20px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(18px);
@@ -595,10 +597,10 @@ button:focus-visible {
 
 .hero__proof-item {
   display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 14px;
+  grid-template-columns: 42px 1fr;
+  gap: 13px;
   align-items: center;
-  padding-block: 12px;
+  padding-block: 11px;
   color: var(--color-ink);
 }
 
@@ -608,8 +610,8 @@ button:focus-visible {
 
 .hero__proof-item > span {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-900);
@@ -617,30 +619,30 @@ button:focus-visible {
 }
 
 .hero__proof-item .icon-symbol {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   margin: 0;
   stroke: currentColor;
 }
 
 .hero__proof-item strong {
-  font-size: 0.98rem;
-  font-weight: 850;
+  font-size: 0.94rem;
+  font-weight: 800;
 }
 
 .hero__country-card {
   position: absolute;
   z-index: 3;
-  right: -4px;
-  bottom: 44px;
+  right: -2px;
+  bottom: 40px;
   display: grid;
-  max-width: 262px;
-  grid-template-columns: 42px 1fr;
-  gap: 12px;
+  max-width: 252px;
+  grid-template-columns: 39px 1fr;
+  gap: 11px;
   align-items: center;
   border: 1px solid rgba(143, 208, 126, 0.36);
   border-radius: 18px;
-  padding: 15px 17px;
+  padding: 14px 16px;
   color: #c8ebb9;
   background: rgba(15, 46, 29, 0.92);
   box-shadow: 0 20px 54px rgba(0, 0, 0, 0.24);
@@ -654,15 +656,15 @@ button:focus-visible {
 }
 
 .hero__country-card p {
-  font-size: 0.98rem;
-  font-weight: 750;
+  font-size: 0.94rem;
+  font-weight: 740;
   line-height: 1.34;
 }
 
 .trust-bar {
   position: relative;
   z-index: 4;
-  padding: 24px max(40px, calc((100vw - 1464px) / 2));
+  padding: 19px max(40px, calc((100vw - 1464px) / 2)) 21px;
   background: linear-gradient(180deg, #ffffff, #f7faf5);
   color: var(--color-ink);
 }
@@ -670,26 +672,26 @@ button:focus-visible {
 .trust-bar__grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .trust-bar__item {
   display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 13px;
-  min-height: 104px;
+  grid-template-columns: 50px 1fr;
+  gap: 12px;
+  min-height: 94px;
   align-items: center;
   border: 1px solid rgba(47, 125, 70, 0.28);
-  border-radius: 16px;
-  padding: 15px;
+  border-radius: 15px;
+  padding: 13px;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: 0 16px 42px rgba(23, 69, 42, 0.06);
 }
 
 .trust-bar__icon {
   display: grid;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-900);
@@ -697,8 +699,8 @@ button:focus-visible {
 }
 
 .trust-bar__icon .icon-symbol {
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
   margin: 0;
   stroke: currentColor;
 }
@@ -707,8 +709,8 @@ button:focus-visible {
   margin: 0;
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 0.83rem;
-  font-weight: 900;
+  font-size: 0.8rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
@@ -716,8 +718,8 @@ button:focus-visible {
 .trust-bar__item p {
   margin-top: 6px;
   color: var(--color-muted);
-  font-size: 0.7rem;
-  font-weight: 650;
+  font-size: 0.68rem;
+  font-weight: 600;
   line-height: 1.42;
 }
 
@@ -1004,8 +1006,8 @@ button:focus-visible {
 .service-item > span {
   display: grid;
   flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-950);
@@ -1069,8 +1071,8 @@ button:focus-visible {
 
 .industry-card__icon {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   margin-bottom: 18px;
   place-items: center;
   border-radius: 50%;
@@ -1128,7 +1130,7 @@ button:focus-visible {
   margin-bottom: 24px;
   fill: none;
   stroke: var(--color-yellow-500);
-  stroke-width: 3;
+  stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -1179,8 +1181,8 @@ button:focus-visible {
 
 .step-list span {
   display: grid;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   place-items: center;
   border-radius: 50%;
   color: var(--color-green-950);
@@ -1483,12 +1485,12 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(3.05rem, 4.55vw, 4.75rem);
+    font-size: clamp(2.9rem, 4.18vw, 4.48rem);
   }
 
   .hero__proof-card {
-    left: -36px;
-    width: 330px;
+    left: -34px;
+    width: 300px;
   }
 
   .trust-bar__grid {
@@ -1498,8 +1500,8 @@ button:focus-visible {
 
   .trust-bar__item {
     grid-template-columns: 46px 1fr;
-    min-height: 98px;
-    padding: 14px 12px;
+    min-height: 90px;
+    padding: 12px;
   }
 
   .trust-bar__icon {
@@ -1573,6 +1575,7 @@ button:focus-visible {
 
   .site-header__phone {
     min-height: 38px;
+    min-width: 150px;
     padding-inline: 12px;
   }
 
@@ -1588,19 +1591,19 @@ button:focus-visible {
   }
 
   .hero {
-    min-height: clamp(575px, 76svh, 690px);
-    padding-top: 92px;
-    padding-bottom: 16px;
+    min-height: clamp(548px, 71svh, 660px);
+    padding-top: 88px;
+    padding-bottom: 14px;
   }
 
   .hero__container {
-    width: min(calc(100% - 72px), 1180px);
-    grid-template-columns: minmax(0, 0.94fr) minmax(386px, 0.98fr);
+    width: min(calc(100% - 72px), 1200px);
+    grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.98fr);
     gap: clamp(24px, 3.1vw, 42px);
   }
 
   .hero__copy {
-    max-width: 548px;
+    max-width: 560px;
   }
 
   .hero__badge {
@@ -1617,9 +1620,10 @@ button:focus-visible {
   .hero h1 {
     max-width: 535px;
     margin-top: 22px;
-    font-size: clamp(2.62rem, 4vw, 3.72rem);
-    line-height: 1.07;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.48rem, 3.72vw, 3.46rem);
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+    word-spacing: 0.02em;
   }
 
   .hero__accent-line {
@@ -1641,17 +1645,17 @@ button:focus-visible {
   }
 
   .hero__actions .button {
-    min-height: 48px;
-    padding-inline: 20px;
-    font-size: 0.86rem;
+    min-height: 46px;
+    padding-inline: 19px;
+    font-size: 0.84rem;
   }
 
   .hero__actions .button--accent {
-    min-width: 242px;
+    min-width: 232px;
   }
 
   .hero__actions .button--ghost {
-    min-width: 190px;
+    min-width: 184px;
   }
 
   .hero__contact {
@@ -1661,7 +1665,7 @@ button:focus-visible {
   }
 
   .hero__visual {
-    min-height: clamp(340px, 34vw, 438px);
+    min-height: clamp(324px, 31.5vw, 418px);
   }
 
   .hero__visual::before {
@@ -1685,8 +1689,8 @@ button:focus-visible {
   .hero__proof-card {
     left: -42px;
     bottom: 34px;
-    width: min(270px, 52%);
-    padding: 15px 18px;
+    width: min(252px, 51%);
+    padding: 13px 16px;
   }
 
   .hero__proof-item {
@@ -1712,9 +1716,9 @@ button:focus-visible {
   .hero__country-card {
     right: -2px;
     bottom: 34px;
-    max-width: 220px;
-    grid-template-columns: 34px 1fr;
-    padding: 12px 14px;
+    max-width: 214px;
+    grid-template-columns: 32px 1fr;
+    padding: 11px 13px;
   }
 
   .hero__country-card span {
@@ -1726,7 +1730,7 @@ button:focus-visible {
   }
 
   .trust-bar {
-    padding: 18px 32px;
+    padding: 15px 32px 17px;
   }
 
   .trust-bar__grid {
@@ -1734,15 +1738,15 @@ button:focus-visible {
   }
 
   .trust-bar__item {
-    min-height: 88px;
-    grid-template-columns: 44px 1fr;
+    min-height: 82px;
+    grid-template-columns: 40px 1fr;
     gap: 12px;
     padding: 12px;
   }
 
   .trust-bar__icon {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
   }
 
   .trust-bar__icon .icon-symbol {
@@ -1751,11 +1755,11 @@ button:focus-visible {
   }
 
   .trust-bar__item h2 {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
   }
 
   .trust-bar__item p {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
   }
 }
 

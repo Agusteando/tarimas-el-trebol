@@ -12,7 +12,7 @@ const heroProof = [
 <template>
   <section id="inicio" class="hero" aria-labelledby="hero-title">
     <div class="hero__background" aria-hidden="true">
-      <img src="/images/hero-green-background.webp" alt="" />
+      <img src="/images/hero/green-industrial-pattern.webp" alt="" />
     </div>
 
     <div class="hero__container" data-reveal>
@@ -63,9 +63,9 @@ const heroProof = [
         </div>
       </div>
 
-      <div class="hero__visual" aria-label="Vista de tarimas industriales en patio de operación">
+      <div class="hero__visual" aria-label="Vista de tarimas industriales apiladas en bodega">
         <div class="hero__image-shell">
-          <img src="/images/hero-yard.webp" alt="Tarimas industriales apiladas en patio de operación con montacargas" />
+          <img src="/images/hero/pallets-warehouse-stack.webp" alt="Tarimas industriales apiladas dentro de bodega industrial" />
         </div>
 
         <div class="hero__proof-card" aria-label="Puntos clave de confianza">

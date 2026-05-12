@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Iteración actual
 
-Esta versión recalibra la vista inicial contra la referencia desktop enviada. El ajuste principal no es sólo tipográfico: también corrige escala general, espaciado, iconos, tarjetas superpuestas, header, CTAs y trust bar para que la primera vista tenga la misma densidad visual esperada.
+Esta versión incorpora las dos imágenes nuevas entregadas para el hero, suaviza la tipografía del layout y mantiene la recalibración de escala contra la referencia desktop. El ajuste no es sólo visual: también revisa densidad, espaciado, iconos, tarjetas superpuestas, header, CTAs y trust bar para que la primera vista se acerque más al target.
 
 Assets de marca activos:
 
@@ -32,7 +32,7 @@ Se agregó una calibración responsive para desktop denso, especialmente útil e
 
 - Header flotante más compacto con logo real y lockup legible.
 - Hero de alta densidad visual basado en la referencia.
-- Escala tipográfica contenida y saltos de línea controlados para evitar texto sobredimensionado.
+- Tipografía más cercana a la referencia, usando Manrope para headings con peso visual menos agresivo que Sora.
 - Iconos, tarjetas superpuestas y CTAs recalibrados.
 - Cards de confianza más compactas bajo el hero.
 - Paleta blanco / verde / amarillo.
@@ -42,9 +42,10 @@ Se agregó una calibración responsive para desktop denso, especialmente útil e
 ## Assets principales
 
 - `public/images/brand/el-trebol-logo.png`
-- `public/images/hero-green-background.webp`
-- `public/images/hero-yard.webp`
+- `public/images/hero/green-industrial-pattern.webp`
+- `public/images/hero/pallets-warehouse-stack.webp`
 - `public/references/home-desktop-figma-reference.png`
+- `public/references/target-reference-density.png`
 
 ## Google Maps
 
