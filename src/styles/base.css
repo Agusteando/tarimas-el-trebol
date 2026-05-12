@@ -72,7 +72,7 @@ button:focus-visible {
 }
 
 .container {
-  width: min(100% - 40px, var(--container));
+  width: min(calc(100% - 40px), var(--container));
   margin-inline: auto;
 }
 
@@ -1662,7 +1662,7 @@ button:focus-visible {
   }
 
   .container {
-    width: min(100% - 28px, var(--container));
+    width: min(calc(100% - 28px), var(--container));
   }
 
   .site-header {
@@ -1744,7 +1744,7 @@ button:focus-visible {
   }
 
   .hero__container {
-    width: min(100% - 28px, 720px);
+    width: min(calc(100% - 28px), 720px);
     grid-template-columns: 1fr;
     gap: 42px;
     margin: 0 auto;

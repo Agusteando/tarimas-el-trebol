@@ -22,7 +22,7 @@
 
 .custom-solutions .container,
 .additional-services .container {
-  width: min(100% - var(--container-reference-gutter), var(--container-reference));
+  width: min(calc(100% - var(--container-reference-gutter)), var(--container-reference));
 }
 
 .custom-solutions__grid {
@@ -336,7 +336,7 @@
 @media (max-width: 1180px) {
   .custom-solutions .container,
   .additional-services .container {
-    width: min(100% - 40px, var(--container));
+    width: min(calc(100% - 40px), var(--container));
   }
 
   .custom-solutions__grid {
@@ -367,7 +367,7 @@
 
   .custom-solutions .container,
   .additional-services .container {
-    width: min(100% - 28px, var(--container));
+    width: min(calc(100% - 28px), var(--container));
   }
 
   .custom-solutions h2,

@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.6`.
+Versión actual: `1.2.7`.
 
-Esta iteración estandariza bases visuales para los siguientes bloques: `Quiénes somos` usa la textura de madera real como acento, `Nuestra misión` corrige el encuentro entre la imagen curva y el panel verde, y `Soluciones personalizadas` / `Servicios adicionales` se rehacen contra la nueva referencia Figma con imagen real optimizada, tarjetas, chips e iconografía centrada.
+Esta iteración corrige el bug de `Nuestra misión` donde el grid fijo podía desbordarse hacia la izquierda en anchos intermedios. La composición ahora usa columnas fluidas dentro del contenedor, mantiene altura controlada en desktop, conserva el solape limpio entre imagen curva y panel verde, y centraliza el uso de `calc()` en contenedores para evitar reglas inválidas o frágiles.
 
 ## Estructura principal
 

@@ -1,6 +1,7 @@
 /* Mission/product reference section styles kept separate from global foundations. */
 .mission-section--reference {
   --mission-reference-height: clamp(386px, 27.85vw, 428px);
+  --mission-panel-overlap: clamp(72px, 6.1vw, 100px);
 
   position: relative;
   overflow: hidden;
@@ -10,16 +11,16 @@
 }
 
 .mission-section--reference .container {
-  width: min(100% - var(--container-reference-wide-gutter), var(--container-reference-wide));
+  width: min(calc(100% - var(--container-reference-wide-gutter)), var(--container-reference-wide));
 }
 
 .mission-section__reference-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(410px, 470px) minmax(480px, 540px) minmax(390px, 398px);
+  width: 100%;
+  grid-template-columns: minmax(0, 0.36fr) minmax(0, 0.43fr) minmax(0, 0.31fr);
   height: var(--mission-reference-height);
   min-height: var(--mission-reference-height);
-  justify-content: center;
   align-items: stretch;
   gap: 0;
 }
@@ -28,9 +29,11 @@
   position: relative;
   z-index: 2;
   display: grid;
+  min-width: 0;
   align-content: center;
   justify-items: start;
   max-width: 440px;
+  padding-right: clamp(18px, 2.2vw, 34px);
   padding-left: 0;
 }
 
@@ -49,6 +52,7 @@
   font-weight: 850;
   letter-spacing: -0.045em;
   line-height: 1.08;
+  text-wrap: balance;
 }
 
 .mission-section__reference-copy h2::after,
@@ -75,8 +79,9 @@
   position: relative;
   z-index: 1;
   height: var(--mission-reference-height);
+  min-width: 0;
   min-height: 0;
-  margin-left: -2px;
+  margin-left: 0;
   overflow: visible;
 }
 
@@ -90,27 +95,28 @@
   position: relative;
   z-index: 3;
   display: grid;
+  min-width: 0;
   height: calc(var(--mission-reference-height) - 40px);
+  align-self: end;
   align-content: center;
   gap: 0;
-  margin-top: 40px;
-  margin-left: -96px;
-  padding: 24px 38px 28px 108px;
+  margin-left: calc(var(--mission-panel-overlap) * -1);
+  padding: 24px clamp(28px, 2.7vw, 38px) 28px calc(var(--mission-panel-overlap) + clamp(16px, 1.2vw, 22px));
   color: var(--color-white);
   background:
     radial-gradient(circle at 9% 9%, rgba(105, 166, 111, 0.24), transparent 32%),
     linear-gradient(145deg, #0d351f, #052315);
   border-radius: 28px 28px 0 0;
   box-shadow: 0 24px 64px rgba(16, 32, 20, 0.16);
-  clip-path: polygon(13.5% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .mission-benefit-panel__item {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 70px minmax(0, 1fr);
   gap: 20px;
   align-items: center;
-  padding-block: 21px;
+  padding-block: clamp(16px, 1.45vw, 21px);
 }
 
 .mission-benefit-panel__item + .mission-benefit-panel__item {
@@ -118,21 +124,14 @@
 }
 
 .mission-benefit-panel__icon {
-  display: inline-grid;
-  width: 58px;
-  height: 58px;
-  place-items: center;
-  align-self: center;
-  justify-self: center;
-  border-radius: 999px;
+  place-self: center;
   color: var(--color-white);
   background: rgba(255, 255, 255, 0.13);
-  line-height: 0;
 }
 
 .mission-benefit-panel__icon .icon-symbol {
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
   margin: 0;
   color: currentColor;
   stroke-width: 2.5;
@@ -146,7 +145,7 @@
 
 .mission-benefit-panel__copy strong {
   font-family: var(--font-display);
-  font-size: 1.08rem;
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
   font-weight: 850;
   line-height: 1.1;
 }
@@ -154,7 +153,7 @@
 .mission-benefit-panel__copy small {
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.91rem;
+  font-size: clamp(0.84rem, 0.88vw, 0.91rem);
   font-weight: 500;
   line-height: 1.48;
 }
@@ -165,7 +164,7 @@
 }
 
 .products--showcase .container {
-  width: min(100% - var(--container-reference-wide-gutter), var(--container-reference-wide));
+  width: min(calc(100% - var(--container-reference-wide-gutter)), var(--container-reference-wide));
 }
 
 .products__header {
@@ -544,6 +543,16 @@
   box-shadow: 0 22px 70px rgba(244, 197, 66, 0.18), var(--shadow-card);
 }
 
+@media (max-width: 1280px) {
+  .mission-section--reference {
+    --mission-panel-overlap: clamp(58px, 5.6vw, 76px);
+  }
+
+  .mission-benefit-panel {
+    padding-right: 26px;
+  }
+}
+
 @media (max-width: 1180px) {
   .mission-section--reference {
     --mission-reference-height: auto;
@@ -551,7 +560,7 @@
 
   .mission-section--reference .container,
   .products--showcase .container {
-    width: min(100% - 40px, var(--container));
+    width: min(calc(100% - 40px), var(--container));
   }
 
   .mission-section__reference-grid {
@@ -564,6 +573,7 @@
   .mission-section__reference-copy {
     max-width: 680px;
     padding-block: 0 32px;
+    padding-right: 0;
   }
 
   .mission-section__reference-media {
@@ -618,7 +628,7 @@
 @media (max-width: 680px) {
   .mission-section--reference .container,
   .products--showcase .container {
-    width: min(100% - 28px, var(--container));
+    width: min(calc(100% - 28px), var(--container));
   }
 
   .mission-section__reference-grid {
