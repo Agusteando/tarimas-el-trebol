@@ -1094,6 +1094,11 @@ button:focus-visible {
   --icon-symbol-size: 31px;
 }
 
+.icon-bubble--xl {
+  --icon-bubble-size: 98px;
+  --icon-symbol-size: 50px;
+}
+
 .icon-bubble--soft {
   background: var(--color-green-100);
 }

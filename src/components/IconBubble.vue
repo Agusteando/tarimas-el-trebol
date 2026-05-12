@@ -4,7 +4,7 @@ import IconSymbol from './IconSymbol.vue';
 withDefaults(defineProps<{
   icon: string;
   tone?: 'soft' | 'dark' | 'inverted' | 'yellow';
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }>(), {
   tone: 'soft',
   size: 'md'

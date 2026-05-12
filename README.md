@@ -19,9 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.14`.
+Versión actual: `1.2.15`.
 
-Esta iteración reemplaza la antigua galería placeholder con una sección de `Preguntas frecuentes` mucho más cercana al reference image suministrado: copy y acordeón a la izquierda, fotografía operativa a la derecha y franja CTA inferior con acciones de WhatsApp y llamada.
+Esta iteración reconstruye la sección de `Ventajas competitivas` para acercarla al reference image suministrado: encabezado alineado a la izquierda, cinco beneficios en columnas con separadores verticales y una franja CTA inferior con bloque de relación a largo plazo y acciones de WhatsApp / llamada.
 
 ## Estructura principal
 
@@ -33,6 +33,7 @@ Esta iteración reemplaza la antigua galería placeholder con una sección de `P
 - `src/components/IconBubble.vue` centraliza burbujas de iconos reutilizables.
 - `src/data/` contiene datos reutilizables para productos, servicios, sectores, ventajas, contacto, misión, delivery y FAQ.
 - `src/styles/sections/faq.css` contiene la calibración específica de preguntas frecuentes.
+- `src/styles/sections/advantages.css` contiene la calibración específica de ventajas competitivas.
 - `src/styles/sections/delivery-process.css` contiene la calibración específica de entrega y proceso.
 - `src/styles/sections/sectors.css` contiene la calibración específica de sectores.
 - `src/styles/sections/solutions-services.css` contiene la calibración específica de soluciones y servicios.

@@ -9,3 +9,4 @@ import './styles/sections/delivery-process.css';
 
 createApp(App).mount('#app');
 import './styles/sections/faq.css';
+import './styles/sections/advantages.css';
