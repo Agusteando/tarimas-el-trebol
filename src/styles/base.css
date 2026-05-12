@@ -106,6 +106,11 @@ button:focus-visible {
   stroke-linejoin: round;
 }
 
+.button .icon-symbol {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
 .button {
   display: inline-flex;
   min-height: 50px;
@@ -1193,80 +1198,7 @@ button:focus-visible {
   box-shadow: 0 26px 70px rgba(29, 42, 34, 0.14);
 }
 
-.product-card__image {
-  position: relative;
-  padding: 14px;
-  background: linear-gradient(180deg, var(--color-green-50), var(--color-industrial));
-}
 
-.product-card__image img {
-  width: 100%;
-  border-radius: 28px;
-}
-
-.product-card__body {
-  display: grid;
-  gap: 18px;
-  padding: 28px;
-}
-
-.product-card__topline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
-
-.product-card__measure,
-.product-card__tag {
-  justify-self: start;
-  border-radius: 999px;
-  padding: 7px 11px;
-  font-size: 0.78rem;
-  font-weight: 950;
-  line-height: 1;
-}
-
-.product-card__measure {
-  color: var(--color-green-950);
-  background: var(--color-yellow-100);
-}
-
-.product-card__tag {
-  color: var(--color-green-900);
-  background: var(--color-green-100);
-}
-
-.product-card h3 {
-  font-size: 1.68rem;
-}
-
-.product-card p,
-.product-card li {
-  color: var(--color-muted);
-}
-
-.product-card ul {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.product-card li {
-  position: relative;
-  padding-left: 24px;
-}
-
-.product-card li::before {
-  position: absolute;
-  left: 0;
-  top: 0.1em;
-  color: var(--color-green-700);
-  font-weight: 950;
-  content: "✓";
-}
 
 .solutions {
   position: relative;
@@ -1455,12 +1387,15 @@ button:focus-visible {
 .icon-symbol {
   width: 48px;
   height: 48px;
-  margin-bottom: 24px;
   fill: none;
   stroke: var(--color-yellow-500);
   stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.advantage-card .icon-symbol {
+  margin-bottom: 24px;
 }
 
 .advantage-card h3 {
@@ -2447,9 +2382,7 @@ button:focus-visible {
     text-align: center;
   }
 
-  .product-card__body,
   .advantage-card,
-  .mission-card,
   .quote-process__panel,
   .step-list li {
     padding: 22px;
@@ -2686,6 +2619,7 @@ button:focus-visible {
   width: 58px;
   height: 58px;
   place-items: center;
+  line-height: 0;
   border-radius: 999px;
   color: var(--color-white);
   background: rgba(255, 255, 255, 0.13);
@@ -2694,6 +2628,7 @@ button:focus-visible {
 .mission-section__reference-icon .icon-symbol {
   width: 32px;
   height: 32px;
+  margin: 0;
   stroke: currentColor;
 }
 
@@ -2877,6 +2812,7 @@ button:focus-visible {
 .product-card__quote .icon-symbol {
   width: 18px;
   height: 18px;
+  margin: 0;
 }
 
 .product-card__details {
@@ -2904,6 +2840,7 @@ button:focus-visible {
 .products__all-button .icon-symbol {
   width: 18px;
   height: 18px;
+  margin: 0;
 }
 
 @media (max-width: 1180px) {

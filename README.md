@@ -89,3 +89,21 @@ Updated hero assets:
 - `public/references/hero-main-target-reference.png`
 
 Implementation standard remains: reusable Vue components, global design tokens, clean CSS, organized assets, responsive desktop/mobile behavior, no `!important`, no page-wide scale hacks, and all headings, CTAs, badges, phones, and labels rendered in HTML/CSS.
+## Iteration v11 notes
+
+This pass centers the SVG icons inside their visual containers in `Nuestra misión` and `Nuestros productos`. The shared `IconSymbol` base style is now neutral, so container spacing no longer comes from a global icon margin. The mission benefit bubbles and product CTA/footer icons now control their own sizing and alignment directly.
+
+Product-section cleanup in this pass:
+
+- Added explicit `whatsapp` and `arrow` symbols to `IconSymbol.vue` so product CTAs render the intended icons instead of falling back to the person glyph.
+- Removed obsolete product-card subselectors from the old card structure to avoid stale CSS affecting the current showcase card markup.
+- Preserved the roadmap direction for mission/products reference matching while keeping all labels, CTAs, product names, and badges as HTML/CSS.
+
+Validation:
+
+```bash
+npm run build
+```
+
+Status: build passes.
+
