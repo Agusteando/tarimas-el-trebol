@@ -9,7 +9,7 @@ export const contact = {
   whatsappPhone,
   phonePrimary: phoneCallNumber,
   phoneSecondary: whatsappPhone,
-  email: import.meta.env.VITE_EMAIL || 'eltrebol.tarimaindustrial@gmail.com',
+  email: import.meta.env.VITE_EMAIL || 'ventas@eltreboltarimas.com.mx',
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || `52${whatsappPhone}`,
   defaultWhatsappMessage:
     'Hola, quiero solicitar una cotización de tarimas industriales para mi empresa.',
@@ -18,10 +18,13 @@ export const contact = {
   mapZoom: Number(import.meta.env.VITE_MAP_ZOOM || 13),
   googleMapsLink: import.meta.env.VITE_GOOGLE_MAPS_LINK || 'https://maps.app.goo.gl/CaAWkfqQoaVnfPph8',
   openStreetMapTileUrl:
-    import.meta.env.VITE_OPENSTREETMAP_TILE_URL || 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    import.meta.env.VITE_OPENSTREETMAP_TILE_URL || 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
   openStreetMapAttribution:
     import.meta.env.VITE_OPENSTREETMAP_ATTRIBUTION ||
-    '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>'
+    '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noreferrer">CARTO</a>',
+  addressLine1: import.meta.env.VITE_ADDRESS_LINE_1 || 'Parque Industrial Toluca 2000',
+  addressLine2: import.meta.env.VITE_ADDRESS_LINE_2 || 'Toluca, Estado de México, 50200',
+  facebookUrl: import.meta.env.VITE_FACEBOOK_URL || 'https://www.facebook.com/'
 };
 
 export const formatPhone = (phone: string) =>

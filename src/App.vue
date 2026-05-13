@@ -13,7 +13,6 @@ import AdvantagesSection from './components/AdvantagesSection.vue';
 import QuoteProcess from './components/QuoteProcess.vue';
 import FaqSection from './components/FaqSection.vue';
 import MapSection from './components/MapSection.vue';
-import FinalCTA from './components/FinalCTA.vue';
 import AppFooter from './components/AppFooter.vue';
 import FloatingWhatsApp from './components/FloatingWhatsApp.vue';
 import ProductsPage from './pages/ProductsPage.vue';
@@ -39,11 +38,10 @@ useReveal();
       <SolutionsSection />
       <ServicesSection />
       <IndustriesSection />
-      <MapSection />
       <AdvantagesSection />
       <QuoteProcess />
       <FaqSection />
-      <FinalCTA />
+      <MapSection />
     </template>
   </main>
   <AppFooter />
