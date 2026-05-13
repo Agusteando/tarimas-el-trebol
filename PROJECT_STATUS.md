@@ -6,6 +6,9 @@ Latest implementation pass: v37 gallery integration and real-client image replac
 
 Completed in this pass:
 
+- Unified the contact number so WhatsApp and phone calls both use `722 547 2591`.
+- Added `VITE_CONTACT_PHONE=7225472591` as the canonical env variable while keeping legacy env names aligned for compatibility.
+
 - Processed the client-provided WhatsApp image ZIP into optimized WebP gallery assets under `public/images/gallery/`.
 - Added a new gallery section with real client/plant images, separated into `src/components/GallerySection.vue`, `src/data/gallery.ts`, and `src/styles/sections/gallery.css`.
 - Inserted the gallery into the home flow before FAQ, keeping `Ubicación y cobertura` as the final section before the footer.
@@ -17,7 +20,7 @@ Completed in this pass:
 
 Plan status updates:
 
-- Contact behavior remains centralized: WhatsApp uses `722 547 2591`; phone calls use `722 537 2605`.
+- Contact behavior remains centralized and unified: WhatsApp and phone calls both use `722 547 2591`.
 - `Ubicación y cobertura` remains the last content section before the footer.
 - Footer structure remains aligned to the latest footer reference and keeps only Facebook in the social area.
 - Gallery is now driven by real supplied client images instead of generated/reference placeholders.

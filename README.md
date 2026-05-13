@@ -19,7 +19,9 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.27`.
+Versión actual: `1.2.28`.
+
+Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
 Esta iteración agrega una sección de galería usando las imágenes reales suministradas por el cliente. También reemplaza las imágenes de `Nuestra misión` y `Soluciones a la medida` con fotografías de esa misma galería, manteniendo la estructura limpia por componente, datos y CSS de sección.
 
@@ -48,9 +50,10 @@ Esta iteración agrega una sección de galería usando las imágenes reales sumi
 El ZIP incluye `.env` y `.env.example` con las coordenadas reales suministradas:
 
 ```bash
+VITE_CONTACT_PHONE=7225472591
 VITE_WHATSAPP_NUMBER=527225472591
 VITE_WHATSAPP_PHONE=7225472591
-VITE_PHONE_CALL_NUMBER=7225372605
+VITE_PHONE_CALL_NUMBER=7225472591
 VITE_EMAIL=ventas@eltreboltarimas.com.mx
 VITE_ADDRESS_LINE_1=Parque Industrial Toluca 2000
 VITE_ADDRESS_LINE_2=Toluca, Estado de México, 50200
@@ -82,8 +85,7 @@ No se almacenan screenshots de referencia dentro del proyecto.
 
 ## Contacto centralizado
 
-- WhatsApp: `722 547 2591`
-- Llamadas: `722 537 2605`
+- WhatsApp y llamadas: `722 547 2591`
 - Email: `ventas@eltreboltarimas.com.mx`
 - Ubicación: `19.2985595,-99.6898324`
 - Maps: `https://maps.app.goo.gl/CaAWkfqQoaVnfPph8`
