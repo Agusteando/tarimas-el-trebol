@@ -9,5 +9,6 @@ import './styles/sections/location.css';
 import './styles/sections/advantages.css';
 import './styles/sections/delivery-process.css';
 import './styles/sections/faq.css';
+import './styles/sections/gallery.css';
 
 createApp(App).mount('#app');

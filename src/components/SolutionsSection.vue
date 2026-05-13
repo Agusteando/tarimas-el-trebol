@@ -60,7 +60,7 @@ import { solutionChips, solutionFeatures, solutionProofs } from '../data/service
       </div>
 
       <figure class="custom-solutions__media" data-reveal>
-        <img src="/images/sections/custom-pallet-solutions.webp" alt="Tarimas personalizadas en bodega industrial" loading="lazy" />
+        <img src="/images/gallery/gallery-17.webp" alt="Equipo fabricando tarimas personalizadas de madera" loading="lazy" />
         <figcaption class="custom-solutions__feature-card" aria-label="Aplicaciones de tarimas personalizadas">
           <article v-for="feature in solutionFeatures" :key="feature.title">
             <IconBubble :icon="feature.icon" tone="soft" size="md" />
