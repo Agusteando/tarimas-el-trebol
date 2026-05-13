@@ -2,38 +2,31 @@
 
 Current phase: visual refinement, real-client asset integration, and product catalog cleanup.
 
-Latest implementation pass: v40 product catalog correction.
+Latest implementation pass: v41 compact product section rebuild.
 
 Completed in this pass:
 
-- Corrected the product catalog model: the section no longer renders 8 separate product cards.
-- Product cards now represent 4 product lines:
-  1. Tarima Tacón, with Primera / Segunda / Tercera quality descriptions inside the card.
-  2. Tarima Barrote, with Primera / Segunda / Tercera quality descriptions inside the card.
-  3. Tarima Tipo Cheep.
-  4. Tarima Híbrida.
-- The site still communicates 8 total product types/variants through the heading/supporting copy.
-- Replaced the incorrect `cheep.jpeg`-based asset with the new transparent `cheep.png` image.
-- Added and optimized the provided `hibrida.png` image as `public/images/products/tarima-hibrida.webp`.
-- Reprocessed the supplied barrote/tacón product images into optimized transparent WebP assets.
-- Updated product card rendering so first/second/third quality descriptions appear below the image and main description.
-- Kept `Ficha técnica` as the product action and routed it to WhatsApp.
-- Replaced the `Quiénes somos` image with another real gallery image.
-- Preserved the unified contact number: WhatsApp and phone calls both use `722 547 2591`.
+- Reimagined the `Nuestros productos` section to better match the supplied reference and avoid the oversized card issue.
+- Preserved the corrected product model from v40: 4 product lines, while still communicating 8 total product types/variants.
+- Kept Tarima Tacón and Tarima Barrote as single product cards with Primera / Segunda / Tercera quality descriptions inside each card.
+- Removed the concrete texture from product image frames and replaced it with a clean light image surface.
+- Recalibrated product image sizing so all four cards use a consistent visual frame and fit as a desktop row.
+- Removed the desktop 3-column breakpoint that caused only three product cards to be visible on narrower desktop widths.
+- Added a compact product proof strip below the cards: calidad, entregas, soluciones a medida, and asesoría.
+- Removed the visible `Ver todas las tarimas` button from this section to align more closely with the provided reference.
+- Preserved unified number behavior: WhatsApp and phone both use `722 547 2591`.
 - Rebuilt successfully with `npm run build`.
 
 Plan status updates:
 
-- Contact behavior remains centralized and unified: WhatsApp and phone calls both use `722 547 2591`.
-- `Ubicación y cobertura` remains the last content section before the footer.
-- Footer structure remains aligned to the latest footer reference and keeps only Facebook in the social area.
-- Gallery remains driven by real supplied client images.
-- Mission, solutions, and about use supplied client/gallery imagery.
-- Product catalog is now scoped to product lines plus internal quality descriptions instead of one card per variant.
-- Asset cleanup remains active: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
+- Product section now has a lighter foundation for future catalog edits: four product-line cards, compact content hierarchy, consistent image frames, and no heavy background treatment.
+- Contact behavior remains centralized and explicit: WhatsApp and phone-call flows use the same number by client request.
+- Gallery, FAQ, location/footer, and other reference-matched sections remain intact.
+- Asset cleanup remains intact: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
 
 Pending user input remains:
 
-1. Final official copy for each product ficha técnica.
-2. Final Facebook URL if the placeholder should be replaced.
-3. Final medidas/capacidades per product if they should be displayed in the cards or ficha request text.
+1. Final technical specifications for each product line and quality variant.
+2. Any final product measurements/capacity ranges for product cards or downloadable ficha técnica content.
+3. Final product detail behavior: WhatsApp-only ficha técnica, modal, or generated downloadable sheet.
+4. Final service area/city/cobertura copy if it changes.

@@ -11,8 +11,13 @@ defineProps<{
 </script>
 
 <template>
-  <article :id="product.id" class="product-card" data-reveal>
-    <ProductImageFrame :src="product.image" :alt="product.name" />
+  <article
+    :id="product.id"
+    class="product-card"
+    :class="[`product-card--${product.id}`, { 'product-card--with-qualities': product.qualities?.length }]"
+    data-reveal
+  >
+    <ProductImageFrame :src="product.image" :alt="product.name" :product-id="product.id" />
 
     <div class="product-card__content">
       <div class="product-card__main">

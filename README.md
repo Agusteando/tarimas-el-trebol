@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.30`.
+Versión actual: `1.2.31`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 

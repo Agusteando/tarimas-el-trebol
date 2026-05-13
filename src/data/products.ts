@@ -20,15 +20,15 @@ const imageBase = '/images/products';
 const qualityDescriptions: ProductQuality[] = [
   {
     title: 'Primera calidad · Nueva',
-    description: 'Fabricada con madera nueva para operaciones que requieren mejor presentación, resistencia uniforme y continuidad de suministro.'
+    description: 'Madera nueva para mejor presentación, resistencia uniforme y continuidad de suministro.'
   },
   {
     title: 'Segunda calidad · Reciclada',
-    description: 'Tarima reciclada revisada para optimizar costo sin perder funcionalidad en manejo, almacenaje y transporte.'
+    description: 'Tarima reciclada revisada para optimizar costo sin perder funcionalidad operativa.'
   },
   {
     title: 'Tercera calidad · Con empalmes',
-    description: 'Alternativa funcional con empalmes para usos prácticos donde se busca una solución económica y operativa.'
+    description: 'Alternativa funcional con empalmes para una solución económica y práctica.'
   }
 ];
 
@@ -62,7 +62,7 @@ export const allProducts: Product[] = [
     name: 'Tarima Tipo Cheep',
     image: `${imageBase}/tarima-tipo-chep.webp`,
     summary:
-      'Tarima ligera y práctica para manejo, almacenamiento, distribución y operaciones donde se requiere una base funcional y ágil.',
+      'Tarima ligera y práctica para manejo, almacenamiento y distribución donde se requiere una base funcional y ágil.',
     highlights: ['Ligera', 'Práctica', 'Operativa'],
     quoteMessage: 'Hola, quiero cotizar tarima tipo cheep.',
     sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tipo cheep.'
