@@ -21,16 +21,15 @@ const handleHomeClick = (event: MouseEvent) => {
           <IconSymbol name="arrow" />
           <span>Volver al inicio</span>
         </a>
-        <p class="eyebrow eyebrow--clover">Catálogo de tarimas industriales</p>
-        <h1 id="products-page-title">Todas las tarimas para operación industrial</h1>
+        <p class="eyebrow eyebrow--clover">Nuestros productos</p>
+        <h1 id="products-page-title">Contamos con 8 tipos de producto</h1>
         <p>
-          Elige el tipo de tarima que necesitas y solicita una cotización personalizada por medida,
-          uso, volumen, estado y capacidad de carga.
+          Consulta nuestras variantes de tarima tacón, barrote, tipo cheep e híbrida. Cada producto incluye su descripción y ficha técnica por WhatsApp.
         </p>
         <div class="products-page__actions">
           <a class="button button--accent" :href="getWhatsAppLink(quoteMessage)" target="_blank" rel="noreferrer">
             <IconSymbol name="whatsapp" />
-            Cotizar catálogo completo
+            Solicitar fichas técnicas
           </a>
           <a class="button products-page__phone" :href="`tel:+52${contact.phoneCallNumber}`">
             Llamar {{ formatPhone(contact.phoneCallNumber) }}
@@ -40,8 +39,8 @@ const handleHomeClick = (event: MouseEvent) => {
 
       <div class="products-page__summary" data-reveal>
         <span>{{ allProducts.length }}</span>
-        <strong>tipos de tarima</strong>
-        <p>Nuevas, recicladas, estándar y personalizadas para necesidades industriales.</p>
+        <strong>productos</strong>
+        <p>Tacón, barrote, tipo cheep e híbrida con variantes nuevas, recicladas y con empalmes.</p>
       </div>
     </div>
 

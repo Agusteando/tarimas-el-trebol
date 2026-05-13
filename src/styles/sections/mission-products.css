@@ -196,8 +196,8 @@
 
 .product-grid--showcase {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
   margin-top: 18px;
 }
 
@@ -240,7 +240,7 @@
 
 .product-card__content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 104px;
+  grid-template-columns: 1fr;
   gap: 14px;
   padding: 18px 20px 16px;
 }
@@ -272,6 +272,7 @@
 
 .product-card__badges {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-content: start;
   gap: 8px;
   margin: 0;
@@ -300,9 +301,9 @@
 
 .product-card__actions {
   display: grid;
-  grid-template-columns: minmax(204px, 1fr) minmax(128px, 0.78fr);
+  grid-template-columns: 1fr;
   gap: 12px;
-  margin: 0 20px 20px;
+  margin: 0 18px 18px;
   border-top: 1px solid rgba(29, 42, 34, 0.11);
   padding-top: 14px;
 }
@@ -311,7 +312,7 @@
   min-height: 42px;
   border-radius: 6px;
   padding-inline: 14px;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   line-height: 1;
   white-space: nowrap;
   box-shadow: none;
@@ -335,6 +336,24 @@
 }
 
 .product-card__quote span {
+  white-space: nowrap;
+}
+
+
+.product-card__sheet {
+  width: 100%;
+  border-color: #f6c626;
+  color: var(--color-green-950);
+  background: #f6c626;
+}
+
+.product-card__sheet .icon-symbol {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.product-card__sheet span {
   white-space: nowrap;
 }
 
@@ -544,6 +563,10 @@
 }
 
 @media (max-width: 1280px) {
+  .product-grid--showcase {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .mission-section--reference {
     --mission-panel-overlap: clamp(58px, 5.6vw, 76px);
   }
@@ -597,7 +620,7 @@
   }
 
   .product-grid--showcase {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-image-frame {
@@ -662,6 +685,10 @@
   .mission-benefit-panel__icon .icon-symbol {
     width: 27px;
     height: 27px;
+  }
+
+  .product-grid--showcase {
+    grid-template-columns: 1fr;
   }
 
   .product-card__content,

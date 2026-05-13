@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.28`.
+Versión actual: `1.2.29`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
@@ -95,3 +95,11 @@ La configuración vive en `src/data/contact.ts` y puede complementarse con varia
 ## Estándares activos
 
 Componentes reutilizables, tokens globales, CSS separado por responsabilidad, texto en HTML/CSS, diseño responsive, sin `!important`, sin hacks por resolución, sin screenshots de referencia en el repo y sin assets fuente innecesarios en producción.
+
+## Última actualización
+
+- Se reemplazó la imagen de `Quiénes somos` por una imagen real de la galería del cliente.
+- Se actualizaron las tres imágenes base de producto: barrote, tacón y tipo cheep.
+- El catálogo se redujo y ordenó a 8 productos: tres variantes de tacón, tres variantes de barrote, tarima tipo cheep y tarima híbrida.
+- Cada producto ahora muestra botón de `Ficha técnica` conectado a WhatsApp.
+- Se removieron imágenes de productos retirados para mantener el ZIP más ligero.

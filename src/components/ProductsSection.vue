@@ -10,7 +10,7 @@ import { navigateToHref } from '../composables/useAppRoute';
     <div class="container">
       <div class="products__header" data-reveal>
         <p class="eyebrow eyebrow--clover">Nuestros productos</p>
-        <h2 id="products-title">Tarimas diseñadas para cada necesidad industrial</h2>
+        <h2 id="products-title">Contamos con 8 tipos de producto</h2>
       </div>
 
       <div class="product-grid product-grid--showcase">
