@@ -30,3 +30,11 @@ Pending user input remains:
 2. Any final product measurements/capacity ranges for product cards or downloadable ficha técnica content.
 3. Final product detail behavior: WhatsApp-only ficha técnica, modal, or generated downloadable sheet.
 4. Final service area/city/cobertura copy if it changes.
+
+Completed in v42:
+
+- Replaced the very first hero section image with the new client-provided pallet tower photograph.
+- Ensured `Quiénes somos` and `Nuestra misión` no longer reuse the same gallery image.
+- Set `Quiénes somos` to `gallery-18.webp` and `Nuestra misión` to `gallery-04.webp` to keep them visually distinct.
+- Removed the retired hero warehouse-stack asset after confirming it was no longer referenced.
+- Rebuilt successfully with `npm run build`.

@@ -18,7 +18,7 @@ import { missionBenefits } from '../data/mission';
       </div>
 
       <div class="mission-section__reference-media" data-reveal>
-        <MissionMediaShape src="/images/gallery/gallery-13.webp" alt="Tarimas de madera almacenadas en bodega real" />
+        <MissionMediaShape src="/images/gallery/gallery-04.webp" alt="Tarimas de madera alineadas en bodega real" />
       </div>
 
       <MissionBenefitList :items="missionBenefits" />

@@ -21,7 +21,7 @@ const aboutHighlights = [
     <div class="container about__grid">
       <figure class="about__media" data-reveal>
         <div class="about__image-card">
-          <img src="/images/gallery/gallery-13.webp" alt="Tarimas industriales del cliente almacenadas en bodega" />
+          <img src="/images/gallery/gallery-18.webp" alt="Operación real con tarimas industriales del cliente en bodega" />
         </div>
 
         <figcaption class="about__float-card">

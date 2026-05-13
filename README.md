@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.31`.
+Versión actual: `1.2.32`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
@@ -108,3 +108,10 @@ Componentes reutilizables, tokens globales, CSS separado por responsabilidad, te
 ## Iteración v1.2.30
 
 El catálogo ahora muestra 4 líneas de producto y comunica 8 tipos/variantes mediante descripciones internas: tacón y barrote incluyen primera, segunda y tercera calidad dentro de la misma tarjeta; tipo cheep e híbrida se muestran como productos individuales. Se reemplazó la imagen de tipo cheep por el PNG transparente correcto y se agregó la imagen de tarima híbrida.
+
+
+## v42
+
+- Se reemplazó la imagen principal del hero con la fotografía nueva de torres de tarimas proporcionada por el cliente.
+- Se corrigió la repetición visual entre `Quiénes somos` y `Nuestra misión`: ahora usan fotografías distintas de la galería.
+- Se retiró el asset anterior del hero que quedó sin uso.
