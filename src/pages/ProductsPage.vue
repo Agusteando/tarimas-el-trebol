@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ProductCard from '../components/ProductCard.vue';
 import IconSymbol from '../components/IconSymbol.vue';
-import { allProducts } from '../data/products';
+import { allProducts, totalProductTypes } from '../data/products';
 import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
 import { navigateToHref } from '../composables/useAppRoute';
 
@@ -22,9 +22,9 @@ const handleHomeClick = (event: MouseEvent) => {
           <span>Volver al inicio</span>
         </a>
         <p class="eyebrow eyebrow--clover">Nuestros productos</p>
-        <h1 id="products-page-title">Contamos con 8 tipos de producto</h1>
+        <h1 id="products-page-title">Nuestros productos</h1>
         <p>
-          Consulta nuestras variantes de tarima tacón, barrote, tipo cheep e híbrida. Cada producto incluye su descripción y ficha técnica por WhatsApp.
+          Contamos con 8 tipos de producto: tacón y barrote con primera, segunda y tercera calidad, además de tarima tipo cheep y tarima híbrida.
         </p>
         <div class="products-page__actions">
           <a class="button button--accent" :href="getWhatsAppLink(quoteMessage)" target="_blank" rel="noreferrer">
@@ -38,9 +38,9 @@ const handleHomeClick = (event: MouseEvent) => {
       </div>
 
       <div class="products-page__summary" data-reveal>
-        <span>{{ allProducts.length }}</span>
-        <strong>productos</strong>
-        <p>Tacón, barrote, tipo cheep e híbrida con variantes nuevas, recicladas y con empalmes.</p>
+        <span>{{ totalProductTypes }}</span>
+        <strong>tipos de producto</strong>
+        <p>Tacón y barrote incluyen descripción de primera calidad, segunda calidad y tercera calidad.</p>
       </div>
     </div>
 

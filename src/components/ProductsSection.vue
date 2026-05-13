@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ProductCard from './ProductCard.vue';
 import IconSymbol from './IconSymbol.vue';
-import { featuredProducts } from '../data/products';
+import { featuredProducts, totalProductTypes } from '../data/products';
 import { navigateToHref } from '../composables/useAppRoute';
 </script>
 
@@ -10,7 +10,8 @@ import { navigateToHref } from '../composables/useAppRoute';
     <div class="container">
       <div class="products__header" data-reveal>
         <p class="eyebrow eyebrow--clover">Nuestros productos</p>
-        <h2 id="products-title">Contamos con 8 tipos de producto</h2>
+        <h2 id="products-title">Nuestros productos</h2>
+        <p class="products__lead">Contamos con {{ totalProductTypes }} tipos de producto, incluyendo variantes de primera, segunda y tercera calidad.</p>
       </div>
 
       <div class="product-grid product-grid--showcase">

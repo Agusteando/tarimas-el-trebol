@@ -1,10 +1,15 @@
+export type ProductQuality = {
+  title: string;
+  description: string;
+};
+
 export type Product = {
   id: string;
   name: string;
   measure?: string;
   image: string;
   summary: string;
-  variants: string[];
+  qualities?: ProductQuality[];
   highlights: string[];
   quoteMessage: string;
   sheetMessage: string;
@@ -12,98 +17,69 @@ export type Product = {
 
 const imageBase = '/images/products';
 
-const firstVariantDescription = 'Primera calidad fabricada con madera nueva, indicada para operaciones que requieren mayor presentación, resistencia uniforme y continuidad de suministro.';
-const secondVariantDescription = 'Segunda calidad elaborada con tarima reciclada revisada, ideal para optimizar costo sin perder funcionalidad en manejo, almacenaje y transporte.';
-const thirdVariantDescription = 'Tercera calidad con empalmes, pensada para operaciones de uso práctico donde se busca una alternativa económica y funcional.';
+const qualityDescriptions: ProductQuality[] = [
+  {
+    title: 'Primera calidad · Nueva',
+    description: 'Fabricada con madera nueva para operaciones que requieren mejor presentación, resistencia uniforme y continuidad de suministro.'
+  },
+  {
+    title: 'Segunda calidad · Reciclada',
+    description: 'Tarima reciclada revisada para optimizar costo sin perder funcionalidad en manejo, almacenaje y transporte.'
+  },
+  {
+    title: 'Tercera calidad · Con empalmes',
+    description: 'Alternativa funcional con empalmes para usos prácticos donde se busca una solución económica y operativa.'
+  }
+];
 
 export const allProducts: Product[] = [
   {
-    id: 'tacon-primera',
-    name: 'Tarima Tacón Primera',
-    measure: 'Variante nueva',
+    id: 'tacon',
+    name: 'Tarima Tacón',
+    measure: '3 variantes disponibles',
     image: `${imageBase}/tarima-tacon.webp`,
-    summary: `Tarima de tacón de primera calidad. ${firstVariantDescription}`,
-    variants: ['Primera', 'Nueva', 'Tacón'],
-    highlights: ['Madera nueva', 'Estable', 'Apta para volumen'],
-    quoteMessage: 'Hola, quiero cotizar tarima tacón primera nueva.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tacón primera nueva.'
+    summary:
+      'Tarima estable para almacenamiento, transporte y operaciones industriales que requieren buen soporte y maniobra segura.',
+    qualities: qualityDescriptions,
+    highlights: ['Primera', 'Segunda', 'Tercera'],
+    quoteMessage: 'Hola, quiero cotizar tarima tacón y revisar sus variantes primera, segunda y tercera.',
+    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tacón y sus variantes primera, segunda y tercera.'
   },
   {
-    id: 'tacon-segunda',
-    name: 'Tarima Tacón Segunda',
-    measure: 'Tarima reciclada',
-    image: `${imageBase}/tarima-tacon.webp`,
-    summary: `Tarima de tacón de segunda calidad. ${secondVariantDescription}`,
-    variants: ['Segunda', 'Reciclada', 'Tacón'],
-    highlights: ['Costo eficiente', 'Revisada', 'Operativa'],
-    quoteMessage: 'Hola, quiero cotizar tarima tacón segunda reciclada.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tacón segunda reciclada.'
-  },
-  {
-    id: 'tacon-tercera',
-    name: 'Tarima Tacón Tercera',
-    measure: 'Tarima con empalmes',
-    image: `${imageBase}/tarima-tacon.webp`,
-    summary: `Tarima de tacón de tercera calidad. ${thirdVariantDescription}`,
-    variants: ['Tercera', 'Con empalmes', 'Tacón'],
-    highlights: ['Económica', 'Funcional', 'Uso práctico'],
-    quoteMessage: 'Hola, quiero cotizar tarima tacón tercera con empalmes.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tacón tercera con empalmes.'
-  },
-  {
-    id: 'barrote-primera',
-    name: 'Tarima Barrote Primera',
-    measure: 'Variante nueva',
+    id: 'barrote',
+    name: 'Tarima Barrote',
+    measure: '3 variantes disponibles',
     image: `${imageBase}/tarima-barrote.webp`,
-    summary: `Tarima de barrote de primera calidad. ${firstVariantDescription}`,
-    variants: ['Primera', 'Nueva', 'Barrote'],
-    highlights: ['Alta resistencia', 'Madera nueva', 'Uso industrial'],
-    quoteMessage: 'Hola, quiero cotizar tarima barrote primera nueva.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima barrote primera nueva.'
-  },
-  {
-    id: 'barrote-segunda',
-    name: 'Tarima Barrote Segunda',
-    measure: 'Tarima reciclada',
-    image: `${imageBase}/tarima-barrote.webp`,
-    summary: `Tarima de barrote de segunda calidad. ${secondVariantDescription}`,
-    variants: ['Segunda', 'Reciclada', 'Barrote'],
-    highlights: ['Resistente', 'Reciclada', 'Costo eficiente'],
-    quoteMessage: 'Hola, quiero cotizar tarima barrote segunda reciclada.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima barrote segunda reciclada.'
-  },
-  {
-    id: 'barrote-tercera',
-    name: 'Tarima Barrote Tercera',
-    measure: 'Tarima con empalmes',
-    image: `${imageBase}/tarima-barrote.webp`,
-    summary: `Tarima de barrote de tercera calidad. ${thirdVariantDescription}`,
-    variants: ['Tercera', 'Con empalmes', 'Barrote'],
-    highlights: ['Económica', 'Uso rudo', 'Funcional'],
-    quoteMessage: 'Hola, quiero cotizar tarima barrote tercera con empalmes.',
-    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima barrote tercera con empalmes.'
+    summary:
+      'La opción más resistente para cargas pesadas, uso rudo y operaciones donde la durabilidad es prioridad.',
+    qualities: qualityDescriptions,
+    highlights: ['Primera', 'Segunda', 'Tercera'],
+    quoteMessage: 'Hola, quiero cotizar tarima barrote y revisar sus variantes primera, segunda y tercera.',
+    sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima barrote y sus variantes primera, segunda y tercera.'
   },
   {
     id: 'tipo-chep',
     name: 'Tarima Tipo Cheep',
     image: `${imageBase}/tarima-tipo-chep.webp`,
-    summary: 'Tarima ligera y práctica para manejo, almacenamiento, distribución y operaciones donde se requiere una base funcional y ágil.',
-    variants: ['Tipo Cheep', 'Ligera', 'Operativa'],
-    highlights: ['Ligera', 'Práctica', 'Manejo ágil'],
+    summary:
+      'Tarima ligera y práctica para manejo, almacenamiento, distribución y operaciones donde se requiere una base funcional y ágil.',
+    highlights: ['Ligera', 'Práctica', 'Operativa'],
     quoteMessage: 'Hola, quiero cotizar tarima tipo cheep.',
     sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima tipo cheep.'
   },
   {
     id: 'hibrida',
     name: 'Tarima Híbrida',
-    image: `${imageBase}/tarima-tipo-chep.webp`,
-    summary: 'Tarima fabricada con combinación de tablas recicladas y nuevas para equilibrar costo, disponibilidad y desempeño operativo.',
-    variants: ['Tablas recicladas', 'Tablas nuevas', 'Mixta'],
-    highlights: ['Híbrida', 'Flexible', 'Costo-beneficio'],
+    image: `${imageBase}/tarima-hibrida.webp`,
+    summary:
+      'Tarima fabricada con combinación de tablas recicladas y nuevas para equilibrar costo, disponibilidad y desempeño operativo.',
+    highlights: ['Reciclada', 'Nueva', 'Mixta'],
     quoteMessage: 'Hola, quiero cotizar tarima híbrida con tablas recicladas y nuevas.',
     sheetMessage: 'Hola, quiero recibir la ficha técnica de la tarima híbrida con tablas recicladas y nuevas.'
   }
 ];
+
+export const totalProductTypes = 8;
 
 export const featuredProducts = allProducts;
 

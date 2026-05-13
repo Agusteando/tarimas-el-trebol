@@ -21,7 +21,14 @@ defineProps<{
         <p>{{ product.summary }}</p>
       </div>
 
-      <ul class="product-card__badges" aria-label="Características principales">
+      <div v-if="product.qualities?.length" class="product-card__qualities" aria-label="Calidades disponibles">
+        <article v-for="quality in product.qualities" :key="quality.title" class="product-card__quality">
+          <strong>{{ quality.title }}</strong>
+          <p>{{ quality.description }}</p>
+        </article>
+      </div>
+
+      <ul v-else class="product-card__badges" aria-label="Características principales">
         <li v-for="highlight in product.highlights" :key="highlight">{{ highlight }}</li>
       </ul>
     </div>
