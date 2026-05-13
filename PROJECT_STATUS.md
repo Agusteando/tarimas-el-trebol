@@ -1,40 +1,28 @@
 # Project Status — Tarimas El Trébol
 
-Current phase: visual refinement, real-client asset integration, and product catalog cleanup.
+Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v41 compact product section rebuild.
+Latest implementation pass: v43 legal pages.
 
 Completed in this pass:
 
-- Reimagined the `Nuestros productos` section to better match the supplied reference and avoid the oversized card issue.
-- Preserved the corrected product model from v40: 4 product lines, while still communicating 8 total product types/variants.
-- Kept Tarima Tacón and Tarima Barrote as single product cards with Primera / Segunda / Tercera quality descriptions inside each card.
-- Removed the concrete texture from product image frames and replaced it with a clean light image surface.
-- Recalibrated product image sizing so all four cards use a consistent visual frame and fit as a desktop row.
-- Removed the desktop 3-column breakpoint that caused only three product cards to be visible on narrower desktop widths.
-- Added a compact product proof strip below the cards: calidad, entregas, soluciones a medida, and asesoría.
-- Removed the visible `Ver todas las tarimas` button from this section to align more closely with the provided reference.
-- Preserved unified number behavior: WhatsApp and phone both use `722 547 2591`.
+- Added internal legal pages for `Aviso de privacidad` and `Términos y condiciones`.
+- Created `src/pages/LegalPage.vue` with two content modes: privacy and terms.
+- Added `src/styles/sections/legal.css` for isolated legal-page layout and typography.
+- Extended the lightweight app router to support `/aviso-de-privacidad` and `/terminos-y-condiciones`.
+- Updated footer legal links so they no longer point to `#`.
+- Drafted Mexico / Estado de México oriented legal copy for privacy, quotes, product images, delivery, cancellation, warranty/reclamation, intellectual property, liability, external links, and jurisdiction.
+- Preserved unified contact number: `722 547 2591` for WhatsApp and phone.
 - Rebuilt successfully with `npm run build`.
 
-Plan status updates:
+Important note:
 
-- Product section now has a lighter foundation for future catalog edits: four product-line cards, compact content hierarchy, consistent image frames, and no heavy background treatment.
-- Contact behavior remains centralized and explicit: WhatsApp and phone-call flows use the same number by client request.
-- Gallery, FAQ, location/footer, and other reference-matched sections remain intact.
-- Asset cleanup remains intact: screenshots are not stored in the project ZIP; `dist` and `node_modules` remain excluded from delivery.
+- The legal copy is a preventive publication draft, not a substitute for formal legal review. It should be reviewed by a qualified Mexican attorney before final public use, especially if the client has specific fiscal, contract, data-treatment, invoicing, credit, delivery, or warranty processes.
 
 Pending user input remains:
 
-1. Final technical specifications for each product line and quality variant.
-2. Any final product measurements/capacity ranges for product cards or downloadable ficha técnica content.
-3. Final product detail behavior: WhatsApp-only ficha técnica, modal, or generated downloadable sheet.
-4. Final service area/city/cobertura copy if it changes.
-
-Completed in v42:
-
-- Replaced the very first hero section image with the new client-provided pallet tower photograph.
-- Ensured `Quiénes somos` and `Nuestra misión` no longer reuse the same gallery image.
-- Set `Quiénes somos` to `gallery-18.webp` and `Nuestra misión` to `gallery-04.webp` to keep them visually distinct.
-- Removed the retired hero warehouse-stack asset after confirming it was no longer referenced.
-- Rebuilt successfully with `npm run build`.
+1. Product spreadsheet with all final tarima types, variants, measures, and capacities.
+2. Final legal company details if `MOAN SA de CV` or the current address/email need correction.
+3. Any final warranty/cancellation/payment policy from the client.
+4. Final Facebook URL.
+5. Final service area/city/cobertura copy if it changes.

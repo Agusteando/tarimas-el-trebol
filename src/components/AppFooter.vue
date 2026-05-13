@@ -86,9 +86,9 @@ const footerColumns = [
       <div class="container site-footer__bottom-inner">
         <span>© 2025 El Trébol Tarimas y Empaques Industriales. Todos los derechos reservados.</span>
         <span class="site-footer__legal">
-          <a href="#">Aviso de privacidad</a>
+          <a href="/aviso-de-privacidad">Aviso de privacidad</a>
           <span aria-hidden="true">|</span>
-          <a href="#">Términos y condiciones</a>
+          <a href="/terminos-y-condiciones">Términos y condiciones</a>
         </span>
       </div>
     </div>

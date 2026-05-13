@@ -17,11 +17,14 @@ import MapSection from './components/MapSection.vue';
 import AppFooter from './components/AppFooter.vue';
 import FloatingWhatsApp from './components/FloatingWhatsApp.vue';
 import ProductsPage from './pages/ProductsPage.vue';
+import LegalPage from './pages/LegalPage.vue';
 import { useReveal } from './composables/useReveal';
 import { useAppRoute } from './composables/useAppRoute';
 
 const { currentPath } = useAppRoute();
 const isProductsPage = computed(() => currentPath.value === '/productos');
+const isPrivacyPage = computed(() => currentPath.value === '/aviso-de-privacidad');
+const isTermsPage = computed(() => currentPath.value === '/terminos-y-condiciones');
 
 useReveal();
 </script>
@@ -30,6 +33,8 @@ useReveal();
   <AppHeader />
   <main>
     <ProductsPage v-if="isProductsPage" />
+    <LegalPage v-else-if="isPrivacyPage" type="privacy" />
+    <LegalPage v-else-if="isTermsPage" type="terms" />
     <template v-else>
       <HeroSection />
       <TrustBar />

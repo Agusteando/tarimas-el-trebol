@@ -3,8 +3,11 @@ import { nextTick, onMounted, onUnmounted, readonly, ref } from 'vue';
 const currentPath = ref(normalizePath(window.location.pathname));
 
 function normalizePath(path: string) {
-  if (path === '/productos' || path === '/productos/') {
-    return '/productos';
+  const normalized = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+  const appPaths = new Set(['/productos', '/aviso-de-privacidad', '/terminos-y-condiciones']);
+
+  if (appPaths.has(normalized)) {
+    return normalized;
   }
 
   return '/';

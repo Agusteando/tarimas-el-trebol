@@ -12,3 +12,4 @@ import './styles/sections/faq.css';
 import './styles/sections/gallery.css';
 
 createApp(App).mount('#app');
+import './styles/sections/legal.css';

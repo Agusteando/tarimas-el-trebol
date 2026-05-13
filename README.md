@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.32`.
+Versión actual: `1.2.33`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
@@ -115,3 +115,7 @@ El catálogo ahora muestra 4 líneas de producto y comunica 8 tipos/variantes me
 - Se reemplazó la imagen principal del hero con la fotografía nueva de torres de tarimas proporcionada por el cliente.
 - Se corrigió la repetición visual entre `Quiénes somos` y `Nuestra misión`: ahora usan fotografías distintas de la galería.
 - Se retiró el asset anterior del hero que quedó sin uso.
+
+## Legal
+
+Se agregaron páginas internas para `Aviso de privacidad` y `Términos y condiciones` en `src/pages/LegalPage.vue`, con estilos aislados en `src/styles/sections/legal.css`. Los enlaces del footer apuntan a `/aviso-de-privacidad` y `/terminos-y-condiciones`. El contenido es una base preventiva para México / Estado de México y debe revisarse con asesoría legal antes de publicación definitiva.
