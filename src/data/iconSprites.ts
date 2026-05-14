@@ -24,7 +24,8 @@ export const spriteIconMap = {
   ship: '/images/icons/sprite/ship.png',
   shovel: '/images/icons/sprite/shovel.png',
   users: '/images/icons/sprite/users.png',
-  people: '/images/icons/sprite/users.png'
+  people: '/images/icons/sprite/users.png',
+  whatsapp: '/images/icons/brand/whatsapp-brand-dark.png'
 } as const;
 
 export type SpriteIconName = keyof typeof spriteIconMap;

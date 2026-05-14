@@ -362,12 +362,13 @@ button:focus-visible {
   box-shadow: none;
 }
 
-.site-header__whatsapp-icon {
+.site-header__whatsapp-icon.icon-symbol {
   display: block;
   flex: 0 0 19px;
   width: 19px;
   height: 19px;
   object-fit: contain;
+  --icon-brand-scale: 1;
 }
 
 .site-header__menu {
@@ -1070,6 +1071,10 @@ button:focus-visible {
   transform-origin: center;
 }
 
+.icon-symbol--brand {
+  transform: scale(var(--icon-brand-scale, 1));
+}
+
 .icon-bubble {
   --icon-bubble-size: 48px;
   --icon-symbol-size: 26px;
@@ -1318,10 +1323,21 @@ button:focus-visible {
   font-weight: 950;
 }
 
-.floating-whatsapp svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+.floating-whatsapp__icon-shell {
+  display: inline-grid;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-white);
+}
+
+.floating-whatsapp__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 
@@ -1761,7 +1777,7 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .floating-whatsapp span {
+  .floating-whatsapp__label {
     display: none;
   }
 

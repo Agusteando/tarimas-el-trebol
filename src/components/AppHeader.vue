@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import BrandLogo from './BrandLogo.vue';
+import IconSymbol from './IconSymbol.vue';
 import { contact, formatPhone, getWhatsAppLink } from '../data/contact';
 import { navigateToHref } from '../composables/useAppRoute';
 
@@ -63,13 +64,7 @@ const handleNavClick = (event: MouseEvent, href: string) => {
           <span>{{ formatPhone(contact.phoneCallNumber) }}</span>
         </a>
         <a class="button button--small button--accent site-header__whatsapp" :href="getWhatsAppLink()" target="_blank" rel="noreferrer">
-          <img
-            class="site-header__whatsapp-icon"
-            src="/images/icons/brand/whatsapp-brand-dark.png"
-            alt=""
-            aria-hidden="true"
-            draggable="false"
-          />
+          <IconSymbol name="whatsapp" class="site-header__whatsapp-icon" />
           <span>Cotizar por WhatsApp</span>
         </a>
       </div>
