@@ -67,9 +67,13 @@ const footerColumns = [
 
       <div class="site-footer__contact">
         <h2>Contacto</h2>
-        <a :href="`tel:+52${contact.phoneCallNumber}`">
+        <a
+          v-for="phone in contact.footerPhoneNumbers"
+          :key="phone"
+          :href="`tel:+52${phone}`"
+        >
           <IconSymbol name="phone" />
-          <span>{{ formatPhone(contact.phoneCallNumber) }}</span>
+          <span>{{ formatPhone(phone) }}</span>
         </a>
         <a :href="`mailto:${contact.email}`">
           <IconSymbol name="mail" />

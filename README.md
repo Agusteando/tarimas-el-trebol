@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.33`.
+Versión actual: `1.2.34`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
@@ -86,6 +86,7 @@ No se almacenan screenshots de referencia dentro del proyecto.
 ## Contacto centralizado
 
 - WhatsApp y llamadas: `722 547 2591`
+- Teléfonos adicionales en footer: `723 547 2591`, `722 670 6686`, `563 502 8358`
 - Email: `ventas@eltreboltarimas.com.mx`
 - Ubicación: `19.2985595,-99.6898324`
 - Maps: `https://maps.app.goo.gl/CaAWkfqQoaVnfPph8`
@@ -118,4 +119,4 @@ El catálogo ahora muestra 4 líneas de producto y comunica 8 tipos/variantes me
 
 ## Legal
 
-Se agregaron páginas internas para `Aviso de privacidad` y `Términos y condiciones` en `src/pages/LegalPage.vue`, con estilos aislados en `src/styles/sections/legal.css`. Los enlaces del footer apuntan a `/aviso-de-privacidad` y `/terminos-y-condiciones`. El contenido es una base preventiva para México / Estado de México y debe revisarse con asesoría legal antes de publicación definitiva.
+Se agregaron páginas internas para `Aviso de privacidad` y `Términos y condiciones` en `src/pages/LegalPage.vue`, con estilos aislados en `src/styles/sections/legal.css`. Los enlaces del footer apuntan a `/aviso-de-privacidad` y `/terminos-y-condiciones`. El contenido está redactado para publicación informativa en México / Estado de México.

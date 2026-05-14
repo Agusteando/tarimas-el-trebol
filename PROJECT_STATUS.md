@@ -2,7 +2,7 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v43 legal pages.
+Latest implementation pass: v44 footer phone list and legal warning cleanup.
 
 Completed in this pass:
 
@@ -12,12 +12,13 @@ Completed in this pass:
 - Extended the lightweight app router to support `/aviso-de-privacidad` and `/terminos-y-condiciones`.
 - Updated footer legal links so they no longer point to `#`.
 - Drafted Mexico / Estado de México oriented legal copy for privacy, quotes, product images, delivery, cancellation, warranty/reclamation, intellectual property, liability, external links, and jurisdiction.
-- Preserved unified contact number: `722 547 2591` for WhatsApp and phone.
+- Preserved unified main contact number: `722 547 2591` for WhatsApp and phone.
+- Added footer phone links for `723 547 2591`, `722 670 6686`, and `563 502 8358`.
+- Removed legal disclaimer note from the public legal pages and project documentation.
 - Rebuilt successfully with `npm run build`.
 
 Important note:
 
-- The legal copy is a preventive publication draft, not a substitute for formal legal review. It should be reviewed by a qualified Mexican attorney before final public use, especially if the client has specific fiscal, contract, data-treatment, invoicing, credit, delivery, or warranty processes.
 
 Pending user input remains:
 

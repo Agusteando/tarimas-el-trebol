@@ -212,10 +212,6 @@ const page = computed(() => {
             </p>
           </section>
         </template>
-
-        <div class="legal-page__note">
-          <strong>Nota:</strong> Este documento es una base preventiva para publicación web. Debe revisarse con asesoría legal antes de considerarse definitivo o adaptarse a operaciones fiscales, contratos, tratamiento de datos o procesos internos específicos.
-        </div>
       </article>
     </div>
   </section>
