@@ -26,7 +26,7 @@ export const contact = {
     '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noreferrer">CARTO</a>',
   addressLine1: import.meta.env.VITE_ADDRESS_LINE_1 || 'Parque Industrial Toluca 2000',
   addressLine2: import.meta.env.VITE_ADDRESS_LINE_2 || 'Toluca, Estado de México, 50200',
-  facebookUrl: import.meta.env.VITE_FACEBOOK_URL || 'https://www.facebook.com/'
+  facebookUrl: import.meta.env.VITE_FACEBOOK_URL || 'https://www.facebook.com/share/18mNymQXp2'
 };
 
 export const formatPhone = (phone: string) =>

@@ -19,7 +19,7 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.35`.
+Versión actual: `1.2.36`.
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 
@@ -57,7 +57,7 @@ VITE_PHONE_CALL_NUMBER=7225472591
 VITE_EMAIL=ventas@eltreboltarimas.com.mx
 VITE_ADDRESS_LINE_1=Parque Industrial Toluca 2000
 VITE_ADDRESS_LINE_2=Toluca, Estado de México, 50200
-VITE_FACEBOOK_URL=https://www.facebook.com/
+VITE_FACEBOOK_URL=https://www.facebook.com/share/18mNymQXp2
 VITE_MAP_LAT=19.2985595
 VITE_MAP_LNG=-99.6898324
 VITE_MAP_ZOOM=13
