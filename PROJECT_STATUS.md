@@ -13,7 +13,7 @@ Completed in this pass:
 - Updated footer legal links so they no longer point to `#`.
 - Drafted Mexico / Estado de México oriented legal copy for privacy, quotes, product images, delivery, cancellation, warranty/reclamation, intellectual property, liability, external links, and jurisdiction.
 - Preserved unified main contact number: `722 547 2591` for WhatsApp and phone.
-- Added footer phone links for `723 547 2591`, `722 670 6686`, and `563 502 8358`.
+- Corrected footer phone links to show only three numbers: `722 547 2591`, `722 670 6686`, and `563 502 8358`.
 - Removed legal disclaimer note from the public legal pages and project documentation.
 - Rebuilt successfully with `npm run build`.
 

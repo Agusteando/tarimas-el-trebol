@@ -10,7 +10,7 @@ export const contact = {
   whatsappPhone,
   phonePrimary: phoneCallNumber,
   phoneSecondary: whatsappPhone,
-  footerPhoneNumbers: [phoneCallNumber, '7235472591', '7226706686', '5635028358'],
+  footerPhoneNumbers: [phoneCallNumber, '7226706686', '5635028358'],
   email: import.meta.env.VITE_EMAIL || 'ventas@eltreboltarimas.com.mx',
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || `52${whatsappPhone}`,
   defaultWhatsappMessage:
