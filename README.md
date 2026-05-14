@@ -19,7 +19,18 @@ La última validación de esta iteración compiló correctamente con `npm run bu
 
 ## Estado actual
 
-Versión actual: `1.2.36`.
+Versión actual: `1.2.37`.
+
+## Vista previa
+
+El proyecto incluye una marca visual de vista previa controlada por `.env`:
+
+```env
+PREVIEW=TRUE
+```
+
+Valores activos: `TRUE`, `1`, `YES` u `ON`. Para ocultar la marca, usar `PREVIEW=FALSE` o eliminar la variable.
+
 
 Esta iteración unifica el contacto telefónico: el mismo número `722 547 2591` se usa para WhatsApp y llamadas en toda la app.
 

@@ -16,6 +16,7 @@ import FaqSection from './components/FaqSection.vue';
 import MapSection from './components/MapSection.vue';
 import AppFooter from './components/AppFooter.vue';
 import FloatingWhatsApp from './components/FloatingWhatsApp.vue';
+import PreviewOverlay from './components/PreviewOverlay.vue';
 import ProductsPage from './pages/ProductsPage.vue';
 import LegalPage from './pages/LegalPage.vue';
 import { useReveal } from './composables/useReveal';
@@ -53,4 +54,5 @@ useReveal();
   </main>
   <AppFooter />
   <FloatingWhatsApp />
+  <PreviewOverlay />
 </template>

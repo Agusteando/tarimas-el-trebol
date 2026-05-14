@@ -2,7 +2,9 @@
 
 Current phase: visual refinement, product-system expansion, and section-by-section reference matching.
 
-Latest implementation pass: v44 footer phone list and legal warning cleanup.
+Latest implementation pass: v47 preview overlay.
+
+Previous implementation pass: v44 footer phone list and legal warning cleanup.
 
 Completed in this pass:
 

@@ -10,6 +10,7 @@ import './styles/sections/advantages.css';
 import './styles/sections/delivery-process.css';
 import './styles/sections/faq.css';
 import './styles/sections/gallery.css';
+import './styles/sections/legal.css';
+import './styles/preview.css';
 
 createApp(App).mount('#app');
-import './styles/sections/legal.css';

@@ -1,0 +1,56 @@
+.preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.preview-overlay::before,
+.preview-overlay::after {
+  position: absolute;
+  left: 50%;
+  width: 140vw;
+  transform: translateX(-50%) rotate(-18deg);
+  color: rgba(255, 255, 255, 0.12);
+  font-size: clamp(2.2rem, 6vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  content: 'VISTA PREVIA  VISTA PREVIA  VISTA PREVIA';
+}
+
+.preview-overlay::before {
+  top: 18%;
+}
+
+.preview-overlay::after {
+  bottom: 18%;
+}
+
+.preview-overlay span {
+  position: relative;
+  transform: rotate(-18deg);
+  color: rgba(255, 255, 255, 0.34);
+  font-size: clamp(4.6rem, 14vw, 13rem);
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 6px 36px rgba(0, 0, 0, 0.38);
+}
+
+@media (max-width: 760px) {
+  .preview-overlay span {
+    font-size: clamp(3rem, 20vw, 7rem);
+    white-space: normal;
+  }
+}
